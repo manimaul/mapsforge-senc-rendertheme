@@ -1,0 +1,4 @@
+use the lookup xml node/element
+	the lookup name corresponds with the s57 layer
+		when the attributes match (ie colour etc)
+	the instruction tells which "symbol" name to use

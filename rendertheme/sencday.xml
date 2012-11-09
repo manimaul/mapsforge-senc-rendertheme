@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rendertheme xmlns="http://mapsforge.org/renderTheme" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://mapsforge.org/renderTheme ../renderTheme.xsd" version="1" map-background="#C9B97A">
+	
+	<!-- ways -->
+	<rule e="way" k="*" v="*">
+	    
+	    <!-- senc -->
+	    <rule e="way" k="senc" v="*">
+		    <rule e="way" k="senc" v="cstln">
+		        <rule e="way" k="*" v="*">
+					<line stroke="#525A5C" stroke-width="2.0" />
+				</rule>
+		    </rule>
+	    </rule>
+
+	    <!-- natural -->
+	    <!-- Bare minimum needed from original mapsforge osmarender theme
+	         natural:coastline key values are special -->      
+		<rule e="way" k="natural" v="*">
+			<rule e="way" k="natural" v="coastline">
+				<rule e="way" k="*" v="*" closed="no">
+					<line stroke="#D4EAEE" stroke-width="2.0" />
+				</rule>
+				<rule e="way" k="*" v="*" closed="yes">
+				    <!-- coastline fill areas are sea areas not land areas -->
+					<area fill="#D4EAEE" stroke="#D4EAEE" stroke-width="0.4" />
+				</rule>
+			</rule>
+		</rule>
+	</rule>
+	
+	<!-- nodes -->
+	<rule e="node" k="*" v="*">
+		<!-- place -->
+		<rule e="node" k="place" v="city" zoom-max="14">
+			<caption k="name" font-style="bold" font-size="35" fill="#000000" stroke="#ffffff" stroke-width="2.0" />
+		</rule>
+	</rule>
+	
+	
+</rendertheme>

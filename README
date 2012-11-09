@@ -1,0 +1,21 @@
+The mandate of this project is two fold:
+
+1. Provide tools that aid in the creation of mapsforge vector maps from s57 sources
+
+2. Provide a mapsforge rendertheme and tag mapping that closely matches the s57 standard way of displaying nautical charts
+
+Other tools used:
+a. Mapsforge - http://code.google.com/p/mapsforge/
+b. Mapsforge (coastline branch) - https://www.assembla.com/code/mapsf_coastline/git/nodes#open 
+c. Osmosis - http://wiki.openstreetmap.org/wiki/Osmosis
+d. JOSM - http://josm.openstreetmap.de/
+e. gdal-ogr - http://www.gdal.org/ogr/
+
+Referenced projects/websites
+a. Opencpn.org - https://github.com/OpenCPN/OpenCPN/tree/master/data/s57data
+b. Natureal Earth Data - http://www.naturalearthdata.com/
+c. S57 - http://www.s-57.com/
+d. OpenSeamap Tags - http://wiki.openstreetmap.org/wiki/OpenSeaMap/Seamark_Tag_Values
+
+
+
