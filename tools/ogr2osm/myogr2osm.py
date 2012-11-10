@@ -326,7 +326,7 @@ def parseLayer(layer):
     fieldNames = getLayerFields(layer)
     reproject = getTransform(layer)
     
-    for j in range(layer.GetFeatureCount()):
+    for _ in range(layer.GetFeatureCount()):
         ogrfeature = layer.GetNextFeature()
         parseFeature(translations.filterFeature(ogrfeature, fieldNames, reproject), fieldNames, reproject)
 
@@ -455,7 +455,7 @@ def mergePoints():
 
     # Use list to get rid of extras
     l.debug("Checking list")
-    for (location, pointsatloc) in pointcoords.items():
+    for (_location, pointsatloc) in pointcoords.items():
         if len(pointsatloc) > 1:
             for point in pointsatloc[1:]:
                 for parent in set(point.parents):
@@ -471,7 +471,7 @@ def output():
     featuresmap = {feature.geometry : feature for feature in features}
 
     w = XMLWriter(open(options.outputFile, 'w'))
-    w.start("osm", version='0.6', generator='uvmogr2osm')
+    w.start("osm", version='0.6', generator='myogr2osm')
 
     for node in nodes:
         w.start("node", version="1", timestamp="2012-01-01T00:00:00.0+11:00", changeset="0", visible="true", id=str(node.id), lat=str(node.y), lon=str(node.x))

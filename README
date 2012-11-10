@@ -6,7 +6,8 @@ The mandate of this project is two fold:
 
 Other tools used:
 a. Mapsforge - http://code.google.com/p/mapsforge/
-b. Mapsforge (coastline branch) - https://www.assembla.com/code/mapsf_coastline/git/nodes#open 
+b. Mapsforge (coastline branch) - https://www.assembla.com/code/mapsf_coastline/git/nodes#open
+	http://mapsforgecoastline.wikia.com/wiki/Mapsforge_%28Coastline-Enabled%29_Wiki
 c. Osmosis - http://wiki.openstreetmap.org/wiki/Osmosis
 d. JOSM - http://josm.openstreetmap.de/
 e. gdal-ogr - http://www.gdal.org/ogr/
