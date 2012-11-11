@@ -10,7 +10,6 @@ import math
 from shapely.geometry import Point
 from pyproj import Proj
 from osgeo import ogr
-import sys
 
 class s57():
     def __init__(self, s57_path):
@@ -37,6 +36,38 @@ class s57():
                 self.layerList.append(layer.GetName())
         else:
             self.fieldValues = {}
+    
+    def getLayerGeometryType(self, layerName):
+        if self.layerList.count(layerName) > 0:
+            layer = self.s57_ds.GetLayerByName(layerName)
+            layer.ResetReading()
+            feature = layer.GetNextFeature()
+            geometryType = 0;
+            if feature is not None:
+                geomRef = feature.GetGeometryRef()
+                if geomRef is not None:
+                    geometryType = geomRef.GetGeometryType()
+        
+            if (geometryType == ogr.wkbPoint or
+                geometryType == ogr.wkbPoint25D):
+                return "POINT"
+            elif (geometryType == ogr.wkbLineString or
+                  geometryType == ogr.wkbLinearRing or
+                  geometryType == ogr.wkbLineString25D):
+        #         geometryType == ogr.wkbLinearRing25D does not exist
+                return "LINESTRING"
+            elif (geometryType == ogr.wkbPolygon or
+                  geometryType == ogr.wkbPolygon25D):
+                return "POLYGON"
+            elif (geometryType == ogr.wkbMultiPoint or
+                  geometryType == ogr.wkbMultiLineString or
+                  geometryType == ogr.wkbMultiPolygon or
+                  geometryType == ogr.wkbGeometryCollection or
+                  geometryType == ogr.wkbMultiPoint25D or
+                  geometryType == ogr.wkbMultiLineString25D or
+                  geometryType == ogr.wkbMultiPolygon25D or
+                  geometryType == ogr.wkbGeometryCollection25D):
+                return "COLLECTION"
     
     def getLayerFields(self, layerName):
         if self.layerList.count(layerName) > 0:
@@ -161,4 +192,5 @@ if __name__== "__main__":
     print myS57.getCenterPoint()
     print myS57.getZoom()
     print myS57.getLayerList()
-    print myS57.getLayerFields("CTNARE")
+    print myS57.getLayerFields("LIGHTS")
+    print myS57.getLayerGeometryType("LIGHTS")

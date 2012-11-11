@@ -396,8 +396,9 @@
 		<osm-tag key="wood" value="mixed" renderable="false" />
 	</ways>
 	
-		<!-- S57 SENC tags -->
+	<!-- S57 SENC tags -->
 	<ways>
 	    <osm-tag key="senc" value="cstln" force-polygon-line="true" zoom-appear="0" />
 	</ways>
+	
 </tag-mapping>
