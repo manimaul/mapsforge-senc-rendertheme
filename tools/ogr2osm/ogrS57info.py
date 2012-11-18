@@ -6,21 +6,77 @@
 # Bounding box center point and scale also available
 # Accounts for latitude distortion of scales
 
+from osgeo import ogr
 import math
 from shapely.geometry import Point
 from pyproj import Proj
-from osgeo import ogr
+    
+def getZoom(scale, latitude):
+    tweakPercent = .70
+    truescale = scale * _latitudedistortion(latitude) * tweakPercent
+    z = 30;
+    while truescale > 1:
+        truescale = truescale / 2;
+        z -= 1;
+    return z
+
+def getLayerFields(layer):
+    featureDefinition = layer.GetLayerDefn()
+    fieldNames = []
+    fieldCount = featureDefinition.GetFieldCount()
+    for j in range(fieldCount):
+        fieldNames.append(featureDefinition.GetFieldDefn(j).GetNameRef())
+    return fieldNames
+
+def getLayerFieldValues(ogrfeature, fieldList):
+    fieldValues = {}
+    for i in range(len(fieldList)):
+        fieldValues[fieldList[i]] = ogrfeature.GetFieldAsString(i)
+    return fieldValues
+
+def _haversinedistance(origin, destination):
+    lon1, lat1 = origin
+    lon2, lat2 = destination
+    radius = 6371 #kilometers
+    dlat = math.radians(lat2-lat1)
+    dlon = math.radians(lon2-lon1)
+    a = math.sin(dlat/2) * math.sin(dlat/2) + math.cos(math.radians(lat1)) \
+        * math.cos(math.radians(lat2)) * math.sin(dlon/2) * math.sin(dlon/2)
+    c = 2 * math.atan2(math.sqrt(a), math.sqrt(1-a))
+    d = radius * c
+    return d * 1000 #meters
+
+def _cartesiandistance(origin, destination):
+    lon1, lat1 = origin
+    lon2, lat2 = destination
+    proj = Proj(init="epsg:3785") # spherical mercator, should work anywhere
+    point1 = proj(lon1, lat1)
+    point2 = proj(lon2, lat2)
+    point1_cart = Point(point1)
+    point2_cart = Point(point2)
+    return point1_cart.distance(point2_cart) #meters
+
+def _latitudedistortion(latitude):
+    origin = (0, latitude)
+    destination = (1, latitude)
+    hdist = _haversinedistance(origin, destination)
+    cdist = _cartesiandistance(origin, destination)
+    return cdist/hdist
 
 class s57():
-    def __init__(self, s57_path):
-        
-        self.s57_path = s57_path
-        self.s57_ds = ogr.Open(s57_path, 0) #0 means read only
+    def __init__(self, s57_path = None, s57_ds = None):
+        if s57_path == None and s57_ds != None:
+            self.s57_ds = s57_ds
+        elif s57_path != None and s57_ds == None:
+            self.s57_ds = ogr.Open(s57_path, 0) #0 means read only
+        else:
+            self.s57_ds = None
+            
         if self.s57_ds == None:
-            print "open S57 failed:", self.s57_path
+            print "open S57 failed:", s57_path
         
         elif not self.s57_ds.GetDriver().GetName() == "S57":
-            print "not and S57 file:", self.s57_path
+            print "not an S57 file:", s57_path
         
         self.scale = None
         self.box = None
@@ -28,10 +84,9 @@ class s57():
         self.layerList = []
         
         if self.s57_ds != None:    
-            layer = self.s57_ds.GetLayerByName("DSID") #BEACON SPECIAL PURPOSE
-            fieldList = self._getLayerFields(layer)
-            self.fieldValues = self._getLayerFieldValues(layer.GetNextFeature(), fieldList)
-            
+            layer = self.s57_ds.GetLayerByName("DSID")
+            fieldList = getLayerFields(layer)
+            self.fieldValues = getLayerFieldValues(layer.GetNextFeature(), fieldList)
             for layer in self.s57_ds:
                 self.layerList.append(layer.GetName())
         else:
@@ -72,7 +127,14 @@ class s57():
     def getLayerFields(self, layerName):
         if self.layerList.count(layerName) > 0:
             layer = self.s57_ds.GetLayerByName(layerName)
-            return self._getLayerFields(layer)
+            return getLayerFields(layer)
+        
+    def getLayerFieldValues(self, layerName, num=0):
+        if self.layerList.count(layerName) > 0:
+            layer = self.s57_ds.GetLayerByName(layerName)
+            feature = layer.GetNextFeature()
+            if feature is not None:
+                return getLayerFieldValues(feature, self.getLayerFields(layerName))
         
     def getLayerList(self):
         return self.layerList
@@ -123,74 +185,26 @@ class s57():
             self.box = (minLatitude, minLongitude, maxLatitude, maxLongitude)
         return self.box
     
+    def getZoom(self):
+        if self.getScale() != None and self.getCenterPoint() != None:
+            return getZoom(self.scale, self.center[0])
+     
     def getScale(self):
         if self.scale is None:
             if self.fieldValues.has_key("DSPM_CSCL"):
                 self.scale = int(self.fieldValues["DSPM_CSCL"])
         return self.scale
-    
-    def getZoom(self):
-        if self.getScale() > -1 and self.getCenterPoint() is not None:
-            tweakPercent = .70
-            latitude = self.center[0]
-            truescale = self.scale * self._latitudedistortion(latitude) * tweakPercent
-            z = 30;
-            while truescale > 1:
-                truescale = truescale / 2;
-                z -= 1;
-            return z
-                
-    def _getLayerFields(self, layer):
-        featureDefinition = layer.GetLayerDefn()
-        fieldNames = []
-        fieldCount = featureDefinition.GetFieldCount()
-        for j in range(fieldCount):
-            fieldNames.append(featureDefinition.GetFieldDefn(j).GetNameRef())
-        return fieldNames
 
-    def _getLayerFieldValues(self, ogrfeature, fieldList):
-        fieldValues = {}
-        for i in range(len(fieldList)):
-            fieldValues[fieldList[i]] = ogrfeature.GetFieldAsString(i)
-        return fieldValues
-
-    def _haversinedistance(self, origin, destination):
-        lon1, lat1 = origin
-        lon2, lat2 = destination
-        radius = 6371 #kilometers
-        dlat = math.radians(lat2-lat1)
-        dlon = math.radians(lon2-lon1)
-        a = math.sin(dlat/2) * math.sin(dlat/2) + math.cos(math.radians(lat1)) \
-            * math.cos(math.radians(lat2)) * math.sin(dlon/2) * math.sin(dlon/2)
-        c = 2 * math.atan2(math.sqrt(a), math.sqrt(1-a))
-        d = radius * c
-        return d * 1000 #meters
-    
-    def _cartesiandistance(self, origin, destination):
-        lon1, lat1 = origin
-        lon2, lat2 = destination
-        proj = Proj(init="epsg:3785") # spherical mercator, should work anywhere
-        point1 = proj(lon1, lat1)
-        point2 = proj(lon2, lat2)
-        point1_cart = Point(point1)
-        point2_cart = Point(point2)
-        return point1_cart.distance(point2_cart) #meters
-    
-    def _latitudedistortion(self, latitude):
-        origin = (0, latitude)
-        destination = (1, latitude)
-        hdist = self._haversinedistance(origin, destination)
-        cdist = self._cartesiandistance(origin, destination)
-        return cdist/hdist
 
 if __name__== "__main__":
     #mpath = "/home/will/zxyCharts/ENC_ROOT/REGION_15/ENC_ROOT/CATALOG.031"
-    mpath = "/home/will/zxyCharts/ENC_ROOT/REGION_15/ENC_ROOT/US1WC01M/US1WC01M.000"
+    mpath = "/media/WAKDrive/mapsforge-mapswork/REGION_15/US1WC01M/US1WC01M.000"
     myS57 = s57(mpath)
-    print myS57.getScale()
-    print myS57.getBoundingBox()
-    print myS57.getCenterPoint()
-    print myS57.getZoom()
-    print myS57.getLayerList()
-    print myS57.getLayerFields("LIGHTS")
-    print myS57.getLayerGeometryType("LIGHTS")
+#    print myS57.getScale()
+#    print myS57.getBoundingBox()
+#    print myS57.getCenterPoint()
+#    print myS57.getZoom()
+#    print myS57.getLayerList()
+#    print myS57.getLayerFields("BOYSPP")
+    print myS57.getLayerFieldValues("BOYSPP")
+#    print myS57.getLayerGeometryType("LIGHTS")

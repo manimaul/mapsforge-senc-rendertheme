@@ -3,402 +3,1163 @@
 	xsi:schemaLocation="http://mapsforge.org/tag-mapping ../resources/tag-mapping.xsd" default-zoom-appear="16"
 	profile-name="default-profile">
 
-	<!-- ************* POIS *************** -->
-	
-	<!-- HIGHWAY TAGS -->
-	<pois>
-		<osm-tag key="highway" value="bus_stop" zoom-appear="17" />
-		<osm-tag key="highway" value="mini_roundabout" zoom-appear="17" />
-		<osm-tag key="highway" value="traffic_signals" zoom-appear="17" />
-		<osm-tag key="highway" value="turning_circle" zoom-appear="15" />
-	</pois>
-
-	<!-- PUBLIC AMENITIES -->
-	<pois>
-		<osm-tag key="amenity" value="atm" zoom-appear="17" />
-		<osm-tag key="amenity" value="bank" zoom-appear="17" />
-		<osm-tag key="amenity" value="bench" zoom-appear="17" />
-		<osm-tag key="amenity" value="bicycle_rental" zoom-appear="17" />
-		<osm-tag key="amenity" value="bus_station" zoom-appear="15" />
-		<osm-tag key="amenity" value="cafe" zoom-appear="17" />
-		<osm-tag key="amenity" value="cinema" zoom-appear="17" />
-		<osm-tag key="amenity" value="drinking_water" zoom-appear="17" />
-		<osm-tag key="amenity" value="fast_food" zoom-appear="17" />
-		<osm-tag key="amenity" value="fountain" zoom-appear="17" />
-		<osm-tag key="amenity" value="fire_station" zoom-appear="17" />
-		<osm-tag key="amenity" value="fuel" zoom-appear="16" />
-		<osm-tag key="amenity" value="hospital" zoom-appear="15" />
-		<osm-tag key="amenity" value="kindergarten" zoom-appear="17" />
-		<osm-tag key="amenity" value="library" zoom-appear="17" />
-		<osm-tag key="amenity" value="parking" zoom-appear="17" />
-		<osm-tag key="amenity" value="pharmacy" zoom-appear="17" />
-		<osm-tag key="amenity" value="place_of_worship" zoom-appear="17" />
-		<osm-tag key="amenity" value="police" zoom-appear="16" />
-		<osm-tag key="amenity" value="post_box" zoom-appear="17" />
-		<osm-tag key="amenity" value="post_office" zoom-appear="17" />
-		<osm-tag key="amenity" value="pub" zoom-appear="17" />
-		<osm-tag key="amenity" value="recycling" zoom-appear="17" />
-		<osm-tag key="amenity" value="restaurant" zoom-appear="17" />
-		<osm-tag key="amenity" value="school" zoom-appear="17" />
-		<osm-tag key="amenity" value="shelter" zoom-appear="16" />
-		<osm-tag key="amenity" value="telephone" zoom-appear="17" />
-		<osm-tag key="amenity" value="theatre" zoom-appear="17" />
-		<osm-tag key="amenity" value="toilets" zoom-appear="17" />
-		<osm-tag key="amenity" value="university" zoom-appear="17" />
-
-		<osm-tag key="emergency" value="phone" zoom-appear="16" />
-
-		<osm-tag key="leisure" value="playground" zoom-appear="17" />
-		<osm-tag key="leisure" value="slipway" zoom-appear="17" />
-
-		<osm-tag key="religion" value="christian" renderable="false" />
-		<osm-tag key="religion" value="jewish" renderable="false" />
-		<osm-tag key="religion" value="muslim" renderable="false" />
-
-		<osm-tag key="shop" value="bakery" zoom-appear="17" />
-		<osm-tag key="shop" value="bicycle" zoom-appear="17" />
-		<osm-tag key="shop" value="hairdresser" zoom-appear="17" />
-		<osm-tag key="shop" value="organic" zoom-appear="17" />
-		<osm-tag key="shop" value="supermarket" zoom-appear="17" />
-	</pois>
-
-	<!-- PUBLIC TRANSPORT TAGS -->
-	<pois>
-		<osm-tag key="railway" value="halt" zoom-appear="16" />
-		<osm-tag key="railway" value="level_crossing" zoom-appear="16" />
-		<osm-tag key="railway" value="station" zoom-appear="14" />
-		<osm-tag key="railway" value="tram_stop" zoom-appear="16" />
-
-		<osm-tag key="station" value="light_rail" zoom-appear="15">
-			<zoom-override key="railway" value="station" />
-		</osm-tag>
-		<osm-tag key="station" value="subway" zoom-appear="15">
-			<zoom-override key="railway" value="station" />
-		</osm-tag>
-	</pois>
-
-	<!-- TOURISM TAGS -->
-	<pois>
-		<osm-tag key="tourism" value="alpine_hut" zoom-appear="15" />
-		<osm-tag key="tourism" value="attraction" zoom-appear="17" />
-		<osm-tag key="tourism" value="hostel" zoom-appear="17" />
-		<osm-tag key="tourism" value="hotel" zoom-appear="17" />
-		<osm-tag key="tourism" value="information" zoom-appear="17" />
-		<osm-tag key="tourism" value="museum" zoom-appear="17" />
-		<osm-tag key="tourism" value="viewpoint" zoom-appear="15" />
-
-		<osm-tag key="historic" value="memorial" zoom-appear="17" />
-		<osm-tag key="historic" value="monument" zoom-appear="17" />
-	</pois>
-
-	<!-- PLACES TAGS -->
-	<pois>
-		<osm-tag key="place" value="city" zoom-appear="6" />
-		<osm-tag key="place" value="country" zoom-appear="3" />
-		<osm-tag key="place" value="hamlet" zoom-appear="13" />
-		<osm-tag key="place" value="island" zoom-appear="12" />
-		<osm-tag key="place" value="suburb" zoom-appear="12" />
-		<osm-tag key="place" value="town" zoom-appear="9" />
-		<osm-tag key="place" value="village" zoom-appear="12" />
-	</pois>
-
-	<!-- NATURAL TAGS -->
-	<pois>
-		<osm-tag key="natural" value="cave_entrance" zoom-appear="14" />
-		<osm-tag key="natural" value="peak" zoom-appear="12" />
-		<osm-tag key="natural" value="spring" zoom-appear="17" />
-		<osm-tag key="natural" value="tree" zoom-appear="16" />
-		<osm-tag key="natural" value="volcano" zoom-appear="12" />
-	</pois>
-
-	<!-- OTHER POIS -->
-	<pois>
-		<osm-tag key="barrier" value="bollard" zoom-appear="17" />
-		<osm-tag key="barrier" value="cycle_barrier" zoom-appear="17" />
-
-		<osm-tag key="man_made" value="lighthouse" zoom-appear="17" />
-		<osm-tag key="man_made" value="surveillance" zoom-appear="17" />
-		<osm-tag key="man_made" value="tower" zoom-appear="17" />
-		<osm-tag key="man_made" value="windmill" zoom-appear="17" />
-
-		<osm-tag key="power" value="generator" zoom-appear="17" />
-		<osm-tag key="power" value="tower" zoom-appear="17" />
-	</pois>
-
-	<!-- AIRPORT TAGS -->
-	<pois>
-		<osm-tag key="aeroway" value="aerodrome" zoom-appear="13" />
-		<osm-tag key="aeroway" value="airport" zoom-appear="13" />
-		<osm-tag key="aeroway" value="gate" zoom-appear="17" />
-		<osm-tag key="aeroway" value="helipad" zoom-appear="17" />
-	</pois>
-
-
-
-	<!-- ************* WAYS *************** -->
-	
-	<!-- HIGHWAY TAGS -->
 	<ways>
-		<osm-tag key="highway" value="bridleway" zoom-appear="13" />
-		<osm-tag key="highway" value="bus_guideway" zoom-appear="13" />
-		<osm-tag key="highway" value="byway" zoom-appear="13" />
-		<osm-tag key="highway" value="construction" zoom-appear="13" />
-		<osm-tag key="highway" value="cycleway" zoom-appear="13" />
-		<osm-tag key="highway" value="footway" zoom-appear="13" />
-		<osm-tag key="highway" value="living_street" zoom-appear="13" />
-		<osm-tag key="highway" value="motorway" zoom-appear="6" />
-		<osm-tag key="highway" value="motorway_link" zoom-appear="6" />
-		<osm-tag key="highway" value="path" zoom-appear="14" />
-		<osm-tag key="highway" value="pedestrian" zoom-appear="14" />
-		<osm-tag key="highway" value="primary" zoom-appear="8" />
-		<osm-tag key="highway" value="primary_link" zoom-appear="8" />
-		<osm-tag key="highway" value="raceway" zoom-appear="12" />
-		<osm-tag key="highway" value="residential" zoom-appear="12" />
-		<osm-tag key="highway" value="road" zoom-appear="12" />
-		<osm-tag key="highway" value="secondary" zoom-appear="12" />
-		<osm-tag key="highway" value="secondary_link" zoom-appear="12" />
-		<osm-tag key="highway" value="service" zoom-appear="14" />
-		<osm-tag key="highway" value="services" zoom-appear="14" />
-		<osm-tag key="highway" value="steps" zoom-appear="16" />
-		<osm-tag key="highway" value="tertiary" zoom-appear="12" />
-		<osm-tag key="highway" value="track" zoom-appear="13" />
-		<osm-tag key="highway" value="trunk" zoom-appear="6" />
-		<osm-tag key="highway" value="trunk_link" zoom-appear="6" />
-		<osm-tag key="highway" value="unclassified" zoom-appear="13" />
-	</ways>
-
-	<!-- NATURAL / WATERWAY TAGS -->
-	<ways>
-		<osm-tag key="lock" value="yes" zoom-appear="14" />
-
-		<osm-tag key="natural" value="beach" zoom-appear="10" />
 		<osm-tag key="natural" value="coastline" zoom-appear="0" />
-		<osm-tag key="natural" value="glacier" zoom-appear="8" enabled="false"/>
-		<osm-tag key="natural" value="heath" zoom-appear="10" />
-		<osm-tag key="natural" value="land" zoom-appear="8" />
-		<osm-tag key="natural" value="marsh" zoom-appear="12" />
-		<osm-tag key="natural" value="scrub" zoom-appear="10" />
-		<osm-tag key="natural" value="water" zoom-appear="8" />
-		<osm-tag key="natural" value="wetland" zoom-appear="12" />
-		<osm-tag key="natural" value="wood" zoom-appear="8" />
-
-		<osm-tag key="waterway" value="canal" zoom-appear="10" />
-		<osm-tag key="waterway" value="dam" zoom-appear="10" />
-		<osm-tag key="waterway" value="drain" zoom-appear="13" />
-		<osm-tag key="waterway" value="river" zoom-appear="8" />
-		<osm-tag key="waterway" value="riverbank" zoom-appear="8" />
-		<osm-tag key="waterway" value="stream" zoom-appear="13" />
-	</ways>
-
-	<!-- LANDUSE TAGS -->
-	<ways>
-		<osm-tag key="landuse" value="allotments" zoom-appear="10" />
-		<osm-tag key="landuse" value="basin" zoom-appear="12" />
-		<osm-tag key="landuse" value="brownfield" zoom-appear="10" />
-		<osm-tag key="landuse" value="cemetery" zoom-appear="10" />
-		<osm-tag key="landuse" value="commercial" zoom-appear="10" />
-		<osm-tag key="landuse" value="construction" zoom-appear="12" />
-		<osm-tag key="landuse" value="farm" zoom-appear="12" />
-		<osm-tag key="landuse" value="farmland" zoom-appear="12" />
-		<osm-tag key="landuse" value="forest" zoom-appear="8" />
-		<osm-tag key="landuse" value="grass" zoom-appear="12" />
-		<osm-tag key="landuse" value="greenfield" zoom-appear="12" />
-		<osm-tag key="landuse" value="industrial" zoom-appear="10" />
-		<osm-tag key="landuse" value="landfill" zoom-appear="12" />
-		<osm-tag key="landuse" value="meadow" zoom-appear="12" />
-		<osm-tag key="landuse" value="military" zoom-appear="10" />
-		<osm-tag key="landuse" value="quarry" zoom-appear="10" />
-		<osm-tag key="landuse" value="railway" zoom-appear="10" />
-		<osm-tag key="landuse" value="recreation_ground" zoom-appear="10" />
-		<osm-tag key="landuse" value="reservoir" zoom-appear="10" />
-		<osm-tag key="landuse" value="residential" zoom-appear="10" />
-		<osm-tag key="landuse" value="retail" zoom-appear="10" />
-		<osm-tag key="landuse" value="village_green" zoom-appear="10" />
-		<osm-tag key="landuse" value="vineyard" zoom-appear="12" />
-		<osm-tag key="landuse" value="wood" zoom-appear="8" />
-	</ways>
-
-	<!-- LEISURE/SPORT TAGS -->
-	<ways>
-		<osm-tag key="leisure" value="common" zoom-appear="12" />
-		<osm-tag key="leisure" value="dog_park" zoom-appear="12" />
-		<osm-tag key="leisure" value="garden" zoom-appear="12" />
-		<osm-tag key="leisure" value="golf_course" zoom-appear="12" />
-		<osm-tag key="leisure" value="nature_reserve" zoom-appear="12" />
-		<osm-tag key="leisure" value="park" zoom-appear="10" />
-		<osm-tag key="leisure" value="pitch" zoom-appear="12" />
-		<osm-tag key="leisure" value="playground" zoom-appear="12" />
-		<osm-tag key="leisure" value="sports_centre" zoom-appear="12" />
-		<osm-tag key="leisure" value="stadium" zoom-appear="10" />
-		<osm-tag key="leisure" value="swimming_pool" zoom-appear="14" />
-		<osm-tag key="leisure" value="track" zoom-appear="12" />
-		<osm-tag key="leisure" value="water_park" zoom-appear="12" />
-
-		<osm-tag key="sport" value="golf" zoom-appear="12" />
-		<osm-tag key="sport" value="shooting" zoom-appear="12" />
-		<osm-tag key="sport" value="soccer" zoom-appear="12" />
-		<osm-tag key="sport" value="swimming" zoom-appear="12" />
-		<osm-tag key="sport" value="tennis" zoom-appear="12" />
-
-	</ways>
-
-	<!-- PUBLIC AMENITIES -->
-	<ways>
-		<osm-tag key="amenity" value="college" zoom-appear="13" />
-		<osm-tag key="amenity" value="embassy" zoom-appear="13" />
-		<osm-tag key="amenity" value="fountain" zoom-appear="16" />
-		<osm-tag key="amenity" value="grave_yard" zoom-appear="14" />
-		<osm-tag key="amenity" value="hospital" zoom-appear="13" />
-		<osm-tag key="amenity" value="parking" zoom-appear="14" />
-		<osm-tag key="amenity" value="school" zoom-appear="14" />
-		<osm-tag key="amenity" value="swimming_pool" zoom-appear="14" />
-		<osm-tag key="amenity" value="theatre" zoom-appear="14" />
-		<osm-tag key="amenity" value="toilets" zoom-appear="17" />
-		<osm-tag key="amenity" value="university" zoom-appear="13" />
-
-		<osm-tag key="tourism" value="attraction" zoom-appear="14" />
-		<osm-tag key="tourism" value="hostel" zoom-appear="15" />
-		<osm-tag key="tourism" value="zoo" zoom-appear="12" />
-	</ways>
-
-	<!-- PUBLIC TRANSPORT -->
-	<ways>
-		<osm-tag key="route" value="ferry" zoom-appear="12" />
-		<osm-tag key="railway" value="light_rail" zoom-appear="12" />
-		<osm-tag key="railway" value="narrow_gauge" zoom-appear="14" />
-		<osm-tag key="railway" value="platform" zoom-appear="14" />
-		<osm-tag key="railway" value="rail" zoom-appear="10" />
-		<osm-tag key="railway" value="station" zoom-appear="14" />
-		<osm-tag key="railway" value="subway" zoom-appear="15" />
-		<osm-tag key="railway" value="tram" zoom-appear="15" />
-	</ways>
-
-	<!-- BUILDINGS -->
-	<ways>
-		<osm-tag key="building" value="apartments" zoom-appear="15" />
-		<osm-tag key="building" value="castle" zoom-appear="15" />
-		<osm-tag key="building" value="embassy" zoom-appear="15" />
-		<osm-tag key="building" value="government" zoom-appear="13" />
-		<osm-tag key="building" value="gym" zoom-appear="15" />
-		<osm-tag key="building" value="hangar" zoom-appear="15" />
-		<osm-tag key="building" value="hotel" zoom-appear="15" />
-		<osm-tag key="building" value="library" zoom-appear="15" />
-		<osm-tag key="building" value="museum" zoom-appear="15" />
-		<osm-tag key="building" value="office" zoom-appear="15" />
-		<osm-tag key="building" value="public" zoom-appear="15" />
-		<osm-tag key="building" value="roof" zoom-appear="15" />
-		<osm-tag key="building" value="ruins" zoom-appear="15" />
-		<osm-tag key="building" value="service" zoom-appear="15" />
-		<osm-tag key="building" value="sports" zoom-appear="15" />
-		<osm-tag key="building" value="train_station" zoom-appear="14" />
-		<osm-tag key="building" value="university" zoom-appear="13" />
-		<osm-tag key="building" value="wall" zoom-appear="15" />
-		<osm-tag key="building" value="yes" zoom-appear="15" />
-	</ways>
-
-	<!-- ADMINISTRATIVE BOUNDARIES -->
-	<ways>
-
-		<osm-tag key="admin_level" value="1" force-polygon-line="true" zoom-appear="4">
-			<zoom-override key="boundary" value="administrative" />
-		</osm-tag>
-		<osm-tag key="admin_level" value="2" force-polygon-line="true" zoom-appear="4">
-			<zoom-override key="boundary" value="administrative" />
-		</osm-tag>
-		<osm-tag key="admin_level" value="3" force-polygon-line="true" zoom-appear="4">
-			<zoom-override key="boundary" value="administrative" />
-		</osm-tag>
-		<osm-tag key="admin_level" value="4" force-polygon-line="true" zoom-appear="6">
-			<zoom-override key="boundary" value="administrative" />
-		</osm-tag>
-		<!-- <osm-tag key="admin_level" value="6" force-polygon-line="true" zoom-appear="15" /> <osm-tag key="admin_level" value="8" 
-			force-polygon-line="true" zoom-appear="16" /> <osm-tag key="admin_level" value="9" force-polygon-line="true" zoom-appear="16" 
-			/> <osm-tag key="admin_level" value="10" force-polygon-line="true" zoom-appear="16" /> -->
-	</ways>
-
-	<!-- AIRPORT TAGS -->
-	<ways>
-		<osm-tag key="aeroway" value="aerodrome" zoom-appear="13" />
-		<osm-tag key="aeroway" value="apron" zoom-appear="13" />
-		<osm-tag key="aeroway" value="helipad" zoom-appear="17" />
-		<osm-tag key="aeroway" value="runway" zoom-appear="10" />
-		<osm-tag key="aeroway" value="taxiway" zoom-appear="10" />
-		<osm-tag key="aeroway" value="terminal" zoom-appear="15" />
-	</ways>
-
-	<!-- SKI SLOPES TAGS -->
-	<ways>
-		<osm-tag key="piste:type" value="downhill" zoom-appear="13" />
-		<osm-tag key="piste:type" value="nordic" zoom-appear="13" />
-		<osm-tag key="piste:type" value="sled" zoom-appear="13" />
-		<osm-tag key="aerialway" value="cable_car" zoom-appear="13" />
-		<osm-tag key="aerialway" value="chair_lift" zoom-appear="13" />
-		<osm-tag key="aerialway" value="drag_lift" zoom-appear="13" />
-		<osm-tag key="aerialway" value="gondola" zoom-appear="13" />
-		<osm-tag key="aerialway" value="magic_carpet" zoom-appear="13" />
-		<osm-tag key="aerialway" value="mixed_lift" zoom-appear="13" />
-		<osm-tag key="aerialway" value="rope_tow" zoom-appear="13" />
-	</ways>
-
-	<!-- OTHER TAGS -->
-	<ways>
-		<osm-tag key="barrier" value="city_wall" zoom-appear="14" />
-		<osm-tag key="barrier" value="fence" zoom-appear="14" />
-		<osm-tag key="barrier" value="retaining_wall" zoom-appear="16" />
-		<osm-tag key="barrier" value="wall" zoom-appear="16" />
-
-		<osm-tag key="boundary" value="administrative" force-polygon-line="true" zoom-appear="0" enabled="false" />
-		<osm-tag key="boundary" value="national_park" force-polygon-line="true" zoom-appear="12" />
-
-		<osm-tag key="historic" value="ruins" zoom-appear="17" />
-		<osm-tag key="historic" value="castle" zoom-appear="15" />
-
-		<osm-tag key="man_made" value="pier" zoom-appear="15" />
-
-		<osm-tag key="military" value="airfield" zoom-appear="12" />
-		<osm-tag key="military" value="barracks" zoom-appear="12" />
-		<osm-tag key="military" value="naval_base" zoom-appear="12" />
-
-		<osm-tag key="place" value="locality" zoom-appear="17" />
-
-		<osm-tag key="area" value="yes" zoom-appear="12" />
-	</ways>
-
-	<!-- NOT TO RENDER -->
-	<ways>
-		<osm-tag key="access" value="destination" renderable="false" />
-		<osm-tag key="access" value="private" renderable="false" />
-
-		<osm-tag key="bridge" value="yes" renderable="false" />
-
-		<osm-tag key="oneway" value="yes" equivalent-values="1,true" renderable="false" />
-		<osm-tag key="oneway" value="-1" renderable="false" />
-		<osm-tag key="oneway" value="no" equivalent-values="0,false" renderable="false" />
-
-		<osm-tag key="piste:difficulty" value="novice" renderable="false" />
-		<osm-tag key="piste:difficulty" value="easy" renderable="false" />
-		<osm-tag key="piste:difficulty" value="intermediate" renderable="false" />
-		<osm-tag key="piste:difficulty" value="advanced" renderable="false" />
-		<osm-tag key="piste:difficulty" value="expert" renderable="false" />
-		<osm-tag key="piste:difficulty" value="freeride" renderable="false" />
-
-		<osm-tag key="tracktype" value="grade1" renderable="false" />
-		<osm-tag key="tracktype" value="grade2" renderable="false" />
-		<osm-tag key="tracktype" value="grade3" renderable="false" />
-		<osm-tag key="tracktype" value="grade4" renderable="false" />
-		<osm-tag key="tracktype" value="grade5" renderable="false" />
-
-		<osm-tag key="tunnel" value="yes" renderable="false" />
-		<osm-tag key="tunnel" value="no" renderable="false" />
-
-		<osm-tag key="wood" value="coniferous" renderable="false" />
-		<osm-tag key="wood" value="deciduous" renderable="false" />
-		<osm-tag key="wood" value="mixed" renderable="false" />
+	    <osm-tag key="SEAARE" value="CHGRD" force-polygon-line="true" zoom-appear="0" />
+	    <osm-tag key="SEAARE" value="CHGRD" force-polygon-line="true" zoom-appear="0" />
+	    <osm-tag key="CSTLN" value="CSTLN" force-polygon-line="true" zoom-appear="0" />
+	    <osm-tag key="LNDARE" value="LANDA" zoom-appear="0" />
 	</ways>
 	
-	<!-- S57 SENC tags -->
+	<pois>
+        <osm-tag key="ACHARE" value="ACHARE02" zoom-appear="6" />
+        <osm-tag key="ACHARE" value="ACHARE51" zoom-appear="6" />
+        <osm-tag key="ACHBRT" value="ACHBRT07" zoom-appear="6" />
+        <osm-tag key="BERTHS" value="BRTHNO01" zoom-appear="6" />
+        <osm-tag key="BRIDGE" value="BRIDGE01" zoom-appear="6" />
+        <osm-tag key="CBLARE" value="CBLARE51" zoom-appear="6" />
+        <osm-tag key="CHKPNT" value="POSGEN04" zoom-appear="6" />
+        <osm-tag key="CONVYR" value="RACNSP01" zoom-appear="6" />
+        <osm-tag key="CTNARE" value="CTNARE51" zoom-appear="6" />
+        <osm-tag key="CTSARE" value="INFARE51" zoom-appear="6" />
+        <osm-tag key="DMPGRD" value="INFARE51" zoom-appear="6" />
+        <osm-tag key="DWRTPT" value="TSSLPT51" zoom-appear="6" />
+        <osm-tag key="DWRTPT" value="DWRUTE51" zoom-appear="6" />
+        <osm-tag key="DWRTPT" value="TWRTPT52" zoom-appear="6" />
+        <osm-tag key="FAIRWY" value="FAIRWY51" zoom-appear="6" />
+        <osm-tag key="FAIRWY" value="FAIRWY52" zoom-appear="6" />
+        <osm-tag key="FERYRT" value="FRYARE52" zoom-appear="6" />
+        <osm-tag key="FERYRT" value="FRYARE51" zoom-appear="6" />
+        <osm-tag key="FSHGRD" value="FSHGRD01" zoom-appear="6" />
+        <osm-tag key="HRBFAC" value="ROLROL01" zoom-appear="6" />
+        <osm-tag key="HRBFAC" value="HRBFAC09" zoom-appear="6" />
+        <osm-tag key="HRBFAC" value="SMCFAC02" zoom-appear="6" />
+        <osm-tag key="HRBFAC" value="CHINFO07" zoom-appear="6" />
+        <osm-tag key="ICNARE" value="INFARE51" zoom-appear="6" />
+        <osm-tag key="ISTZNE" value="ITZARE51" zoom-appear="6" />
+        <osm-tag key="LOCMAG" value="LOCMAG51" zoom-appear="6" />
+        <osm-tag key="MAGVAR" value="MAGVAR51" zoom-appear="6" />
+        <osm-tag key="MIPARE" value="CTYARE51" zoom-appear="6" />
+        <osm-tag key="M_NSYS" value="DIRBOYA1" zoom-appear="6" />
+        <osm-tag key="M_NSYS" value="DIRBOYB1" zoom-appear="6" />
+        <osm-tag key="M_NSYS" value="DIRBOY01" zoom-appear="6" />
+        <osm-tag key="NEWOBJ" value="NEWOBJ01" zoom-appear="6" />
+        <osm-tag key="OBSTRN" value="FOULGND1" zoom-appear="6" />
+        <osm-tag key="OBSTRN" value="FLTHAZ02" zoom-appear="6" />
+        <osm-tag key="OBSTRN" value="ACHARE02" zoom-appear="6" />
+        <osm-tag key="OSPARE" value="CTYARE51" zoom-appear="6" />
+        <osm-tag key="PILBOP" value="PILBOP02" zoom-appear="6" />
+        <osm-tag key="PIPARE" value="INFARE51" zoom-appear="6" />
+        <osm-tag key="PIPARE" value="INFARE51" zoom-appear="6" />
+        <osm-tag key="PRCARE" value="PRCARE51" zoom-appear="6" />
+        <osm-tag key="PRDARE" value="RFNERY11" zoom-appear="6" />
+        <osm-tag key="PRDARE" value="TNKFRM11" zoom-appear="6" />
+        <osm-tag key="PRDARE" value="WNDFRM61" zoom-appear="6" />
+        <osm-tag key="PRDARE" value="QUARRY01" zoom-appear="6" />
+        <osm-tag key="PRDARE" value="RFNERY01" zoom-appear="6" />
+        <osm-tag key="PRDARE" value="TMBYRD01" zoom-appear="6" />
+        <osm-tag key="PRDARE" value="TNKFRM01" zoom-appear="6" />
+        <osm-tag key="PRDARE" value="WNDFRM51" zoom-appear="6" />
+        <osm-tag key="RCTLPT" value="RCTLPT52" zoom-appear="6" />
+        <osm-tag key="RCTLPT" value="RTLDEF51" zoom-appear="6" />
+        <osm-tag key="RECTRC" value="RECTRC58" zoom-appear="6" />
+        <osm-tag key="RECTRC" value="RECTRC56" zoom-appear="6" />
+        <osm-tag key="RECTRC" value="RECTRC57" zoom-appear="6" />
+        <osm-tag key="RECTRC" value="RECTRC55" zoom-appear="6" />
+        <osm-tag key="RECTRC" value="RECDEF51" zoom-appear="6" />
+        <osm-tag key="RESARE" value="ESSARE01" zoom-appear="6" />
+        <osm-tag key="RESARE" value="PSSARE01" zoom-appear="6" />
+        <osm-tag key="SPLARE" value="CTYARE51" zoom-appear="6" />
+        <osm-tag key="SUBTLN" value="CTYARE51" zoom-appear="6" />
+        <osm-tag key="SWPARE" value="SWPARE51" zoom-appear="6" />
+        <osm-tag key="TSSLPT" value="TSSLPT51" zoom-appear="6" />
+        <osm-tag key="TSSLPT" value="CTNARE51" zoom-appear="6" />
+        <osm-tag key="TSSRON" value="TSSRON51" zoom-appear="6" />
+        <osm-tag key="TS_FEB" value="FLDSTR01" zoom-appear="6" />
+        <osm-tag key="TS_FEB" value="EBBSTR01" zoom-appear="6" />
+        <osm-tag key="TS_FEB" value="CURENT01" zoom-appear="6" />
+        <osm-tag key="TS_FEB" value="CURDEF01" zoom-appear="6" />
+        <osm-tag key="TS_PAD" value="TIDSTR01" zoom-appear="6" />
+        <osm-tag key="TS_PNH" value="TIDSTR01" zoom-appear="6" />
+        <osm-tag key="TS_PRH" value="TIDSTR01" zoom-appear="6" />
+        <osm-tag key="TS_TIS" value="TIDSTR01" zoom-appear="6" />
+        <osm-tag key="TWRTPT" value="TWRTPT53" zoom-appear="6" />
+        <osm-tag key="TWRTPT" value="TWRTPT52" zoom-appear="6" />
+        <osm-tag key="TWRTPT" value="TWRDEF51" zoom-appear="6" />
+        <osm-tag key="T_HMON" value="TIDEHT01" zoom-appear="6" />
+        <osm-tag key="T_NHMN" value="TIDEHT01" zoom-appear="6" />
+        <osm-tag key="T_TIMS" value="TIDEHT01" zoom-appear="6" />
+        <osm-tag key="WATTUR" value="WATTUR02" zoom-appear="6" />
+        <osm-tag key="WEDKLP" value="WEDKLP03" zoom-appear="6" />
+        <osm-tag key="achare" value="ACHARE02" zoom-appear="6" />
+        <osm-tag key="achbrt" value="ACHBRT07" zoom-appear="6" />
+        <osm-tag key="berths" value="BRTHNO01" zoom-appear="6" />
+        <osm-tag key="bunsta" value="BUNSTA01" zoom-appear="6" />
+        <osm-tag key="bunsta" value="BUNSTA02" zoom-appear="6" />
+        <osm-tag key="bunsta" value="BUNSTA03" zoom-appear="6" />
+        <osm-tag key="bunsta" value="CHINFO07" zoom-appear="6" />
+        <osm-tag key="feryrt" value="FRYARE52" zoom-appear="6" />
+        <osm-tag key="feryrt" value="FRYARE51" zoom-appear="6" />
+        <osm-tag key="hrbare" value="SMCFAC02" zoom-appear="6" />
+        <osm-tag key="hrbfac" value="SMCFAC02" zoom-appear="6" />
+        <osm-tag key="trnbsn" value="TRNBSN01" zoom-appear="6" />
+        <osm-tag key="vehtrf" value="VEHTRF01" zoom-appear="6" />
+        <osm-tag key="AREAS" value="CHCRDEL1" zoom-appear="6" />
+        <osm-tag key="AREAS" value="CHCRID01" zoom-appear="6" />
+        <osm-tag key="######" value="QUESMRK1" zoom-appear="6" />
+        <osm-tag key="ACHARE" value="ACHARE02" zoom-appear="6" />
+        <osm-tag key="ACHBRT" value="ACHBRT07" zoom-appear="6" />
+        <osm-tag key="ACHPNT" value="ACHPNT01" zoom-appear="6" />
+        <osm-tag key="AIRARE" value="AIRARE02" zoom-appear="6" />
+        <osm-tag key="BCNCAR" value="BCNTOW70" zoom-appear="6" />
+        <osm-tag key="BCNCAR" value="BCNTOW71" zoom-appear="6" />
+        <osm-tag key="BCNCAR" value="BCNTOW68" zoom-appear="6" />
+        <osm-tag key="BCNCAR" value="BCNTOW69" zoom-appear="6" />
+        <osm-tag key="BCNCAR" value="BCNGEN70" zoom-appear="6" />
+        <osm-tag key="BCNCAR" value="BCNGEN71" zoom-appear="6" />
+        <osm-tag key="BCNCAR" value="BCNGEN68" zoom-appear="6" />
+        <osm-tag key="BCNCAR" value="BCNGEN69" zoom-appear="6" />
+        <osm-tag key="BCNCAR" value="BCNSTK02" zoom-appear="6" />
+        <osm-tag key="BCNCAR" value="BCNTOW01" zoom-appear="6" />
+        <osm-tag key="BCNCAR" value="BCNLTC01" zoom-appear="6" />
+        <osm-tag key="BCNCAR" value="BCNGEN01" zoom-appear="6" />
+        <osm-tag key="BCNCAR" value="BCNGEN03" zoom-appear="6" />
+        <osm-tag key="BCNISD" value="BCNTOW76" zoom-appear="6" />
+        <osm-tag key="BCNISD" value="BCNGEN76" zoom-appear="6" />
+        <osm-tag key="BCNISD" value="BCNSTK02" zoom-appear="6" />
+        <osm-tag key="BCNISD" value="BCNTOW01" zoom-appear="6" />
+        <osm-tag key="BCNISD" value="BCNLTC01" zoom-appear="6" />
+        <osm-tag key="BCNISD" value="BCNGEN01" zoom-appear="6" />
+        <osm-tag key="BCNISD" value="BCNGEN03" zoom-appear="6" />
+        <osm-tag key="BCNLAT" value="BCNTOW74" zoom-appear="6" />
+        <osm-tag key="BCNLAT" value="BCNTOW66" zoom-appear="6" />
+        <osm-tag key="BCNLAT" value="BCNTOW65" zoom-appear="6" />
+        <osm-tag key="BCNLAT" value="BCNTOW63" zoom-appear="6" />
+        <osm-tag key="BCNLAT" value="BCNTOW64" zoom-appear="6" />
+        <osm-tag key="BCNLAT" value="BCNSTK61" zoom-appear="6" />
+        <osm-tag key="BCNLAT" value="BCNSTK60" zoom-appear="6" />
+        <osm-tag key="BCNLAT" value="BCNSTK77" zoom-appear="6" />
+        <osm-tag key="BCNLAT" value="BCNSTK78" zoom-appear="6" />
+        <osm-tag key="BCNLAT" value="PRICKE03" zoom-appear="6" />
+        <osm-tag key="BCNLAT" value="PRICKE04" zoom-appear="6" />
+        <osm-tag key="BCNLAT" value="BCNTOW60" zoom-appear="6" />
+        <osm-tag key="BCNLAT" value="BCNTOW61" zoom-appear="6" />
+        <osm-tag key="BCNLAT" value="BCNTOW60" zoom-appear="6" />
+        <osm-tag key="BCNLAT" value="BCNTOW61" zoom-appear="6" />
+        <osm-tag key="BCNLAT" value="BCNGEN01" zoom-appear="6" />
+        <osm-tag key="BCNLAT" value="CAIRNS11" zoom-appear="6" />
+        <osm-tag key="BCNLAT" value="BCNTOW05" zoom-appear="6" />
+        <osm-tag key="BCNLAT" value="BCNGEN64" zoom-appear="6" />
+        <osm-tag key="BCNLAT" value="BCNGEN65" zoom-appear="6" />
+        <osm-tag key="BCNLAT" value="BCNSTK02" zoom-appear="6" />
+        <osm-tag key="BCNLAT" value="BCNTOW01" zoom-appear="6" />
+        <osm-tag key="BCNLAT" value="BCNLTC01" zoom-appear="6" />
+        <osm-tag key="BCNLAT" value="BCNGEN01" zoom-appear="6" />
+        <osm-tag key="BCNLAT" value="CAIRNS01" zoom-appear="6" />
+        <osm-tag key="BCNLAT" value="BCNGEN01" zoom-appear="6" />
+        <osm-tag key="BCNLAT" value="BCNGEN60" zoom-appear="6" />
+        <osm-tag key="BCNLAT" value="BCNGEN61" zoom-appear="6" />
+        <osm-tag key="BCNSAW" value="BCNSTK78" zoom-appear="6" />
+        <osm-tag key="BCNSAW" value="BCNSTK02" zoom-appear="6" />
+        <osm-tag key="BCNSAW" value="BCNTOW01" zoom-appear="6" />
+        <osm-tag key="BCNSAW" value="BCNLTC01" zoom-appear="6" />
+        <osm-tag key="BCNSAW" value="BCNGEN01" zoom-appear="6" />
+        <osm-tag key="BCNSAW" value="BCNGEN03" zoom-appear="6" />
+        <osm-tag key="BCNSPP" value="BCNCON81" zoom-appear="6" />
+        <osm-tag key="BCNSPP" value="BCNTOW87" zoom-appear="6" />
+        <osm-tag key="BCNSPP" value="BCNTOW85" zoom-appear="6" />
+        <osm-tag key="BCNSPP" value="BCNSTK61" zoom-appear="6" />
+        <osm-tag key="BCNSPP" value="BCNTOW65" zoom-appear="6" />
+        <osm-tag key="BCNSPP" value="BCNTOW86" zoom-appear="6" />
+        <osm-tag key="BCNSPP" value="BCNTOW88" zoom-appear="6" />
+        <osm-tag key="BCNSPP" value="NOTBRD12" zoom-appear="6" />
+        <osm-tag key="BCNSPP" value="BCNSTK05" zoom-appear="6" />
+        <osm-tag key="BCNSPP" value="BCNSTK60" zoom-appear="6" />
+        <osm-tag key="BCNSPP" value="BCNSTK61" zoom-appear="6" />
+        <osm-tag key="BCNSPP" value="BCNSTK08" zoom-appear="6" />
+        <osm-tag key="BCNSPP" value="BCNTOW05" zoom-appear="6" />
+        <osm-tag key="BCNSPP" value="BCNTOW89" zoom-appear="6" />
+        <osm-tag key="BCNSPP" value="BCNTOW61" zoom-appear="6" />
+        <osm-tag key="BCNSPP" value="BCNTOW62" zoom-appear="6" />
+        <osm-tag key="BCNSPP" value="BCNTOW91" zoom-appear="6" />
+        <osm-tag key="BCNSPP" value="BCNTOW60" zoom-appear="6" />
+        <osm-tag key="BCNSPP" value="BCNTOW90" zoom-appear="6" />
+        <osm-tag key="BCNSPP" value="BCNSTK05" zoom-appear="6" />
+        <osm-tag key="BCNSPP" value="BCNSTK08" zoom-appear="6" />
+        <osm-tag key="BCNSPP" value="CAIRNS11" zoom-appear="6" />
+        <osm-tag key="BCNSPP" value="BCNSTK62" zoom-appear="6" />
+        <osm-tag key="BCNSPP" value="BCNSTK79" zoom-appear="6" />
+        <osm-tag key="BCNSPP" value="BCNSTK80" zoom-appear="6" />
+        <osm-tag key="BCNSPP" value="BCNSTK78" zoom-appear="6" />
+        <osm-tag key="BCNSPP" value="BCNSTK81" zoom-appear="6" />
+        <osm-tag key="BCNSPP" value="NOTBRD11" zoom-appear="6" />
+        <osm-tag key="BCNSPP" value="BCNGEN01" zoom-appear="6" />
+        <osm-tag key="BCNSPP" value="BCNGEN79" zoom-appear="6" />
+        <osm-tag key="BCNSPP" value="BCNSTK02" zoom-appear="6" />
+        <osm-tag key="BCNSPP" value="BCNTOW01" zoom-appear="6" />
+        <osm-tag key="BCNSPP" value="BCNLTC01" zoom-appear="6" />
+        <osm-tag key="BCNSPP" value="CAIRNS01" zoom-appear="6" />
+        <osm-tag key="BCNSPP" value="BCNGEN05" zoom-appear="6" />
+        <osm-tag key="BCNSPP" value="BCNGEN80" zoom-appear="6" />
+        <osm-tag key="BCNSPP" value="BCNGEN60" zoom-appear="6" />
+        <osm-tag key="BCNSPP" value="BCNGEN61" zoom-appear="6" />
+        <osm-tag key="BCNSPP" value="BCNSPR62" zoom-appear="6" />
+        <osm-tag key="BCNSPP" value="BCNGEN01" zoom-appear="6" />
+        <osm-tag key="BOYCAR" value="BOYCON71" zoom-appear="6" />
+        <osm-tag key="BOYCAR" value="BOYCON72" zoom-appear="6" />
+        <osm-tag key="BOYCAR" value="BOYCAN70" zoom-appear="6" />
+        <osm-tag key="BOYCAR" value="BOYCAN71" zoom-appear="6" />
+        <osm-tag key="BOYCAR" value="BOYSPH70" zoom-appear="6" />
+        <osm-tag key="BOYCAR" value="BOYSPH71" zoom-appear="6" />
+        <osm-tag key="BOYCAR" value="BOYPIL70" zoom-appear="6" />
+        <osm-tag key="BOYCAR" value="BOYPIL71" zoom-appear="6" />
+        <osm-tag key="BOYCAR" value="BOYSPR70" zoom-appear="6" />
+        <osm-tag key="BOYCAR" value="BOYSPR71" zoom-appear="6" />
+        <osm-tag key="BOYCAR" value="BOYCON69" zoom-appear="6" />
+        <osm-tag key="BOYCAR" value="BOYCON70" zoom-appear="6" />
+        <osm-tag key="BOYCAR" value="BOYCAN68" zoom-appear="6" />
+        <osm-tag key="BOYCAR" value="BOYCAN69" zoom-appear="6" />
+        <osm-tag key="BOYCAR" value="BOYSPH68" zoom-appear="6" />
+        <osm-tag key="BOYCAR" value="BOYSPH69" zoom-appear="6" />
+        <osm-tag key="BOYCAR" value="BOYPIL68" zoom-appear="6" />
+        <osm-tag key="BOYCAR" value="BOYPIL69" zoom-appear="6" />
+        <osm-tag key="BOYCAR" value="BOYSPR68" zoom-appear="6" />
+        <osm-tag key="BOYCAR" value="BOYSPR69" zoom-appear="6" />
+        <osm-tag key="BOYCAR" value="BOYCON01" zoom-appear="6" />
+        <osm-tag key="BOYCAR" value="BOYCAN01" zoom-appear="6" />
+        <osm-tag key="BOYCAR" value="BOYSPH01" zoom-appear="6" />
+        <osm-tag key="BOYCAR" value="BOYPIL01" zoom-appear="6" />
+        <osm-tag key="BOYCAR" value="BOYSPR01" zoom-appear="6" />
+        <osm-tag key="BOYCAR" value="BOYBAR01" zoom-appear="6" />
+        <osm-tag key="BOYCAR" value="BOYSUP01" zoom-appear="6" />
+        <osm-tag key="BOYCAR" value="BOYGEN03" zoom-appear="6" />
+        <osm-tag key="BOYINB" value="BOYBAR62" zoom-appear="6" />
+        <osm-tag key="BOYINB" value="BOYSUP62" zoom-appear="6" />
+        <osm-tag key="BOYINB" value="BOYINB01" zoom-appear="6" />
+        <osm-tag key="BOYISD" value="BOYCON77" zoom-appear="6" />
+        <osm-tag key="BOYISD" value="BOYCON63" zoom-appear="6" />
+        <osm-tag key="BOYISD" value="BOYCAN76" zoom-appear="6" />
+        <osm-tag key="BOYISD" value="BOYPIL72" zoom-appear="6" />
+        <osm-tag key="BOYISD" value="BOYSPR72" zoom-appear="6" />
+        <osm-tag key="BOYISD" value="BOYCON01" zoom-appear="6" />
+        <osm-tag key="BOYISD" value="BOYCAN01" zoom-appear="6" />
+        <osm-tag key="BOYISD" value="BOYSPH01" zoom-appear="6" />
+        <osm-tag key="BOYISD" value="BOYPIL01" zoom-appear="6" />
+        <osm-tag key="BOYISD" value="BOYSPR01" zoom-appear="6" />
+        <osm-tag key="BOYISD" value="BOYBAR01" zoom-appear="6" />
+        <osm-tag key="BOYISD" value="BOYSUP01" zoom-appear="6" />
+        <osm-tag key="BOYISD" value="BOYGEN03" zoom-appear="6" />
+        <osm-tag key="BOYLAT" value="BOYCAN82" zoom-appear="6" />
+        <osm-tag key="BOYLAT" value="BOYCAN83" zoom-appear="6" />
+        <osm-tag key="BOYLAT" value="BOYCON66" zoom-appear="6" />
+        <osm-tag key="BOYLAT" value="BOYCAN73" zoom-appear="6" />
+        <osm-tag key="BOYLAT" value="BOYPIL66" zoom-appear="6" />
+        <osm-tag key="BOYLAT" value="BOYPIL67" zoom-appear="6" />
+        <osm-tag key="BOYLAT" value="BOYSPH79" zoom-appear="6" />
+        <osm-tag key="BOYLAT" value="BOYSPH66" zoom-appear="6" />
+        <osm-tag key="BOYLAT" value="BOYSPH67" zoom-appear="6" />
+        <osm-tag key="BOYLAT" value="BOYPIL74" zoom-appear="6" />
+        <osm-tag key="BOYLAT" value="BOYSPH62" zoom-appear="6" />
+        <osm-tag key="BOYLAT" value="BOYCON65" zoom-appear="6" />
+        <osm-tag key="BOYLAT" value="BOYCAN74" zoom-appear="6" />
+        <osm-tag key="BOYLAT" value="BOYSPH74" zoom-appear="6" />
+        <osm-tag key="BOYLAT" value="BOYCON67" zoom-appear="6" />
+        <osm-tag key="BOYLAT" value="BOYCAN72" zoom-appear="6" />
+        <osm-tag key="BOYLAT" value="BOYCON73" zoom-appear="6" />
+        <osm-tag key="BOYLAT" value="BOYCON68" zoom-appear="6" />
+        <osm-tag key="BOYLAT" value="BOYCAN74" zoom-appear="6" />
+        <osm-tag key="BOYLAT" value="BOYCAN75" zoom-appear="6" />
+        <osm-tag key="BOYLAT" value="BOYCON64" zoom-appear="6" />
+        <osm-tag key="BOYLAT" value="BOYCON60" zoom-appear="6" />
+        <osm-tag key="BOYLAT" value="BOYCON61" zoom-appear="6" />
+        <osm-tag key="BOYLAT" value="BOYCON62" zoom-appear="6" />
+        <osm-tag key="BOYLAT" value="BOYCAN60" zoom-appear="6" />
+        <osm-tag key="BOYLAT" value="BOYCAN61" zoom-appear="6" />
+        <osm-tag key="BOYLAT" value="BOYCAN63" zoom-appear="6" />
+        <osm-tag key="BOYLAT" value="BOYPIL60" zoom-appear="6" />
+        <osm-tag key="BOYLAT" value="BOYPIL61" zoom-appear="6" />
+        <osm-tag key="BOYLAT" value="BOYSPR05" zoom-appear="6" />
+        <osm-tag key="BOYLAT" value="BOYSPR60" zoom-appear="6" />
+        <osm-tag key="BOYLAT" value="BOYSPR61" zoom-appear="6" />
+        <osm-tag key="BOYLAT" value="BOYCON01" zoom-appear="6" />
+        <osm-tag key="BOYLAT" value="BOYCAN01" zoom-appear="6" />
+        <osm-tag key="BOYLAT" value="BOYSPH01" zoom-appear="6" />
+        <osm-tag key="BOYLAT" value="BOYPIL01" zoom-appear="6" />
+        <osm-tag key="BOYLAT" value="BOYSPR01" zoom-appear="6" />
+        <osm-tag key="BOYLAT" value="BOYBAR01" zoom-appear="6" />
+        <osm-tag key="BOYLAT" value="BOYSUP01" zoom-appear="6" />
+        <osm-tag key="BOYLAT" value="BOYGEN03" zoom-appear="6" />
+        <osm-tag key="BOYSAW" value="BOYSPH65" zoom-appear="6" />
+        <osm-tag key="BOYSAW" value="BOYPIL73" zoom-appear="6" />
+        <osm-tag key="BOYSAW" value="BOYCON78" zoom-appear="6" />
+        <osm-tag key="BOYSAW" value="BOYSPH01" zoom-appear="6" />
+        <osm-tag key="BOYSAW" value="BOYPIL01" zoom-appear="6" />
+        <osm-tag key="BOYSAW" value="BOYSPR65" zoom-appear="6" />
+        <osm-tag key="BOYSAW" value="BOYBAR01" zoom-appear="6" />
+        <osm-tag key="BOYSAW" value="BOYSUP01" zoom-appear="6" />
+        <osm-tag key="BOYSAW" value="BOYSPR01" zoom-appear="6" />
+        <osm-tag key="BOYSAW" value="BOYGEN03" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYCON65" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYCON81" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYCON80" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYCAN78" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYSPH66" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYCAN77" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYCAN81" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYSPH77" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYPIL81" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYCON73" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYCAN80" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYCAN75" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYPIL73" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYPIL78" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYSUP66" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYSUP65" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYMOR31" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYCAN60" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYCON77" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYPIL74" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYCAN79" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYPIL59" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYMOR03" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYCON60" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYCON62" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYCAN65" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYCAN64" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYCAN61" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYCAN63" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYSPH05" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYSPH60" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYSPH62" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYPIL60" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYPIL61" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYPIL62" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYSPR62" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYBAR60" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYBAR61" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYBAR62" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYSUP62" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYSUP03" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYCON01" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYCAN62" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYSPH01" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYPIL01" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYSPR01" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYBAR01" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYSUP01" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYSPR01" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYSPH62" zoom-appear="6" />
+        <osm-tag key="BOYSPP" value="BOYGEN03" zoom-appear="6" />
+        <osm-tag key="BUAARE" value="BUAARE02" zoom-appear="6" />
+        <osm-tag key="BUIREL" value="BUIREL13" zoom-appear="6" />
+        <osm-tag key="BUISGL" value="POSGEN03" zoom-appear="6" />
+        <osm-tag key="BUISGL" value="BUIREL13" zoom-appear="6" />
+        <osm-tag key="BUISGL" value="BUIREL14" zoom-appear="6" />
+        <osm-tag key="BUISGL" value="BUIREL15" zoom-appear="6" />
+        <osm-tag key="BUISGL" value="POSGEN03" zoom-appear="6" />
+        <osm-tag key="BUISGL" value="TNKCON12" zoom-appear="6" />
+        <osm-tag key="BUISGL" value="BUIREL01" zoom-appear="6" />
+        <osm-tag key="BUISGL" value="BUIREL04" zoom-appear="6" />
+        <osm-tag key="BUISGL" value="BUIREL05" zoom-appear="6" />
+        <osm-tag key="BUISGL" value="TNKCON02" zoom-appear="6" />
+        <osm-tag key="BUISGL" value="BUISGL11" zoom-appear="6" />
+        <osm-tag key="BUISGL" value="BUISGL01" zoom-appear="6" />
+        <osm-tag key="CGUSTA" value="CGUSTA02" zoom-appear="6" />
+        <osm-tag key="CRANES" value="CRANES01" zoom-appear="6" />
+        <osm-tag key="CTNARE" value="CHINFO06" zoom-appear="6" />
+        <osm-tag key="CTRPNT" value="POSGEN04" zoom-appear="6" />
+        <osm-tag key="CTSARE" value="CHINFO07" zoom-appear="6" />
+        <osm-tag key="CURENT" value="CURENT01" zoom-appear="6" />
+        <osm-tag key="CURENT" value="CURENT01" zoom-appear="6" />
+        <osm-tag key="DAMCON" value="CHINFO06" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP77" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP76" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP78" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP96" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP74" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP7" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP72" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP64" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP43" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP90" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP17" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP0" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP08" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP00" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP34" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP38" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP63" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP41" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP29" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP33" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP30" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP8" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHPA5" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP94" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHPA1" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHPA0" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHPA3" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHPA7" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP97" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP1" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHPS1" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP62" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP61" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP71" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP67" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP25" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP31" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP84" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP8" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP79" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP03" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP01" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP13" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP05" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHPT" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP58" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP65" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP69" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP70" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP42" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP32" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP40" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP39" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP37" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP48" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP44" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP85" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP87" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP88" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP80" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHPA9" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHPB0" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP99" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP92" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP93" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP91" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP98" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHPA2" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHPA8" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHPA4" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP04" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP02" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP16" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP20" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP19" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHPU1" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP18" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP55" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHPD2" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP28" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP47" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP36" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP11" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHPD1" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP51" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP21" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP23" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP22" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP24" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP35" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP83" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP82" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP95" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHPA6" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP12" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP14" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP10" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHP06" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHPD3" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHQ15" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHQ16" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHQ17" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHQ18" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHQ19" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHQ20" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHQ21" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHQ22" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHQ23" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHQ24" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHQ25" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHQ26" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHQ27" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHQ28" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHQ29" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHQ30" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHQ31" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHQ32" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHQ06" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHQ07" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="TOPSHQ08" zoom-appear="6" />
+        <osm-tag key="DAYMAR" value="DAYSQR21" zoom-appear="6" />
+        <osm-tag key="DISMAR" value="DISMAR04" zoom-appear="6" />
+        <osm-tag key="DISMAR" value="DISMAR03" zoom-appear="6" />
+        <osm-tag key="DMPGRD" value="CHINFO07" zoom-appear="6" />
+        <osm-tag key="FOGSIG" value="FOGSIG01" zoom-appear="6" />
+        <osm-tag key="FORSTC" value="FORSTC11" zoom-appear="6" />
+        <osm-tag key="FORSTC" value="FORSTC01" zoom-appear="6" />
+        <osm-tag key="FSHFAC" value="FSHFAC03" zoom-appear="6" />
+        <osm-tag key="FSHFAC" value="FSHFAC02" zoom-appear="6" />
+        <osm-tag key="FSHFAC" value="FSHHAV01" zoom-appear="6" />
+        <osm-tag key="GATCON" value="GATCON04" zoom-appear="6" />
+        <osm-tag key="GATCON" value="GATCON03" zoom-appear="6" />
+        <osm-tag key="HULKES" value="HULKES01" zoom-appear="6" />
+        <osm-tag key="ICNARE" value="CHINFO07" zoom-appear="6" />
+        <osm-tag key="LIGHTS" value="LIGHTS11" zoom-appear="6" />
+        <osm-tag key="LIGHTS" value="LIGHTS12" zoom-appear="6" />
+        <osm-tag key="LIGHTS" value="LIGHTS13" zoom-appear="6" />
+	    <osm-tag key="LIGHTS" value="LIGHTDEF" zoom-appear="6" />
+	    <osm-tag key="LIGHTS" value="LIGHTS90" zoom-appear="6" />
+	    <osm-tag key="LIGHTS" value="LIGHTS92" zoom-appear="6" />
+	    <osm-tag key="LIGHTS" value="LIGHTS93" zoom-appear="6" />
+	    <osm-tag key="LIGHTS" value="LIGHTS94" zoom-appear="6" />
+	    <osm-tag key="LIGHTS" value="LIGHTS95" zoom-appear="6" />
+	    <osm-tag key="LIGHTS" value="LIGHTS96" zoom-appear="6" />
+        <osm-tag key="LITFLT" value="LITFLT10" zoom-appear="6" />
+        <osm-tag key="LITFLT" value="LITFLT61" zoom-appear="6" />
+        <osm-tag key="LITFLT" value="LITFLT01" zoom-appear="6" />
+        <osm-tag key="LITVES" value="LITVES60" zoom-appear="6" />
+        <osm-tag key="LITVES" value="LITVES61" zoom-appear="6" />
+        <osm-tag key="LITVES" value="LITVES01" zoom-appear="6" />
+        <osm-tag key="LNDARE" value="LNDARE01" zoom-appear="6" />
+        <osm-tag key="LNDELV" value="POSGEN04" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="TOWERS51" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="TOWERS72" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="TOWERS92" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="TOWERS93" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="TOWERS73" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="TOWERS79" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="TOWERS48" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="TOWERS83" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="TOWERS94" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="TOWERS98" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="TOWERS85" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="TOWERS67" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="TOWERS66" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="TOWERS88" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="TOWERS52" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="TOWERS53" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="TOWERS96" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="TOWERS50" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="TOWERS49" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="TOWERS97" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="BUIREL13" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="TOWERS65" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="TOWERS05" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="TOWERS60" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="TOWERS61" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="TOWERS62" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="TOWERS59" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="TOWERS03" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="BUIREL15" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="TOWERS15" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="TOWERS01" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="BUIREL01" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="MONUMT12" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="DOMES011" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="RASCAN11" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="TOWERS03" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="WNDMIL12" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="WIMCON11" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="POSGEN03" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="CAIRNS11" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="CHIMNY11" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="DSHAER11" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="FLGSTF01" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="FLASTK11" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="MSTCON14" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="MONUMT02" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="DOMES001" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="RASCAN01" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="TOWERS01" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="WNDMIL02" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="WIMCON01" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="POSGEN01" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="CAIRNS01" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="CHIMNY01" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="DSHAER01" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="FLASTK01" zoom-appear="6" />
+        <osm-tag key="LNDMRK" value="MSTCON04" zoom-appear="6" />
+        <osm-tag key="LNDRGN" value="POSGEN04" zoom-appear="6" />
+        <osm-tag key="LOCMAG" value="LOCMAG01" zoom-appear="6" />
+        <osm-tag key="MAGVAR" value="MAGVAR01" zoom-appear="6" />
+        <osm-tag key="MARCUL" value="MARCUL02" zoom-appear="6" />
+        <osm-tag key="MIPARE" value="CHINFO06" zoom-appear="6" />
+        <osm-tag key="MONUMT" value="MONUMT12" zoom-appear="6" />
+        <osm-tag key="MORFAC" value="BOYMOR01" zoom-appear="6" />
+        <osm-tag key="MORFAC" value="BOYMOR03" zoom-appear="6" />
+        <osm-tag key="MORFAC" value="MORFAC03" zoom-appear="6" />
+        <osm-tag key="MORFAC" value="MORFAC04" zoom-appear="6" />
+        <osm-tag key="MORFAC" value="PILPNT02" zoom-appear="6" />
+        <osm-tag key="MORFAC" value="BOYMOR11" zoom-appear="6" />
+        <osm-tag key="M_NPUB" value="CHINFO07" zoom-appear="6" />
+        <osm-tag key="NEWOBJ" value="NEWOBJ01" zoom-appear="6" />
+        <osm-tag key="OBSTRN" value="FLTHAZ02" zoom-appear="6" />
+        <osm-tag key="OBSTRN" value="FOULGND1" zoom-appear="6" />
+        <osm-tag key="OBSTRN" value="ACHARE02" zoom-appear="6" />
+        <osm-tag key="OFSPLF" value="OFSPLF01" zoom-appear="6" />
+        <osm-tag key="PILBOP" value="PILBOP02" zoom-appear="6" />
+        <osm-tag key="PILPNT" value="PILPNT02" zoom-appear="6" />
+        <osm-tag key="PIPARE" value="CHINFO07" zoom-appear="6" />
+        <osm-tag key="PRCARE" value="PRCARE12" zoom-appear="6" />
+        <osm-tag key="PRDARE" value="FLASTK11" zoom-appear="6" />
+        <osm-tag key="PRDARE" value="TNKCON12" zoom-appear="6" />
+        <osm-tag key="PRDARE" value="WIMCON11" zoom-appear="6" />
+        <osm-tag key="PRDARE" value="PRDINS02" zoom-appear="6" />
+        <osm-tag key="PRDARE" value="FLASTK01" zoom-appear="6" />
+        <osm-tag key="PRDARE" value="TMBYRD01" zoom-appear="6" />
+        <osm-tag key="PRDARE" value="TNKCON02" zoom-appear="6" />
+        <osm-tag key="PRDARE" value="WIMCON01" zoom-appear="6" />
+        <osm-tag key="PYLONS" value="POSGEN03" zoom-appear="6" />
+        <osm-tag key="RADRFL" value="RADRFL03" zoom-appear="6" />
+        <osm-tag key="RADSTA" value="RDOSTA02" zoom-appear="6" />
+        <osm-tag key="RADSTA" value="POSGEN01" zoom-appear="6" />
+        <osm-tag key="RDOCAL" value="RDOCAL02" zoom-appear="6" />
+        <osm-tag key="RDOCAL" value="RDOCAL03" zoom-appear="6" />
+        <osm-tag key="RDOCAL" value="RCLDEF01" zoom-appear="6" />
+        <osm-tag key="RDOSTA" value="RDOSTA02" zoom-appear="6" />
+        <osm-tag key="RDOSTA" value="RDOSTA02" zoom-appear="6" />
+        <osm-tag key="RETRFL" value="RETRFL01" zoom-appear="6" />
+        <osm-tag key="RSCSTA" value="RSCSTA02" zoom-appear="6" />
+        <osm-tag key="RTPBCN" value="RTPBCN02" zoom-appear="6" />
+        <osm-tag key="SILTNK" value="SILBUI11" zoom-appear="6" />
+        <osm-tag key="SILTNK" value="TNKCON12" zoom-appear="6" />
+        <osm-tag key="SILTNK" value="TOWERS03" zoom-appear="6" />
+        <osm-tag key="SILTNK" value="TOWERS12" zoom-appear="6" />
+        <osm-tag key="SILTNK" value="SILBUI01" zoom-appear="6" />
+        <osm-tag key="SILTNK" value="TNKCON02" zoom-appear="6" />
+        <osm-tag key="SILTNK" value="TOWERS01" zoom-appear="6" />
+        <osm-tag key="SILTNK" value="TOWERS02" zoom-appear="6" />
+        <osm-tag key="SISTAT" value="SISTAT02" zoom-appear="6" />
+        <osm-tag key="SISTAW" value="SISTAT02" zoom-appear="6" />
+        <osm-tag key="SLCONS" value="MORFAC03" zoom-appear="6" />
+        <osm-tag key="SLOGRD" value="HILTOP01" zoom-appear="6" />
+        <osm-tag key="SLOTOP" value="HILTOP11" zoom-appear="6" />
+        <osm-tag key="SLOTOP" value="HILTOP01" zoom-appear="6" />
+        <osm-tag key="SNDWAV" value="SNDWAV02" zoom-appear="6" />
+        <osm-tag key="SPLARE" value="CHINFO06" zoom-appear="6" />
+        <osm-tag key="SPRING" value="SPRING02" zoom-appear="6" />
+        <osm-tag key="TOPMAR" value="TOPMAR98" zoom-appear="6" />
+        <osm-tag key="TOPMAR" value="TOPSHPU2" zoom-appear="6" />
+        <osm-tag key="TOPMAR" value="TOPSHPT2" zoom-appear="6" />
+        <osm-tag key="TOPMAR" value="TOPSHPI3" zoom-appear="6" />
+        <osm-tag key="TOPMAR" value="TOPMAR99" zoom-appear="6" />
+        <osm-tag key="TOPMAR" value="TOPSHPT6" zoom-appear="6" />
+        <osm-tag key="TOPMAR" value="TOPSHPT7" zoom-appear="6" />
+        <osm-tag key="TOPMAR" value="TOPSHP07" zoom-appear="6" />
+        <osm-tag key="TOPMAR" value="TOPSHPT5" zoom-appear="6" />
+        <osm-tag key="TOPMAR" value="TOPSHPT4" zoom-appear="6" />
+        <osm-tag key="TOPMAR" value="TOPSHP51" zoom-appear="6" />
+        <osm-tag key="TOPMAR" value="TOPSHP52" zoom-appear="6" />
+        <osm-tag key="TOPMAR" value="TOPSHP54" zoom-appear="6" />
+        <osm-tag key="TOPMAR" value="TOPSHP53" zoom-appear="6" />
+        <osm-tag key="TOPMAR" value="TOPSHPJ3" zoom-appear="6" />
+        <osm-tag key="TOPMAR" value="TOPSHPJ1" zoom-appear="6" />
+        <osm-tag key="TOPMAR" value="TOPSHP23" zoom-appear="6" />
+        <osm-tag key="TOPMAR" value="TOPSHPR1" zoom-appear="6" />
+        <osm-tag key="TOPMAR" value="TOPSHP10" zoom-appear="6" />
+        <osm-tag key="TOPMAR" value="TOPSHPT3" zoom-appear="6" />
+        <osm-tag key="TOPMAR" value="TOPSHPT1" zoom-appear="6" />
+        <osm-tag key="TOPMAR" value="TOPSHPI2" zoom-appear="6" />
+        <osm-tag key="TOPMAR" value="TOPSHPI1" zoom-appear="6" />
+        <osm-tag key="TOPMAR" value="TOPSHPP2" zoom-appear="6" />
+        <osm-tag key="TOPMAR" value="TOPSHQ17" zoom-appear="6" />
+        <osm-tag key="TOPMAR" value="TOPSHQ19" zoom-appear="6" />
+        <osm-tag key="TOPMAR" value="TOPSHQ20" zoom-appear="6" />
+        <osm-tag key="TOPMAR" value="TOPSHQ21" zoom-appear="6" />
+        <osm-tag key="TOPMAR" value="TOPSHQ22" zoom-appear="6" />
+        <osm-tag key="TOPMAR" value="TOPSHQ23" zoom-appear="6" />
+        <osm-tag key="TOPMAR" value="TOPSHQ24" zoom-appear="6" />
+        <osm-tag key="TOPMAR" value="TOPSHQ25" zoom-appear="6" />
+        <osm-tag key="TOPMAR" value="TOPSHQ26" zoom-appear="6" />
+        <osm-tag key="TOPMAR" value="TOPSHQ27" zoom-appear="6" />
+        <osm-tag key="TOPMAR" value="TOPSHQ28" zoom-appear="6" />
+        <osm-tag key="TOPMAR" value="TOPSHQ29" zoom-appear="6" />
+        <osm-tag key="TOPMAR" value="TOPSHQ30" zoom-appear="6" />
+        <osm-tag key="TOPMAR" value="TOPSHQ31" zoom-appear="6" />
+        <osm-tag key="TOPMAR" value="TOPSHQ32" zoom-appear="6" />
+        <osm-tag key="TOPMAR" value="ZZZZZZ01" zoom-appear="6" />
+        <osm-tag key="TOPMAR" value="TOPMAR91" zoom-appear="6" />
+        <osm-tag key="TOPMAR" value="TOPSHP20" zoom-appear="6" />
+        <osm-tag key="TOPMAR" value="TOPMAR92" zoom-appear="6" />
+        <osm-tag key="TOPMAR" value="TOPSHP48" zoom-appear="6" />
+        <osm-tag key="TOPMAR" value="TOPSHQ06" zoom-appear="6" />
+        <osm-tag key="TOPMAR" value="TOPSHQ07" zoom-appear="6" />
+        <osm-tag key="TOPMAR" value="TOPSHQ08" zoom-appear="6" />
+        <osm-tag key="TOPMAR" value="TOPMAR01" zoom-appear="6" />
+        <osm-tag key="TOWERS" value="TOWERS72" zoom-appear="6" />
+        <osm-tag key="TOWERS" value="TOWERS54" zoom-appear="6" />
+        <osm-tag key="TOWERS" value="TOWERS56" zoom-appear="6" />
+        <osm-tag key="TOWERS" value="TOWERS75" zoom-appear="6" />
+        <osm-tag key="TOWERS" value="TOWERS96" zoom-appear="6" />
+        <osm-tag key="TOWERS" value="TOWERS95" zoom-appear="6" />
+        <osm-tag key="TOWERS" value="TOWERS76" zoom-appear="6" />
+        <osm-tag key="TOWERS" value="TOWERS58" zoom-appear="6" />
+        <osm-tag key="TOWERS" value="TOWERS99" zoom-appear="6" />
+        <osm-tag key="TOWERS" value="TOWERS57" zoom-appear="6" />
+        <osm-tag key="TOWERS" value="TOWERS98" zoom-appear="6" />
+        <osm-tag key="TOWERS" value="TOWERS55" zoom-appear="6" />
+        <osm-tag key="TOWERS" value="TOWERS80" zoom-appear="6" />
+        <osm-tag key="TOWERS" value="TOWERS70" zoom-appear="6" />
+        <osm-tag key="TOWERS" value="TOWERS81" zoom-appear="6" />
+        <osm-tag key="TOWERS" value="TOWERS71" zoom-appear="6" />
+        <osm-tag key="TOWERS" value="TOWERS74" zoom-appear="6" />
+        <osm-tag key="TOWERS" value="TOWERS79" zoom-appear="6" />
+        <osm-tag key="TOWERS" value="TOWERS78" zoom-appear="6" />
+        <osm-tag key="TOWERS" value="TOWERS77" zoom-appear="6" />
+        <osm-tag key="TOWERS" value="TOWERS87" zoom-appear="6" />
+        <osm-tag key="TOWERS" value="TOWERS83" zoom-appear="6" />
+        <osm-tag key="TOWERS" value="TOWERS68" zoom-appear="6" />
+        <osm-tag key="TOWERS" value="TOWERS84" zoom-appear="6" />
+        <osm-tag key="TOWERS" value="TOWERS85" zoom-appear="6" />
+        <osm-tag key="TOWERS" value="TOWERS82" zoom-appear="6" />
+        <osm-tag key="TOWERS" value="TOWERS89" zoom-appear="6" />
+        <osm-tag key="TOWERS" value="TOWERS69" zoom-appear="6" />
+        <osm-tag key="TOWERS" value="TOWERS91" zoom-appear="6" />
+        <osm-tag key="TOWERS" value="TOWERS90" zoom-appear="6" />
+        <osm-tag key="TOWERS" value="TOWERS64" zoom-appear="6" />
+        <osm-tag key="TOWERS" value="TOWERS02" zoom-appear="6" />
+        <osm-tag key="TOWERS" value="TOWERS15" zoom-appear="6" />
+        <osm-tag key="TOWERS" value="TOWERS05" zoom-appear="6" />
+        <osm-tag key="TOWERS" value="TOWERS63" zoom-appear="6" />
+        <osm-tag key="TOWERS" value="TOWERS60" zoom-appear="6" />
+        <osm-tag key="TOWERS" value="TOWERS61" zoom-appear="6" />
+        <osm-tag key="TOWERS" value="TOWERS62" zoom-appear="6" />
+        <osm-tag key="TOWERS" value="TOWERS86" zoom-appear="6" />
+        <osm-tag key="TOWERS" value="TOWERS59" zoom-appear="6" />
+        <osm-tag key="TOWERS" value="TOWERS03" zoom-appear="6" />
+        <osm-tag key="TS_FEB" value="CURDEF01" zoom-appear="6" />
+        <osm-tag key="TS_PAD" value="TIDSTR01" zoom-appear="6" />
+        <osm-tag key="TS_PNH" value="TIDSTR01" zoom-appear="6" />
+        <osm-tag key="TS_PRH" value="TIDSTR01" zoom-appear="6" />
+        <osm-tag key="TS_TIS" value="TIDSTR01" zoom-appear="6" />
+        <osm-tag key="T_HMON" value="TIDEHT01" zoom-appear="6" />
+        <osm-tag key="T_NHMN" value="TIDEHT01" zoom-appear="6" />
+        <osm-tag key="T_TIMS" value="TIDEHT01" zoom-appear="6" />
+        <osm-tag key="VEGATN" value="TREPNT04" zoom-appear="6" />
+        <osm-tag key="VEGATN" value="TREPNT05" zoom-appear="6" />
+        <osm-tag key="WATTUR" value="WATTUR02" zoom-appear="6" />
+        <osm-tag key="WEDKLP" value="WEDKLP03" zoom-appear="6" />
+        <osm-tag key="WRECKS" value="FOULGND1" zoom-appear="6" />
+        <osm-tag key="achare" value="ACHARE02" zoom-appear="6" />
+        <osm-tag key="achbrt" value="ACHBRT07" zoom-appear="6" />
+        <osm-tag key="bcnlat" value="PRICKE03" zoom-appear="6" />
+        <osm-tag key="bcnlat" value="PRICKE04" zoom-appear="6" />
+        <osm-tag key="bcnlat" value="CAIRNS11" zoom-appear="6" />
+        <osm-tag key="bcnlat" value="BCNSTK03" zoom-appear="6" />
+        <osm-tag key="bcnlat" value="BCNTOW01" zoom-appear="6" />
+        <osm-tag key="bcnlat" value="BCNLTC01" zoom-appear="6" />
+        <osm-tag key="bcnlat" value="BCNGEN01" zoom-appear="6" />
+        <osm-tag key="bcnlat" value="CAIRNS01" zoom-appear="6" />
+        <osm-tag key="bcnlat" value="BCNGEN03" zoom-appear="6" />
+        <osm-tag key="bcnwtw" value="BCNLAT50" zoom-appear="6" />
+        <osm-tag key="berths" value="BRTHNO01" zoom-appear="6" />
+        <osm-tag key="boylat" value="BOYCON74" zoom-appear="6" />
+        <osm-tag key="boylat" value="BOYCAN82" zoom-appear="6" />
+        <osm-tag key="boylat" value="BOYCAN83" zoom-appear="6" />
+        <osm-tag key="boylat" value="BOYCON78" zoom-appear="6" />
+        <osm-tag key="boylat" value="BOYSPH74" zoom-appear="6" />
+        <osm-tag key="boylat" value="BOYCON73" zoom-appear="6" />
+        <osm-tag key="boylat" value="BOYCAN74" zoom-appear="6" />
+        <osm-tag key="boylat" value="BOYCON68" zoom-appear="6" />
+        <osm-tag key="boylat" value="BOYCAN75" zoom-appear="6" />
+        <osm-tag key="boylat" value="BOYSPH75" zoom-appear="6" />
+        <osm-tag key="boylat" value="BOYCON61" zoom-appear="6" />
+        <osm-tag key="boylat" value="BOYCON62" zoom-appear="6" />
+        <osm-tag key="boylat" value="BOYCAN60" zoom-appear="6" />
+        <osm-tag key="boylat" value="BOYCAN63" zoom-appear="6" />
+        <osm-tag key="boylat" value="BOYSPH62" zoom-appear="6" />
+        <osm-tag key="boylat" value="BOYCON01" zoom-appear="6" />
+        <osm-tag key="boylat" value="BOYCAN01" zoom-appear="6" />
+        <osm-tag key="boylat" value="BOYSPH01" zoom-appear="6" />
+        <osm-tag key="boylat" value="BOYPIL01" zoom-appear="6" />
+        <osm-tag key="boylat" value="BOYSPR01" zoom-appear="6" />
+        <osm-tag key="boylat" value="BOYBAR01" zoom-appear="6" />
+        <osm-tag key="boylat" value="BOYSUP01" zoom-appear="6" />
+        <osm-tag key="boylat" value="BOYGEN03" zoom-appear="6" />
+        <osm-tag key="boywtw" value="BOYSPR65" zoom-appear="6" />
+        <osm-tag key="boywtw" value="BOYLAT53" zoom-appear="6" />
+        <osm-tag key="boywtw" value="BOYLAT52" zoom-appear="6" />
+        <osm-tag key="boywtw" value="BOYLAT56" zoom-appear="6" />
+        <osm-tag key="boywtw" value="BOYLAT55" zoom-appear="6" />
+        <osm-tag key="boywtw" value="BOYLAT54" zoom-appear="6" />
+        <osm-tag key="boywtw" value="BOYCAN63" zoom-appear="6" />
+        <osm-tag key="boywtw" value="BOYLAT50" zoom-appear="6" />
+        <osm-tag key="boywtw" value="BOYLAT51" zoom-appear="6" />
+        <osm-tag key="boywtw" value="BOYDEF03" zoom-appear="6" />
+        <osm-tag key="bridge" value="BRIDGE01" zoom-appear="6" />
+        <osm-tag key="bunsta" value="BUNSTA01" zoom-appear="6" />
+        <osm-tag key="bunsta" value="BUNSTA02" zoom-appear="6" />
+        <osm-tag key="bunsta" value="BUNSTA03" zoom-appear="6" />
+        <osm-tag key="bunsta" value="CHINFO07" zoom-appear="6" />
+        <osm-tag key="chkpnt" value="CUSTOM01" zoom-appear="6" />
+        <osm-tag key="chkpnt" value="BORDER01" zoom-appear="6" />
+        <osm-tag key="chkpnt" value="POSGEN04" zoom-appear="6" />
+        <osm-tag key="cranes" value="CRANES01" zoom-appear="6" />
+        <osm-tag key="curent" value="CURENT01" zoom-appear="6" />
+        <osm-tag key="curent" value="POSGEN04" zoom-appear="6" />
+        <osm-tag key="cursor" value="CURSRB01" zoom-appear="6" />
+        <osm-tag key="cursor" value="CURSRA01" zoom-appear="6" />
+        <osm-tag key="dismar" value="DISMAR06" zoom-appear="6" />
+        <osm-tag key="dismar" value="DISMAR05" zoom-appear="6" />
+        <osm-tag key="dismar" value="DISMAR03" zoom-appear="6" />
+        <osm-tag key="dismar" value="HECMTR02" zoom-appear="6" />
+        <osm-tag key="dismar" value="HECMTR01" zoom-appear="6" />
+        <osm-tag key="dismar" value="HECMTR02" zoom-appear="6" />
+        <osm-tag key="dismar" value="HECMTR01" zoom-appear="6" />
+        <osm-tag key="dismar" value="DISMAR06" zoom-appear="6" />
+        <osm-tag key="dismar" value="DISMAR03" zoom-appear="6" />
+        <osm-tag key="dnghlt" value="DNGHILIT" zoom-appear="6" />
+        <osm-tag key="events" value="EVENTS02" zoom-appear="6" />
+        <osm-tag key="hrbfac" value="HRBFAC13" zoom-appear="6" />
+        <osm-tag key="hrbfac" value="HRBFAC14" zoom-appear="6" />
+        <osm-tag key="hrbfac" value="HRBFAC15" zoom-appear="6" />
+        <osm-tag key="hrbfac" value="HRBFAC16" zoom-appear="6" />
+        <osm-tag key="hrbfac" value="HRBFAC17" zoom-appear="6" />
+        <osm-tag key="hrbfac" value="HRBFAC18" zoom-appear="6" />
+        <osm-tag key="hrbfac" value="HRBFAC11" zoom-appear="6" />
+        <osm-tag key="hrbfac" value="HRBFAC12" zoom-appear="6" />
+        <osm-tag key="hrbfac" value="HRBFAC10" zoom-appear="6" />
+        <osm-tag key="marfea" value="CHINFO09" zoom-appear="6" />
+        <osm-tag key="marnot" value="CHINFO08" zoom-appear="6" />
+        <osm-tag key="marnot" value="CHINFO09" zoom-appear="6" />
+        <osm-tag key="mnufea" value="CHINFO10" zoom-appear="6" />
+        <osm-tag key="mnufea" value="CHINFO11" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKINF06" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKPRH07" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKINF06" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKINF06" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKINF53" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKINF20" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKINF20" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKINF48" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKINF48" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKPRH07" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKPRH07" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKPRH07" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKPRH08" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKPRH11" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKPRH11" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKPRH14" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKREG16" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKREG17" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKINF03" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKINF06" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKINF06" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKINF06" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKINF20" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKINF20" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKINF43" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKINF43" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKINF45" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKINF45" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKPRH02" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKPRH02" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKPRH07" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKPRH07" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKPRH07" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKPRH08" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKPRH08" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKINF48" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKINF49" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKINF50" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKREG01" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKPRH10" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKPRH11" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKPRH12" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKPRH13" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKREG02" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKREG03" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKREG10" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKREG01" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKREG11" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKREG12" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKREG13" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKREG14" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKREG15" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKREG16" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKREG17" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKREG19" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKREG20" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKRCD01" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKRCD02" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKRCD03" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKRCD04" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKRCD05" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKRCD06" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKINF01" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKINF02" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKINF03" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKINF04" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKINF05" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKINF06" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKINF53" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKINF19" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKINF20" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKINF21" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKINF22" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKINF23" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKINF24" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKINF25" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKINF26" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKINF27" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKINF28" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKINF29" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKINF38" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKINF43" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKINF44" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKINF45" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKINF46" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKINF47" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKPRH02" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKPRH06" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKPRH07" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKPRH08" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKPRH12" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKPRH13" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKPRH14" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKRCD01" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKRCD02" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKRCD03" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKRCD04" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKINF01" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKINF40" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NMKPRH02" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NOTMRK01" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NOTMRK02" zoom-appear="6" />
+        <osm-tag key="notmrk" value="NOTMRK03" zoom-appear="6" />
+        <osm-tag key="plnpos" value="PLNPOS01" zoom-appear="6" />
+        <osm-tag key="positn" value="POSITN02" zoom-appear="6" />
+        <osm-tag key="positn" value="POSITN02" zoom-appear="6" />
+        <osm-tag key="positn" value="POSITN02" zoom-appear="6" />
+        <osm-tag key="positn" value="POSITN02" zoom-appear="6" />
+        <osm-tag key="positn" value="POSITN02" zoom-appear="6" />
+        <osm-tag key="positn" value="POSITN02" zoom-appear="6" />
+        <osm-tag key="positn" value="POSITN02" zoom-appear="6" />
+        <osm-tag key="positn" value="POSITN02" zoom-appear="6" />
+        <osm-tag key="positn" value="POSITN02" zoom-appear="6" />
+        <osm-tag key="positn" value="POSITN02" zoom-appear="6" />
+        <osm-tag key="positn" value="POSITN02" zoom-appear="6" />
+        <osm-tag key="positn" value="POSITN02" zoom-appear="6" />
+        <osm-tag key="positn" value="POSITN02" zoom-appear="6" />
+        <osm-tag key="positn" value="POSITN02" zoom-appear="6" />
+        <osm-tag key="positn" value="POSITN02" zoom-appear="6" />
+        <osm-tag key="positn" value="POSITN02" zoom-appear="6" />
+        <osm-tag key="_RDOCAL" value="RDOCAL02" zoom-appear="6" />
+        <osm-tag key="_RDOCAL" value="RDOCAL03" zoom-appear="6" />
+        <osm-tag key="_RDOCAL" value="RCLDEF01" zoom-appear="6" />
+        <osm-tag key="refdmp" value="REFDMP01" zoom-appear="6" />
+        <osm-tag key="refpnt" value="REFPNT02" zoom-appear="6" />
+        <osm-tag key="sistat" value="SSWARS01" zoom-appear="6" />
+        <osm-tag key="sistat" value="SSENTR01" zoom-appear="6" />
+        <osm-tag key="sistat" value="SSLOCK01" zoom-appear="6" />
+        <osm-tag key="sistat" value="SISTAT02" zoom-appear="6" />
+        <osm-tag key="sistaw" value="WTLVGG02" zoom-appear="6" />
+        <osm-tag key="sistaw" value="WTLVGG01" zoom-appear="6" />
+        <osm-tag key="sistaw" value="HGWTMK01" zoom-appear="6" />
+        <osm-tag key="sistaw" value="VTCLMK01" zoom-appear="6" />
+        <osm-tag key="sistaw" value="SISTAT02" zoom-appear="6" />
+        <osm-tag key="slcons" value="PIER0001" zoom-appear="6" />
+        <osm-tag key="slcons" value="MORFAC03" zoom-appear="6" />
+        <osm-tag key="termnl" value="TERMNL12" zoom-appear="6" />
+        <osm-tag key="termnl" value="TERMNL03" zoom-appear="6" />
+        <osm-tag key="termnl" value="TERMNL04" zoom-appear="6" />
+        <osm-tag key="termnl" value="TERMNL05" zoom-appear="6" />
+        <osm-tag key="termnl" value="TERMNL06" zoom-appear="6" />
+        <osm-tag key="termnl" value="TERMNL07" zoom-appear="6" />
+        <osm-tag key="termnl" value="TERMNL08" zoom-appear="6" />
+        <osm-tag key="termnl" value="TERMNL09" zoom-appear="6" />
+        <osm-tag key="termnl" value="TERMNL10" zoom-appear="6" />
+        <osm-tag key="termnl" value="TERMNL11" zoom-appear="6" />
+        <osm-tag key="termnl" value="TERMNL13" zoom-appear="6" />
+        <osm-tag key="termnl" value="TERMNL02" zoom-appear="6" />
+        <osm-tag key="termnl" value="TERMNL01" zoom-appear="6" />
+        <osm-tag key="tidcur" value="TIDCUR01" zoom-appear="6" />
+        <osm-tag key="tidcur" value="TIDCUR02" zoom-appear="6" />
+        <osm-tag key="tidcur" value="TIDCUR01" zoom-appear="6" />
+        <osm-tag key="topmar" value="TOPMA102" zoom-appear="6" />
+        <osm-tag key="topmar" value="TOPMA100" zoom-appear="6" />
+        <osm-tag key="topmar" value="TOPMA114" zoom-appear="6" />
+        <osm-tag key="topmar" value="TOPSHPI1" zoom-appear="6" />
+        <osm-tag key="topmar" value="TOPSHPP2" zoom-appear="6" />
+        <osm-tag key="topmar" value="TOPSHQ15" zoom-appear="6" />
+        <osm-tag key="topmar" value="TOPSHQ16" zoom-appear="6" />
+        <osm-tag key="topmar" value="TOPSHQ17" zoom-appear="6" />
+        <osm-tag key="topmar" value="TOPSHQ18" zoom-appear="6" />
+        <osm-tag key="topmar" value="TOPSHQ19" zoom-appear="6" />
+        <osm-tag key="topmar" value="TOPSHQ20" zoom-appear="6" />
+        <osm-tag key="topmar" value="TOPSHQ21" zoom-appear="6" />
+        <osm-tag key="topmar" value="TOPSHQ22" zoom-appear="6" />
+        <osm-tag key="topmar" value="TOPSHQ23" zoom-appear="6" />
+        <osm-tag key="topmar" value="TOPSHQ24" zoom-appear="6" />
+        <osm-tag key="topmar" value="TOPSHQ25" zoom-appear="6" />
+        <osm-tag key="topmar" value="TOPSHQ26" zoom-appear="6" />
+        <osm-tag key="topmar" value="TOPSHQ27" zoom-appear="6" />
+        <osm-tag key="topmar" value="TOPSHQ28" zoom-appear="6" />
+        <osm-tag key="topmar" value="TOPSHQ29" zoom-appear="6" />
+        <osm-tag key="topmar" value="TOPSHQ30" zoom-appear="6" />
+        <osm-tag key="topmar" value="TOPSHQ31" zoom-appear="6" />
+        <osm-tag key="topmar" value="TOPSHQ32" zoom-appear="6" />
+        <osm-tag key="topmar" value="TOPSHQ06" zoom-appear="6" />
+        <osm-tag key="topmar" value="TOPSHQ08" zoom-appear="6" />
+        <osm-tag key="trnbsn" value="TRNBSN01" zoom-appear="6" />
+        <osm-tag key="vehtrf" value="VEHTRF01" zoom-appear="6" />
+        <osm-tag key="waypnt" value="WAYPNT11" zoom-appear="6" />
+        <osm-tag key="waypnt" value="WAYPNT03" zoom-appear="6" />
+        <osm-tag key="waypnt" value="WAYPNT11" zoom-appear="6" />
+        <osm-tag key="wtwgag" value="WTLVGG02" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="ACHRES61" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="ACHRES71" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="AISDEF01" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="AISONE01" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="AISSIX01" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="AISSLP01" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="AISVES01" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="ARPATG01" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="ARPONE01" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="ARPSIX01" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="BLKADJ01" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="BRIDGE01" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="CHCRDEL1" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="CHCRID01" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="CHINFO08" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="CHINFO09" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="CHINFO10" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="CHINFO11" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="CHKSYM01" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="CLRLIN01" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="CURSRA01" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="CURSRB01" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="DANGER51" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="DANGER52" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="DANGER53" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="DIRBOY01" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="DIRBOYA1" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="DIRBOYB1" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="DNGHILIT" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="EBLVRM11" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="ERBLTIK1" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="EVENTS02" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="INFORM01" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="ISODGR51" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="LOWACC01" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="NORTHAR1" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="OBSTRN01" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="OBSTRN02" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="OBSTRN03" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="OBSTRN11" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="OSPONE02" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="OSPSIX02" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="OWNSHP01" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="OWNSHP05" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="PLNPOS01" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="PLNSPD03" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="PLNSPD04" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="POSITN02" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="QUAPOS01" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="QUARRY01" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="QUESMRK1" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="RACNSP01" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="RECDEF51" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="RECTRC55" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="RECTRC56" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="RECTRC57" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="RECTRC58" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="REFPNT02" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="RFNERY01" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="RFNERY11" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="SCALEB10" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="SCALEB11" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="TIDCUR01" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="TIDCUR02" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="TIDCUR03" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="TMBYRD01" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="TNKFRM01" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="TNKFRM11" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="TOWERS05" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="TOWERS15" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="TREPNT04" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="TREPNT05" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="UNITFTH1" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="UNITMTR1" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="UWTROC03" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="UWTROC04" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="VECGND01" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="VECGND21" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="VECWTR01" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="VECWTR21" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="WAYPNT01" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="WAYPNT03" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="WAYPNT11" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="WNDFRM51" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="WNDFRM61" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="WRECKS01" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="WRECKS04" zoom-appear="6" />
+        <osm-tag key="CSYMB" value="WRECKS05" zoom-appear="6" />
+        <osm-tag key="_bcngn" value="BCNGEN01" zoom-appear="6" />
+        <osm-tag key="_boygn" value="BOYPIL69" zoom-appear="6" />
+        <osm-tag key="_boygn" value="BOYCAN62" zoom-appear="6" />
+        <osm-tag key="_extgn" value="STARPT01" zoom-appear="6" />
+        <osm-tag key="_slgto" value="BOYSPR04" zoom-appear="6" />
+        <osm-tag key="_slgto" value="BOYCON60" zoom-appear="6" />
+        <osm-tag key="_slgto" value="BOYCAN61" zoom-appear="6" />
+        <osm-tag key="_slgto" value="BOYPIL60" zoom-appear="6" />
+        <osm-tag key="_slgto" value="BOYPIL61" zoom-appear="6" />
+        <osm-tag key="_slgto" value="BOYSPR03" zoom-appear="6" />
+        <osm-tag key="_slgto" value="BOYSPR02" zoom-appear="6" />
+        <osm-tag key="_slgto" value="BOYSPR01" zoom-appear="6" />
+        <osm-tag key="_slgto" value="BCNGEN01" zoom-appear="6" />
+        <osm-tag key="_texto" value="WRECKS04" zoom-appear="6" />
+	</pois>
+	
+	<!-- NOT TO RENDER -->
+	<pois>
+	    <osm-tag key="SCAMIN" value="0" zoom-appear="0" renderable="false" />
+        <osm-tag key="SCAMIN" value="1" zoom-appear="1" renderable="false" />
+        <osm-tag key="SCAMIN" value="2" zoom-appear="2" renderable="false" />
+        <osm-tag key="SCAMIN" value="3" zoom-appear="3" renderable="false" />
+        <osm-tag key="SCAMIN" value="4" zoom-appear="4" renderable="false" />
+        <osm-tag key="SCAMIN" value="5" zoom-appear="5" renderable="false" />
+        <osm-tag key="SCAMIN" value="6" zoom-appear="6" renderable="false" />
+        <osm-tag key="SCAMIN" value="7" zoom-appear="7" renderable="false" />
+        <osm-tag key="SCAMIN" value="8" zoom-appear="8" renderable="false" />
+        <osm-tag key="SCAMIN" value="9" zoom-appear="9" renderable="false" />
+        <osm-tag key="SCAMIN" value="10" zoom-appear="10" renderable="false" />
+        <osm-tag key="SCAMIN" value="11" zoom-appear="11" renderable="false" />
+        <osm-tag key="SCAMIN" value="12" zoom-appear="12" renderable="false" />
+        <osm-tag key="SCAMIN" value="13" zoom-appear="13" renderable="false" />
+        <osm-tag key="SCAMIN" value="14" zoom-appear="14" renderable="false" />
+        <osm-tag key="SCAMIN" value="15" zoom-appear="15" renderable="false" />
+        <osm-tag key="SCAMIN" value="16" zoom-appear="16" renderable="false" />
+        <osm-tag key="SCAMIN" value="17" zoom-appear="17" renderable="false" />
+        <osm-tag key="SCAMIN" value="18" zoom-appear="18" renderable="false" />
+        <osm-tag key="SCAMIN" value="19" zoom-appear="19" renderable="false" />
+	</pois>
+	
 	<ways>
-	    <osm-tag key="senc" value="cstln" force-polygon-line="true" zoom-appear="0" />
+	    <osm-tag key="SCAMIN" value="0" zoom-appear="0" renderable="false" />
+        <osm-tag key="SCAMIN" value="1" zoom-appear="1" renderable="false" />
+        <osm-tag key="SCAMIN" value="2" zoom-appear="2" renderable="false" />
+        <osm-tag key="SCAMIN" value="3" zoom-appear="3" renderable="false" />
+        <osm-tag key="SCAMIN" value="4" zoom-appear="4" renderable="false" />
+        <osm-tag key="SCAMIN" value="5" zoom-appear="5" renderable="false" />
+        <osm-tag key="SCAMIN" value="6" zoom-appear="6" renderable="false" />
+        <osm-tag key="SCAMIN" value="7" zoom-appear="7" renderable="false" />
+        <osm-tag key="SCAMIN" value="8" zoom-appear="8" renderable="false" />
+        <osm-tag key="SCAMIN" value="9" zoom-appear="9" renderable="false" />
+        <osm-tag key="SCAMIN" value="10" zoom-appear="10" renderable="false" />
+        <osm-tag key="SCAMIN" value="11" zoom-appear="11" renderable="false" />
+        <osm-tag key="SCAMIN" value="12" zoom-appear="12" renderable="false" />
+        <osm-tag key="SCAMIN" value="13" zoom-appear="13" renderable="false" />
+        <osm-tag key="SCAMIN" value="14" zoom-appear="14" renderable="false" />
+        <osm-tag key="SCAMIN" value="15" zoom-appear="15" renderable="false" />
+        <osm-tag key="SCAMIN" value="16" zoom-appear="16" renderable="false" />
+        <osm-tag key="SCAMIN" value="17" zoom-appear="17" renderable="false" />
+        <osm-tag key="SCAMIN" value="18" zoom-appear="18" renderable="false" />
+        <osm-tag key="SCAMIN" value="19" zoom-appear="19" renderable="false" />
 	</ways>
+	
+	<!--END S57 SENC tags -->
 	
 </tag-mapping>

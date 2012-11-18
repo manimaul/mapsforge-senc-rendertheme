@@ -55,6 +55,7 @@ l.basicConfig(level=l.DEBUG, format="%(message)s")
 
 from osgeo import ogr
 from osgeo import osr
+from ogrS57info import s57, getZoom
 
 from SimpleXMLWriter import XMLWriter
 
@@ -79,11 +80,13 @@ parser.add_option("-d", "--debug-tags", dest="debugTags", action="store_true",
                   help="Output the tags for every feature parsed.")
 parser.add_option("-f", "--force", dest="forceOverwrite", action="store_true",
                   help="Force overwrite of output file.")
+parser.add_option("-c", "--count", dest="setStartingElementId", metavar="store_true",
+                  help="Sett the starting element Id (counts backwards)... use negative number")
 
 parser.set_defaults(sourceEPSG=None, sourcePROJ4=None, verbose=False,
                     debugTags=False,
                     translationMethod=None, outputFile=None,
-                    forceOverwrite=False)
+                    forceOverwrite=False, setStartingElementId=None)
 
 # Parse and process arguments
 (options, args) = parser.parse_args()
@@ -187,14 +190,26 @@ except:
     l.debug("Using default preOutputTransform")
     translations.preOutputTransform = lambda geometries, features: None
 
+if options.setStartingElementId is not None:
+    try:
+        elementIdCounter = int(options.setStartingElementId)
+    except:
+        l.debug("Using default startin ID")
+        elementIdCounter = 0
+else:
+    elementIdCounter = 0
+
 # Done options parsing, now to program code
 
 # Some global variables to hold stuff...
 geometries = []
 features = []
+zoom = None
+lat = 30 #default 30 degrees
+DEBUG = False
 
 # Helper function to get a new ID
-elementIdCounter = 0
+
 def getNewID():
     global elementIdCounter
     elementIdCounter -= 1
@@ -263,6 +278,11 @@ def getFileData(filename):
     if dataSource is None:
         l.error('OGR failed to open ' + filename + ', format may be unsuported')
         sys.exit(1)
+    myS57 = s57(None, dataSource)
+    global zoom
+    zoom = myS57.getZoom()
+    global lat
+    lat = myS57.getCenterPoint()[0]
     return dataSource
 
 def parseData(dataSource):
@@ -318,6 +338,22 @@ def getFeatureTags(ogrfeature, fieldNames):
     tags = {}
     for i in range(len(fieldNames)):
         tags[fieldNames[i]] = ogrfeature.GetFieldAsString(i)
+    if tags.has_key("SCAMIN"):
+        if tags["SCAMIN"] == "":
+            if DEBUG:
+                print "empty SCAMIN... using chart zoom:%s" %(zoom)
+            tags["SCAMIN"] = str(zoom) #set to chart scale/zoom
+        else:
+            scale = int(tags["SCAMIN"])
+            z = getZoom(scale, lat)
+            if DEBUG:
+                print "using feature SCAMIN tag scale:%s zoom:%s" %(scale, z)
+            tags["SCAMIN"] = str(z) #calculate zoom
+    else:
+        if DEBUG:
+            print "no SCAMIN... using chart zoom: %s" %(zoom)
+        tags["SCAMIN"] = str(zoom) #set to chart scale/zoom
+        
     return translations.filterTags(tags)
 
 def parseLayer(layer):
@@ -418,7 +454,6 @@ def parsePolygon(ogrgeometry):
 
 def parseCollection(ogrgeometry):
     # OGR MultiPolygon maps easily to osm multipolygon, so special case it
-    # TODO: Does anything else need special casing?
     geometryType = ogrgeometry.GetGeometryType()
     if (geometryType == ogr.wkbMultiPolygon or
         geometryType == ogr.wkbMultiPolygon25D):
@@ -442,24 +477,27 @@ def parseCollection(ogrgeometry):
 def mergePoints():
     l.debug("Merging points")
     global geometries
-    points = [geometry for geometry in geometries if type(geometry) == Point]
+    nodes = [geometry for geometry in geometries if type(geometry) == Point]
+    featuresmap = {feature.geometry : feature for feature in features}
     
     # Make list of Points at each location
     l.debug("Making list")
     pointcoords = {}
-    for i in points:
+    for node in nodes:
         try:
-            pointcoords[(i.x, i.y)].append(i)
+            pointcoords[(node.x, node.y)].append(node)
         except KeyError:
-            pointcoords[(i.x, i.y)] = [i]
+            pointcoords[(node.x, node.y)] = [node]
 
     # Use list to get rid of extras
+    #TODO: check to see if tags are different and add to merged point
     l.debug("Checking list")
-    for (_location, pointsatloc) in pointcoords.items():
+    for (_, pointsatloc) in pointcoords.items():
         if len(pointsatloc) > 1:
             for point in pointsatloc[1:]:
                 for parent in set(point.parents):
-                    parent.replacejwithi(pointsatloc[0], point)
+                    if featuresmap.has_key(parent):
+                        parent.replacejwithi(pointsatloc[0], point)
         
 def output():
     l.debug("Outputting XML")

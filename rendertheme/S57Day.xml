@@ -1,0 +1,3812 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rendertheme xmlns="http://mapsforge.org/renderTheme" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://mapsforge.org/renderTheme ../renderTheme.xsd" version="1" map-background="#D4EAEE">
+    
+    <!-- NOTE: bottom of list is rendered last and appears on top -->
+    
+	<!-- ways -->
+	<rule e="way" k="*" v="*">
+	    
+   	    <!-- natural -->
+	    <!-- Bare minimum needed from original mapsforge osmarender theme
+	         natural:coastline key values are special -->     
+		<rule e="way" k="natural" v="*">
+			<rule e="way" k="natural" v="coastline">
+				<rule e="way" k="*" v="*" closed="no">
+					<line stroke="#D4EAEE" stroke-width="2.0" />
+				</rule>
+				<rule e="way" k="*" v="*" closed="yes">
+				    <!-- coastline fill areas are sea areas not land areas -->
+					<area fill="#D4EAEE" stroke="#D4EAEE" stroke-width="0.4" />
+				</rule>
+			</rule>
+		</rule>
+	    
+	    <!-- S57 ways -->
+	    <rule e="way" k="CSTLN" v="*">
+	        <rule e="way" k="CSTLN" v="CSTLN">
+				<line stroke="#525A5C" stroke-width="2.0" />
+			</rule>
+	    </rule>
+	    
+	    <rule e="way" k="LNDARE" v="LANDA">
+	        <rule e="way" k="*" v="*" closed="yes">
+				<area fill="#C9B97A" stroke="#C9B97A" stroke-width="1.0" />
+			</rule>
+			<rule e="way" k="*" v="*" closed="no">
+				<line stroke="#C9B97A" stroke-width="1.0" />
+			</rule>
+	    </rule>
+	    
+	    <rule e="way" k="SEAARE" v="*">
+	        <rule e="way" k="SEAARE" v="CHGRD">
+				<line stroke="#7D898C" stroke-width="1.0" />
+			</rule>
+			<rule e="way" k="SEAARE" v="CHBLK">
+				<line stroke="#070707" stroke-width="1.0" />
+			</rule>
+	    </rule>
+	    
+    </rule>
+	
+	<!-- S57 nodes -->
+    <rule e="node" k="*" v="*">
+        <rule e="node" k="ACHARE" v="*">
+            <rule e="node" k="ACHARE" v="ACHARE02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/ACHARE02.png" />
+            </rule>
+            <rule e="node" k="ACHARE" v="ACHARE51">
+                <symbol src="jar:/assets/rendertheme/symbols/day/ACHARE51.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="ACHBRT" v="*">
+            <rule e="node" k="ACHBRT" v="ACHBRT07">
+                <symbol src="jar:/assets/rendertheme/symbols/day/ACHBRT07.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="BERTHS" v="*">
+            <rule e="node" k="BERTHS" v="BRTHNO01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BRTHNO01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="BRIDGE" v="*">
+            <rule e="node" k="BRIDGE" v="BRIDGE01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BRIDGE01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="CBLARE" v="*">
+            <rule e="node" k="CBLARE" v="CBLARE51">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CBLARE51.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="CHKPNT" v="*">
+            <rule e="node" k="CHKPNT" v="POSGEN04">
+                <symbol src="jar:/assets/rendertheme/symbols/day/POSGEN04.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="CONVYR" v="*">
+            <rule e="node" k="CONVYR" v="RACNSP01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/RACNSP01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="CTNARE" v="*">
+            <rule e="node" k="CTNARE" v="CTNARE51">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CTNARE51.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="CTSARE" v="*">
+            <rule e="node" k="CTSARE" v="INFARE51">
+                <symbol src="jar:/assets/rendertheme/symbols/day/INFARE51.png" />
+            </rule>
+            <rule e="node" k="DMPGRD" v="INFARE51">
+                <symbol src="jar:/assets/rendertheme/symbols/day/INFARE51.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="DWRTPT" v="*">
+            <rule e="node" k="DWRTPT" v="TSSLPT51">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TSSLPT51.png" />
+            </rule>
+            <rule e="node" k="DWRTPT" v="DWRUTE51">
+                <symbol src="jar:/assets/rendertheme/symbols/day/DWRUTE51.png" />
+            </rule>
+            <rule e="node" k="DWRTPT" v="TWRTPT52">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TWRTPT52.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="FAIRWY" v="*">
+            <rule e="node" k="FAIRWY" v="FAIRWY51">
+                <symbol src="jar:/assets/rendertheme/symbols/day/FAIRWY51.png" />
+            </rule>
+            <rule e="node" k="FAIRWY" v="FAIRWY52">
+                <symbol src="jar:/assets/rendertheme/symbols/day/FAIRWY52.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="FERYRT" v="*">
+            <rule e="node" k="FERYRT" v="FRYARE52">
+                <symbol src="jar:/assets/rendertheme/symbols/day/FRYARE52.png" />
+            </rule>
+            <rule e="node" k="FERYRT" v="FRYARE51">
+                <symbol src="jar:/assets/rendertheme/symbols/day/FRYARE51.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="FSHGRD" v="*">
+            <rule e="node" k="FSHGRD" v="FSHGRD01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/FSHGRD01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="HRBFAC" v="*">
+            <rule e="node" k="HRBFAC" v="ROLROL01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/ROLROL01.png" />
+            </rule>
+            <rule e="node" k="HRBFAC" v="HRBFAC09">
+                <symbol src="jar:/assets/rendertheme/symbols/day/HRBFAC09.png" />
+            </rule>
+            <rule e="node" k="HRBFAC" v="SMCFAC02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/SMCFAC02.png" />
+            </rule>
+            <rule e="node" k="HRBFAC" v="CHINFO07">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CHINFO07.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="ICNARE" v="*">
+            <rule e="node" k="ICNARE" v="INFARE51">
+                <symbol src="jar:/assets/rendertheme/symbols/day/INFARE51.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="ISTZNE" v="*">
+            <rule e="node" k="ISTZNE" v="ITZARE51">
+                <symbol src="jar:/assets/rendertheme/symbols/day/ITZARE51.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="LOCMAG" v="*">
+            <rule e="node" k="LOCMAG" v="LOCMAG51">
+                <symbol src="jar:/assets/rendertheme/symbols/day/LOCMAG51.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="MAGVAR" v="*">
+            <rule e="node" k="MAGVAR" v="MAGVAR51">
+                <symbol src="jar:/assets/rendertheme/symbols/day/MAGVAR51.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="MIPARE" v="*">
+            <rule e="node" k="MIPARE" v="CTYARE51">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CTYARE51.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="M_NSYS" v="*">
+            <rule e="node" k="M_NSYS" v="DIRBOYA1">
+                <symbol src="jar:/assets/rendertheme/symbols/day/DIRBOYA1.png" />
+            </rule>
+            <rule e="node" k="M_NSYS" v="DIRBOYB1">
+                <symbol src="jar:/assets/rendertheme/symbols/day/DIRBOYB1.png" />
+            </rule>
+            <rule e="node" k="M_NSYS" v="DIRBOY01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/DIRBOY01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="OBSTRN" v="*">
+            <rule e="node" k="OBSTRN" v="FOULGND1">
+                <symbol src="jar:/assets/rendertheme/symbols/day/FOULGND1.png" />
+            </rule>
+            <rule e="node" k="OBSTRN" v="ACHARE02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/ACHARE02.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="OSPARE" v="*">
+            <rule e="node" k="OSPARE" v="CTYARE51">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CTYARE51.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="PILBOP" v="*">
+            <rule e="node" k="PILBOP" v="PILBOP02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/PILBOP02.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="PIPARE" v="*">
+            <rule e="node" k="PIPARE" v="INFARE51">
+                <symbol src="jar:/assets/rendertheme/symbols/day/INFARE51.png" />
+            </rule>
+            <rule e="node" k="PIPARE" v="INFARE51">
+                <symbol src="jar:/assets/rendertheme/symbols/day/INFARE51.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="PRCARE" v="*">
+            <rule e="node" k="PRCARE" v="PRCARE51">
+                <symbol src="jar:/assets/rendertheme/symbols/day/PRCARE51.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="PRDARE" v="*">
+            <rule e="node" k="PRDARE" v="RFNERY11">
+                <symbol src="jar:/assets/rendertheme/symbols/day/RFNERY11.png" />
+            </rule>
+            <rule e="node" k="PRDARE" v="TNKFRM11">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TNKFRM11.png" />
+            </rule>
+            <rule e="node" k="PRDARE" v="WNDFRM61">
+                <symbol src="jar:/assets/rendertheme/symbols/day/WNDFRM61.png" />
+            </rule>
+            <rule e="node" k="PRDARE" v="QUARRY01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/QUARRY01.png" />
+            </rule>
+            <rule e="node" k="PRDARE" v="RFNERY01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/RFNERY01.png" />
+            </rule>
+            <rule e="node" k="PRDARE" v="TMBYRD01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TMBYRD01.png" />
+            </rule>
+            <rule e="node" k="PRDARE" v="TNKFRM01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TNKFRM01.png" />
+            </rule>
+            <rule e="node" k="PRDARE" v="WNDFRM51">
+                <symbol src="jar:/assets/rendertheme/symbols/day/WNDFRM51.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="RCTLPT" v="*">
+            <rule e="node" k="RCTLPT" v="RCTLPT52">
+                <symbol src="jar:/assets/rendertheme/symbols/day/RCTLPT52.png" />
+            </rule>
+            <rule e="node" k="RCTLPT" v="RTLDEF51">
+                <symbol src="jar:/assets/rendertheme/symbols/day/RTLDEF51.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="RECTRC" v="*">
+            <rule e="node" k="RECTRC" v="RECTRC58">
+                <symbol src="jar:/assets/rendertheme/symbols/day/RECTRC58.png" />
+            </rule>
+            <rule e="node" k="RECTRC" v="RECTRC56">
+                <symbol src="jar:/assets/rendertheme/symbols/day/RECTRC56.png" />
+            </rule>
+            <rule e="node" k="RECTRC" v="RECTRC57">
+                <symbol src="jar:/assets/rendertheme/symbols/day/RECTRC57.png" />
+            </rule>
+            <rule e="node" k="RECTRC" v="RECTRC55">
+                <symbol src="jar:/assets/rendertheme/symbols/day/RECTRC55.png" />
+            </rule>
+            <rule e="node" k="RECTRC" v="RECDEF51">
+                <symbol src="jar:/assets/rendertheme/symbols/day/RECDEF51.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="RESARE" v="*">
+        </rule>
+
+        <rule e="node" k="SPLARE" v="*">
+            <rule e="node" k="SPLARE" v="CTYARE51">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CTYARE51.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="SUBTLN" v="*">
+            <rule e="node" k="SUBTLN" v="CTYARE51">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CTYARE51.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="SWPARE" v="*">
+            <rule e="node" k="SWPARE" v="SWPARE51">
+                <symbol src="jar:/assets/rendertheme/symbols/day/SWPARE51.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="TSSLPT" v="*">
+            <rule e="node" k="TSSLPT" v="TSSLPT51">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TSSLPT51.png" />
+            </rule>
+            <rule e="node" k="TSSLPT" v="CTNARE51">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CTNARE51.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="TSSRON" v="*">
+            <rule e="node" k="TSSRON" v="TSSRON51">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TSSRON51.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="TS_FEB" v="*">
+            <rule e="node" k="TS_FEB" v="FLDSTR01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/FLDSTR01.png" />
+            </rule>
+            <rule e="node" k="TS_FEB" v="EBBSTR01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/EBBSTR01.png" />
+            </rule>
+            <rule e="node" k="TS_FEB" v="CURENT01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CURENT01.png" />
+            </rule>
+            <rule e="node" k="TS_FEB" v="CURDEF01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CURDEF01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="TS_PAD" v="*">
+            <rule e="node" k="TS_PAD" v="TIDSTR01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TIDSTR01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="TS_PNH" v="*">
+            <rule e="node" k="TS_PNH" v="TIDSTR01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TIDSTR01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="TS_PRH" v="*">
+            <rule e="node" k="TS_PRH" v="TIDSTR01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TIDSTR01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="TS_TIS" v="*">
+            <rule e="node" k="TS_TIS" v="TIDSTR01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TIDSTR01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="TWRTPT" v="*">
+            <rule e="node" k="TWRTPT" v="TWRTPT53">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TWRTPT53.png" />
+            </rule>
+            <rule e="node" k="TWRTPT" v="TWRTPT52">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TWRTPT52.png" />
+            </rule>
+            <rule e="node" k="TWRTPT" v="TWRDEF51">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TWRDEF51.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="T_HMON" v="*">
+            <rule e="node" k="T_HMON" v="TIDEHT01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TIDEHT01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="T_NHMN" v="*">
+            <rule e="node" k="T_NHMN" v="TIDEHT01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TIDEHT01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="T_TIMS" v="*">
+            <rule e="node" k="T_TIMS" v="TIDEHT01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TIDEHT01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="WATTUR" v="*">
+            <rule e="node" k="WATTUR" v="WATTUR02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/WATTUR02.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="WEDKLP" v="*">
+            <rule e="node" k="WEDKLP" v="WEDKLP03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/WEDKLP03.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="achare" v="*">
+            <rule e="node" k="achare" v="ACHARE02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/ACHARE02.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="achbrt" v="*">
+            <rule e="node" k="achbrt" v="ACHBRT07">
+                <symbol src="jar:/assets/rendertheme/symbols/day/ACHBRT07.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="berths" v="*">
+            <rule e="node" k="berths" v="BRTHNO01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BRTHNO01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="bunsta" v="*">
+            <rule e="node" k="bunsta" v="BUNSTA01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BUNSTA01.png" />
+            </rule>
+            <rule e="node" k="bunsta" v="BUNSTA02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BUNSTA02.png" />
+            </rule>
+            <rule e="node" k="bunsta" v="BUNSTA03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BUNSTA03.png" />
+            </rule>
+            <rule e="node" k="bunsta" v="CHINFO07">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CHINFO07.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="feryrt" v="*">
+            <rule e="node" k="feryrt" v="FRYARE52">
+                <symbol src="jar:/assets/rendertheme/symbols/day/FRYARE52.png" />
+            </rule>
+            <rule e="node" k="feryrt" v="FRYARE51">
+                <symbol src="jar:/assets/rendertheme/symbols/day/FRYARE51.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="hrbare" v="*">
+            <rule e="node" k="hrbare" v="SMCFAC02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/SMCFAC02.png" />
+            </rule>
+            <rule e="node" k="hrbfac" v="SMCFAC02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/SMCFAC02.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="trnbsn" v="*">
+            <rule e="node" k="trnbsn" v="TRNBSN01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TRNBSN01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="vehtrf" v="*">
+            <rule e="node" k="AREAS" v="CHCRDEL1">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CHCRDEL1.png" />
+            </rule>
+            <rule e="node" k="AREAS" v="CHCRID01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CHCRID01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="######" v="*">
+            <rule e="node" k="######" v="QUESMRK1">
+                <symbol src="jar:/assets/rendertheme/symbols/day/QUESMRK1.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="ACHARE" v="*">
+            <rule e="node" k="ACHARE" v="ACHARE02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/ACHARE02.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="ACHBRT" v="*">
+            <rule e="node" k="ACHBRT" v="ACHBRT07">
+                <symbol src="jar:/assets/rendertheme/symbols/day/ACHBRT07.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="ACHPNT" v="*">
+            <rule e="node" k="ACHPNT" v="ACHPNT01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/ACHPNT01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="AIRARE" v="*">
+            <rule e="node" k="AIRARE" v="AIRARE02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/AIRARE02.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="BCNCAR" v="*">
+            <rule e="node" k="BCNCAR" v="BCNTOW70">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNTOW70.png" />
+            </rule>
+            <rule e="node" k="BCNCAR" v="BCNTOW71">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNTOW71.png" />
+            </rule>
+            <rule e="node" k="BCNCAR" v="BCNTOW68">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNTOW68.png" />
+            </rule>
+            <rule e="node" k="BCNCAR" v="BCNTOW69">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNTOW69.png" />
+            </rule>
+            <rule e="node" k="BCNCAR" v="BCNGEN70">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNGEN70.png" />
+            </rule>
+            <rule e="node" k="BCNCAR" v="BCNGEN71">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNGEN71.png" />
+            </rule>
+            <rule e="node" k="BCNCAR" v="BCNGEN68">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNGEN68.png" />
+            </rule>
+            <rule e="node" k="BCNCAR" v="BCNGEN69">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNGEN69.png" />
+            </rule>
+            <rule e="node" k="BCNCAR" v="BCNSTK02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNSTK02.png" />
+            </rule>
+            <rule e="node" k="BCNCAR" v="BCNTOW01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNTOW01.png" />
+            </rule>
+            <rule e="node" k="BCNCAR" v="BCNLTC01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNLTC01.png" />
+            </rule>
+            <rule e="node" k="BCNCAR" v="BCNGEN01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNGEN01.png" />
+            </rule>
+            <rule e="node" k="BCNCAR" v="BCNGEN03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNGEN03.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="BCNISD" v="*">
+            <rule e="node" k="BCNISD" v="BCNTOW76">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNTOW76.png" />
+            </rule>
+            <rule e="node" k="BCNISD" v="BCNGEN76">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNGEN76.png" />
+            </rule>
+            <rule e="node" k="BCNISD" v="BCNSTK02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNSTK02.png" />
+            </rule>
+            <rule e="node" k="BCNISD" v="BCNTOW01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNTOW01.png" />
+            </rule>
+            <rule e="node" k="BCNISD" v="BCNLTC01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNLTC01.png" />
+            </rule>
+            <rule e="node" k="BCNISD" v="BCNGEN01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNGEN01.png" />
+            </rule>
+            <rule e="node" k="BCNISD" v="BCNGEN03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNGEN03.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="BCNLAT" v="*">
+            <rule e="node" k="BCNLAT" v="BCNTOW74">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNTOW74.png" />
+            </rule>
+            <rule e="node" k="BCNLAT" v="BCNTOW66">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNTOW66.png" />
+            </rule>
+            <rule e="node" k="BCNLAT" v="BCNTOW65">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNTOW65.png" />
+            </rule>
+            <rule e="node" k="BCNLAT" v="BCNTOW63">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNTOW63.png" />
+            </rule>
+            <rule e="node" k="BCNLAT" v="BCNTOW64">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNTOW64.png" />
+            </rule>
+            <rule e="node" k="BCNLAT" v="BCNSTK61">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNSTK61.png" />
+            </rule>
+            <rule e="node" k="BCNLAT" v="BCNSTK60">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNSTK60.png" />
+            </rule>
+            <rule e="node" k="BCNLAT" v="BCNSTK77">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNSTK77.png" />
+            </rule>
+            <rule e="node" k="BCNLAT" v="BCNSTK78">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNSTK78.png" />
+            </rule>
+            <rule e="node" k="BCNLAT" v="PRICKE03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/PRICKE03.png" />
+            </rule>
+            <rule e="node" k="BCNLAT" v="PRICKE04">
+                <symbol src="jar:/assets/rendertheme/symbols/day/PRICKE04.png" />
+            </rule>
+            <rule e="node" k="BCNLAT" v="BCNTOW60">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNTOW60.png" />
+            </rule>
+            <rule e="node" k="BCNLAT" v="BCNTOW61">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNTOW61.png" />
+            </rule>
+            <rule e="node" k="BCNLAT" v="BCNTOW60">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNTOW60.png" />
+            </rule>
+            <rule e="node" k="BCNLAT" v="BCNTOW61">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNTOW61.png" />
+            </rule>
+            <rule e="node" k="BCNLAT" v="BCNGEN01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNGEN01.png" />
+            </rule>
+            <rule e="node" k="BCNLAT" v="CAIRNS11">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CAIRNS11.png" />
+            </rule>
+            <rule e="node" k="BCNLAT" v="BCNTOW05">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNTOW05.png" />
+            </rule>
+            <rule e="node" k="BCNLAT" v="BCNGEN64">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNGEN64.png" />
+            </rule>
+            <rule e="node" k="BCNLAT" v="BCNGEN65">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNGEN65.png" />
+            </rule>
+            <rule e="node" k="BCNLAT" v="BCNSTK02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNSTK02.png" />
+            </rule>
+            <rule e="node" k="BCNLAT" v="BCNTOW01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNTOW01.png" />
+            </rule>
+            <rule e="node" k="BCNLAT" v="BCNLTC01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNLTC01.png" />
+            </rule>
+            <rule e="node" k="BCNLAT" v="BCNGEN01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNGEN01.png" />
+            </rule>
+            <rule e="node" k="BCNLAT" v="CAIRNS01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CAIRNS01.png" />
+            </rule>
+            <rule e="node" k="BCNLAT" v="BCNGEN01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNGEN01.png" />
+            </rule>
+            <rule e="node" k="BCNLAT" v="BCNGEN60">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNGEN60.png" />
+            </rule>
+            <rule e="node" k="BCNLAT" v="BCNGEN61">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNGEN61.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="BCNSAW" v="*">
+            <rule e="node" k="BCNSAW" v="BCNSTK78">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNSTK78.png" />
+            </rule>
+            <rule e="node" k="BCNSAW" v="BCNSTK02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNSTK02.png" />
+            </rule>
+            <rule e="node" k="BCNSAW" v="BCNTOW01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNTOW01.png" />
+            </rule>
+            <rule e="node" k="BCNSAW" v="BCNLTC01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNLTC01.png" />
+            </rule>
+            <rule e="node" k="BCNSAW" v="BCNGEN01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNGEN01.png" />
+            </rule>
+            <rule e="node" k="BCNSAW" v="BCNGEN03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNGEN03.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="BCNSPP" v="*">
+            <rule e="node" k="BCNSPP" v="BCNTOW87">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNTOW87.png" />
+            </rule>
+            <rule e="node" k="BCNSPP" v="BCNTOW85">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNTOW85.png" />
+            </rule>
+            <rule e="node" k="BCNSPP" v="BCNSTK61">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNSTK61.png" />
+            </rule>
+            <rule e="node" k="BCNSPP" v="BCNTOW65">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNTOW65.png" />
+            </rule>
+            <rule e="node" k="BCNSPP" v="BCNTOW86">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNTOW86.png" />
+            </rule>
+            <rule e="node" k="BCNSPP" v="BCNTOW88">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNTOW88.png" />
+            </rule>
+            <rule e="node" k="BCNSPP" v="NOTBRD12">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NOTBRD12.png" />
+            </rule>
+            <rule e="node" k="BCNSPP" v="BCNSTK05">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNSTK05.png" />
+            </rule>
+            <rule e="node" k="BCNSPP" v="BCNSTK60">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNSTK60.png" />
+            </rule>
+            <rule e="node" k="BCNSPP" v="BCNSTK61">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNSTK61.png" />
+            </rule>
+            <rule e="node" k="BCNSPP" v="BCNSTK08">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNSTK08.png" />
+            </rule>
+            <rule e="node" k="BCNSPP" v="BCNTOW05">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNTOW05.png" />
+            </rule>
+            <rule e="node" k="BCNSPP" v="BCNTOW89">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNTOW89.png" />
+            </rule>
+            <rule e="node" k="BCNSPP" v="BCNTOW61">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNTOW61.png" />
+            </rule>
+            <rule e="node" k="BCNSPP" v="BCNTOW62">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNTOW62.png" />
+            </rule>
+            <rule e="node" k="BCNSPP" v="BCNTOW91">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNTOW91.png" />
+            </rule>
+            <rule e="node" k="BCNSPP" v="BCNTOW60">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNTOW60.png" />
+            </rule>
+            <rule e="node" k="BCNSPP" v="BCNTOW90">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNTOW90.png" />
+            </rule>
+            <rule e="node" k="BCNSPP" v="BCNSTK05">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNSTK05.png" />
+            </rule>
+            <rule e="node" k="BCNSPP" v="BCNSTK08">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNSTK08.png" />
+            </rule>
+            <rule e="node" k="BCNSPP" v="CAIRNS11">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CAIRNS11.png" />
+            </rule>
+            <rule e="node" k="BCNSPP" v="BCNSTK62">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNSTK62.png" />
+            </rule>
+            <rule e="node" k="BCNSPP" v="BCNSTK79">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNSTK79.png" />
+            </rule>
+            <rule e="node" k="BCNSPP" v="BCNSTK80">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNSTK80.png" />
+            </rule>
+            <rule e="node" k="BCNSPP" v="BCNSTK78">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNSTK78.png" />
+            </rule>
+            <rule e="node" k="BCNSPP" v="BCNSTK81">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNSTK81.png" />
+            </rule>
+            <rule e="node" k="BCNSPP" v="NOTBRD11">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NOTBRD11.png" />
+            </rule>
+            <rule e="node" k="BCNSPP" v="BCNGEN01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNGEN01.png" />
+            </rule>
+            <rule e="node" k="BCNSPP" v="BCNGEN79">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNGEN79.png" />
+            </rule>
+            <rule e="node" k="BCNSPP" v="BCNSTK02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNSTK02.png" />
+            </rule>
+            <rule e="node" k="BCNSPP" v="BCNTOW01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNTOW01.png" />
+            </rule>
+            <rule e="node" k="BCNSPP" v="BCNLTC01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNLTC01.png" />
+            </rule>
+            <rule e="node" k="BCNSPP" v="CAIRNS01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CAIRNS01.png" />
+            </rule>
+            <rule e="node" k="BCNSPP" v="BCNGEN05">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNGEN05.png" />
+            </rule>
+            <rule e="node" k="BCNSPP" v="BCNGEN80">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNGEN80.png" />
+            </rule>
+            <rule e="node" k="BCNSPP" v="BCNGEN60">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNGEN60.png" />
+            </rule>
+            <rule e="node" k="BCNSPP" v="BCNGEN61">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNGEN61.png" />
+            </rule>
+            <rule e="node" k="BCNSPP" v="BCNSPR62">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNSPR62.png" />
+            </rule>
+            <rule e="node" k="BCNSPP" v="BCNGEN01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNGEN01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="BOYCAR" v="*">
+            <rule e="node" k="BOYCAR" v="BOYCON71">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCON71.png" />
+            </rule>
+            <rule e="node" k="BOYCAR" v="BOYCON72">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCON72.png" />
+            </rule>
+            <rule e="node" k="BOYCAR" v="BOYCAN70">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCAN70.png" />
+            </rule>
+            <rule e="node" k="BOYCAR" v="BOYCAN71">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCAN71.png" />
+            </rule>
+            <rule e="node" k="BOYCAR" v="BOYSPH70">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSPH70.png" />
+            </rule>
+            <rule e="node" k="BOYCAR" v="BOYSPH71">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSPH71.png" />
+            </rule>
+            <rule e="node" k="BOYCAR" v="BOYPIL70">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYPIL70.png" />
+            </rule>
+            <rule e="node" k="BOYCAR" v="BOYPIL71">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYPIL71.png" />
+            </rule>
+            <rule e="node" k="BOYCAR" v="BOYSPR70">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSPR70.png" />
+            </rule>
+            <rule e="node" k="BOYCAR" v="BOYSPR71">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSPR71.png" />
+            </rule>
+            <rule e="node" k="BOYCAR" v="BOYCON69">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCON69.png" />
+            </rule>
+            <rule e="node" k="BOYCAR" v="BOYCON70">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCON70.png" />
+            </rule>
+            <rule e="node" k="BOYCAR" v="BOYCAN68">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCAN68.png" />
+            </rule>
+            <rule e="node" k="BOYCAR" v="BOYCAN69">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCAN69.png" />
+            </rule>
+            <rule e="node" k="BOYCAR" v="BOYSPH68">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSPH68.png" />
+            </rule>
+            <rule e="node" k="BOYCAR" v="BOYSPH69">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSPH69.png" />
+            </rule>
+            <rule e="node" k="BOYCAR" v="BOYPIL68">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYPIL68.png" />
+            </rule>
+            <rule e="node" k="BOYCAR" v="BOYPIL69">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYPIL69.png" />
+            </rule>
+            <rule e="node" k="BOYCAR" v="BOYSPR68">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSPR68.png" />
+            </rule>
+            <rule e="node" k="BOYCAR" v="BOYSPR69">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSPR69.png" />
+            </rule>
+            <rule e="node" k="BOYCAR" v="BOYCON01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCON01.png" />
+            </rule>
+            <rule e="node" k="BOYCAR" v="BOYCAN01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCAN01.png" />
+            </rule>
+            <rule e="node" k="BOYCAR" v="BOYSPH01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSPH01.png" />
+            </rule>
+            <rule e="node" k="BOYCAR" v="BOYPIL01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYPIL01.png" />
+            </rule>
+            <rule e="node" k="BOYCAR" v="BOYSPR01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSPR01.png" />
+            </rule>
+            <rule e="node" k="BOYCAR" v="BOYBAR01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYBAR01.png" />
+            </rule>
+            <rule e="node" k="BOYCAR" v="BOYSUP01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSUP01.png" />
+            </rule>
+            <rule e="node" k="BOYCAR" v="BOYGEN03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYGEN03.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="BOYINB" v="*">
+            <rule e="node" k="BOYINB" v="BOYBAR62">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYBAR62.png" />
+            </rule>
+            <rule e="node" k="BOYINB" v="BOYSUP62">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSUP62.png" />
+            </rule>
+            <rule e="node" k="BOYINB" v="BOYINB01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYINB01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="BOYISD" v="*">
+            <rule e="node" k="BOYISD" v="BOYCON77">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCON77.png" />
+            </rule>
+            <rule e="node" k="BOYISD" v="BOYCON63">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCON63.png" />
+            </rule>
+            <rule e="node" k="BOYISD" v="BOYCAN76">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCAN76.png" />
+            </rule>
+            <rule e="node" k="BOYISD" v="BOYPIL72">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYPIL72.png" />
+            </rule>
+            <rule e="node" k="BOYISD" v="BOYSPR72">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSPR72.png" />
+            </rule>
+            <rule e="node" k="BOYISD" v="BOYCON01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCON01.png" />
+            </rule>
+            <rule e="node" k="BOYISD" v="BOYCAN01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCAN01.png" />
+            </rule>
+            <rule e="node" k="BOYISD" v="BOYSPH01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSPH01.png" />
+            </rule>
+            <rule e="node" k="BOYISD" v="BOYPIL01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYPIL01.png" />
+            </rule>
+            <rule e="node" k="BOYISD" v="BOYSPR01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSPR01.png" />
+            </rule>
+            <rule e="node" k="BOYISD" v="BOYBAR01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYBAR01.png" />
+            </rule>
+            <rule e="node" k="BOYISD" v="BOYSUP01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSUP01.png" />
+            </rule>
+            <rule e="node" k="BOYISD" v="BOYGEN03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYGEN03.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="BOYLAT" v="*">
+            <rule e="node" k="BOYLAT" v="BOYCAN82">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCAN82.png" />
+            </rule>
+            <rule e="node" k="BOYLAT" v="BOYCAN83">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCAN83.png" />
+            </rule>
+            <rule e="node" k="BOYLAT" v="BOYCON66">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCON66.png" />
+            </rule>
+            <rule e="node" k="BOYLAT" v="BOYCAN73">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCAN73.png" />
+            </rule>
+            <rule e="node" k="BOYLAT" v="BOYPIL66">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYPIL66.png" />
+            </rule>
+            <rule e="node" k="BOYLAT" v="BOYPIL67">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYPIL67.png" />
+            </rule>
+            <rule e="node" k="BOYLAT" v="BOYSPH66">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSPH66.png" />
+            </rule>
+            <rule e="node" k="BOYLAT" v="BOYSPH67">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSPH67.png" />
+            </rule>
+            <rule e="node" k="BOYLAT" v="BOYPIL74">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYPIL74.png" />
+            </rule>
+            <rule e="node" k="BOYLAT" v="BOYSPH62">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSPH62.png" />
+            </rule>
+            <rule e="node" k="BOYLAT" v="BOYCON65">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCON65.png" />
+            </rule>
+            <rule e="node" k="BOYLAT" v="BOYCAN74">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCAN74.png" />
+            </rule>
+            <rule e="node" k="BOYLAT" v="BOYSPH74">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSPH74.png" />
+            </rule>
+            <rule e="node" k="BOYLAT" v="BOYCON67">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCON67.png" />
+            </rule>
+            <rule e="node" k="BOYLAT" v="BOYCAN72">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCAN72.png" />
+            </rule>
+            <rule e="node" k="BOYLAT" v="BOYCON73">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCON73.png" />
+            </rule>
+            <rule e="node" k="BOYLAT" v="BOYCON68">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCON68.png" />
+            </rule>
+            <rule e="node" k="BOYLAT" v="BOYCAN74">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCAN74.png" />
+            </rule>
+            <rule e="node" k="BOYLAT" v="BOYCAN75">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCAN75.png" />
+            </rule>
+            <rule e="node" k="BOYLAT" v="BOYCON64">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCON64.png" />
+            </rule>
+            <rule e="node" k="BOYLAT" v="BOYCON60">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCON60.png" />
+            </rule>
+            <rule e="node" k="BOYLAT" v="BOYCON61">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCON61.png" />
+            </rule>
+            <rule e="node" k="BOYLAT" v="BOYCON62">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCON62.png" />
+            </rule>
+            <rule e="node" k="BOYLAT" v="BOYCAN60">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCAN60.png" />
+            </rule>
+            <rule e="node" k="BOYLAT" v="BOYCAN61">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCAN61.png" />
+            </rule>
+            <rule e="node" k="BOYLAT" v="BOYCAN63">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCAN63.png" />
+            </rule>
+            <rule e="node" k="BOYLAT" v="BOYPIL60">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYPIL60.png" />
+            </rule>
+            <rule e="node" k="BOYLAT" v="BOYPIL61">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYPIL61.png" />
+            </rule>
+            <rule e="node" k="BOYLAT" v="BOYSPR05">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSPR05.png" />
+            </rule>
+            <rule e="node" k="BOYLAT" v="BOYSPR60">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSPR60.png" />
+            </rule>
+            <rule e="node" k="BOYLAT" v="BOYSPR61">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSPR61.png" />
+            </rule>
+            <rule e="node" k="BOYLAT" v="BOYCON01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCON01.png" />
+            </rule>
+            <rule e="node" k="BOYLAT" v="BOYCAN01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCAN01.png" />
+            </rule>
+            <rule e="node" k="BOYLAT" v="BOYSPH01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSPH01.png" />
+            </rule>
+            <rule e="node" k="BOYLAT" v="BOYPIL01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYPIL01.png" />
+            </rule>
+            <rule e="node" k="BOYLAT" v="BOYSPR01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSPR01.png" />
+            </rule>
+            <rule e="node" k="BOYLAT" v="BOYBAR01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYBAR01.png" />
+            </rule>
+            <rule e="node" k="BOYLAT" v="BOYSUP01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSUP01.png" />
+            </rule>
+            <rule e="node" k="BOYLAT" v="BOYGEN03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYGEN03.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="BOYSAW" v="*">
+            <rule e="node" k="BOYSAW" v="BOYSPH65">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSPH65.png" />
+            </rule>
+            <rule e="node" k="BOYSAW" v="BOYPIL73">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYPIL73.png" />
+            </rule>
+            <rule e="node" k="BOYSAW" v="BOYCON78">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCON78.png" />
+            </rule>
+            <rule e="node" k="BOYSAW" v="BOYSPH01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSPH01.png" />
+            </rule>
+            <rule e="node" k="BOYSAW" v="BOYPIL01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYPIL01.png" />
+            </rule>
+            <rule e="node" k="BOYSAW" v="BOYSPR65">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSPR65.png" />
+            </rule>
+            <rule e="node" k="BOYSAW" v="BOYBAR01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYBAR01.png" />
+            </rule>
+            <rule e="node" k="BOYSAW" v="BOYSUP01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSUP01.png" />
+            </rule>
+            <rule e="node" k="BOYSAW" v="BOYSPR01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSPR01.png" />
+            </rule>
+            <rule e="node" k="BOYSAW" v="BOYGEN03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYGEN03.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="BOYSPP" v="*">
+            <rule e="node" k="BOYSPP" v="BOYCON65">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCON65.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYCON81">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCON81.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYCON80">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCON80.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYCAN78">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCAN78.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYSPH66">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSPH66.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYCAN77">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCAN77.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYCAN81">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCAN81.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYSPH77">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSPH77.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYPIL81">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYPIL81.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYCON73">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCON73.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYCAN80">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCAN80.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYCAN75">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCAN75.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYPIL73">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYPIL73.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYPIL78">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYPIL78.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYSUP66">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSUP66.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYSUP65">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSUP65.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYMOR31">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYMOR31.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYCAN60">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCAN60.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYCON77">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCON77.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYPIL74">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYPIL74.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYCAN79">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCAN79.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYPIL59">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYPIL59.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYMOR03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYMOR03.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYCON60">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCON60.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYCON62">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCON62.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYCAN65">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCAN65.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYCAN64">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCAN64.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYCAN61">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCAN61.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYCAN63">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCAN63.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYSPH05">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSPH05.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYSPH60">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSPH60.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYSPH62">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSPH62.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYPIL60">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYPIL60.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYPIL61">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYPIL61.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYPIL62">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYPIL62.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYSPR62">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSPR62.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYBAR60">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYBAR60.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYBAR61">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYBAR61.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYBAR62">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYBAR62.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYSUP62">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSUP62.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYSUP03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSUP03.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYCON01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCON01.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYCAN62">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCAN62.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYSPH01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSPH01.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYPIL01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYPIL01.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYSPR01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSPR01.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYBAR01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYBAR01.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYSUP01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSUP01.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYSPR01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSPR01.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYSPH62">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSPH62.png" />
+            </rule>
+            <rule e="node" k="BOYSPP" v="BOYGEN03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYGEN03.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="BUAARE" v="*">
+            <rule e="node" k="BUAARE" v="BUAARE02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BUAARE02.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="BUIREL" v="*">
+            <rule e="node" k="BUIREL" v="BUIREL13">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BUIREL13.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="BUISGL" v="*">
+            <rule e="node" k="BUISGL" v="POSGEN03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/POSGEN03.png" />
+            </rule>
+            <rule e="node" k="BUISGL" v="BUIREL13">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BUIREL13.png" />
+            </rule>
+            <rule e="node" k="BUISGL" v="BUIREL14">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BUIREL14.png" />
+            </rule>
+            <rule e="node" k="BUISGL" v="BUIREL15">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BUIREL15.png" />
+            </rule>
+            <rule e="node" k="BUISGL" v="POSGEN03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/POSGEN03.png" />
+            </rule>
+            <rule e="node" k="BUISGL" v="TNKCON12">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TNKCON12.png" />
+            </rule>
+            <rule e="node" k="BUISGL" v="BUIREL01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BUIREL01.png" />
+            </rule>
+            <rule e="node" k="BUISGL" v="BUIREL04">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BUIREL04.png" />
+            </rule>
+            <rule e="node" k="BUISGL" v="BUIREL05">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BUIREL05.png" />
+            </rule>
+            <rule e="node" k="BUISGL" v="TNKCON02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TNKCON02.png" />
+            </rule>
+            <rule e="node" k="BUISGL" v="BUISGL11">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BUISGL11.png" />
+            </rule>
+            <rule e="node" k="BUISGL" v="BUISGL01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BUISGL01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="CGUSTA" v="*">
+            <rule e="node" k="CGUSTA" v="CGUSTA02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CGUSTA02.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="CRANES" v="*">
+            <rule e="node" k="CRANES" v="CRANES01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CRANES01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="CTNARE" v="*">
+            <rule e="node" k="CTNARE" v="CHINFO06">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CHINFO06.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="CTRPNT" v="*">
+            <rule e="node" k="CTRPNT" v="POSGEN04">
+                <symbol src="jar:/assets/rendertheme/symbols/day/POSGEN04.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="CTSARE" v="*">
+            <rule e="node" k="CTSARE" v="CHINFO07">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CHINFO07.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="CURENT" v="*">
+            <rule e="node" k="CURENT" v="CURENT01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CURENT01.png" />
+            </rule>
+            <rule e="node" k="CURENT" v="CURENT01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CURENT01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="DAMCON" v="*">
+            <rule e="node" k="DAMCON" v="CHINFO06">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CHINFO06.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="DAYMAR" v="*">
+            <rule e="node" k="DAYMAR" v="TOPSHP77">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP77.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP76">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP76.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP78">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP78.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP96">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP96.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP74">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP74.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP72">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP72.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP64">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP64.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP43">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP43.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP90">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP90.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP17">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP17.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP08">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP08.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP00">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP00.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP34">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP34.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP38">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP38.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP63">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP63.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP41">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP41.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP29">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP29.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP30">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP30.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHPA5">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHPA5.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP94">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP94.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHPA1">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHPA1.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHPA0">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHPA0.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHPA3">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHPA3.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHPA7">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHPA7.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP97">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP97.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHPS1">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHPS1.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP62">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP62.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP61">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP61.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP71">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP71.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP67">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP67.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP25">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP25.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP31">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP31.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP84">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP84.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP79">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP79.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP03.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP01.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP13">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP13.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP05">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP05.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP58">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP58.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP65">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP65.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP69">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP69.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP70">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP70.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP42">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP42.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP32">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP32.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP40">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP40.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP39">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP39.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP37">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP37.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP48">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP48.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP44">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP44.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP85">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP85.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP87">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP87.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP88">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP88.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP80">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP80.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHPA9">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHPA9.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHPB0">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHPB0.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP99">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP99.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP92">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP92.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP93">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP93.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP91">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP91.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP98">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP98.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHPA2">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHPA2.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHPA8">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHPA8.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHPA4">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHPA4.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP04">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP04.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP02.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP16">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP16.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP20">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP20.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP19">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP19.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHPU1">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHPU1.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP18">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP18.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP55">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP55.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHPD2">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHPD2.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP28">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP28.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP47">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP47.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP36">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP36.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP11">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP11.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHPD1">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHPD1.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP51">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP51.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP21">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP21.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP23">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP23.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP22">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP22.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP24">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP24.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP35">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP35.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP83">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP83.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP82">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP82.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP95">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP95.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHPA6">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHPA6.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP12">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP12.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP14">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP14.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP10">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP10.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHP06">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP06.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHPD3">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHPD3.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHQ15">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ15.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHQ16">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ16.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHQ17">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ17.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHQ18">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ18.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHQ19">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ19.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHQ20">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ20.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHQ21">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ21.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHQ22">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ22.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHQ23">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ23.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHQ24">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ24.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHQ25">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ25.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHQ26">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ26.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHQ27">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ27.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHQ28">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ28.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHQ29">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ29.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHQ30">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ30.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHQ31">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ31.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHQ32">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ32.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHQ06">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ06.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHQ07">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ07.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="TOPSHQ08">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ08.png" />
+            </rule>
+            <rule e="node" k="DAYMAR" v="DAYSQR21">
+                <symbol src="jar:/assets/rendertheme/symbols/day/DAYSQR21.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="DISMAR" v="*">
+            <rule e="node" k="DISMAR" v="DISMAR04">
+                <symbol src="jar:/assets/rendertheme/symbols/day/DISMAR04.png" />
+            </rule>
+            <rule e="node" k="DISMAR" v="DISMAR03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/DISMAR03.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="DMPGRD" v="*">
+            <rule e="node" k="DMPGRD" v="CHINFO07">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CHINFO07.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="FOGSIG" v="*">
+            <rule e="node" k="FOGSIG" v="FOGSIG01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/FOGSIG01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="FORSTC" v="*">
+            <rule e="node" k="FORSTC" v="FORSTC11">
+                <symbol src="jar:/assets/rendertheme/symbols/day/FORSTC11.png" />
+            </rule>
+            <rule e="node" k="FORSTC" v="FORSTC01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/FORSTC01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="FSHFAC" v="*">
+            <rule e="node" k="FSHFAC" v="FSHFAC03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/FSHFAC03.png" />
+            </rule>
+            <rule e="node" k="FSHFAC" v="FSHFAC02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/FSHFAC02.png" />
+            </rule>
+            <rule e="node" k="FSHFAC" v="FSHHAV01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/FSHHAV01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="GATCON" v="*">
+            <rule e="node" k="GATCON" v="GATCON04">
+                <symbol src="jar:/assets/rendertheme/symbols/day/GATCON04.png" />
+            </rule>
+            <rule e="node" k="GATCON" v="GATCON03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/GATCON03.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="HULKES" v="*">
+            <rule e="node" k="HULKES" v="HULKES01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/HULKES01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="ICNARE" v="*">
+            <rule e="node" k="ICNARE" v="CHINFO07">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CHINFO07.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="LIGHTS" v="*">
+            <rule e="node" k="LIGHTS" v="LIGHTS11">
+                <symbol src="jar:/assets/rendertheme/symbols/day/LIGHTS11.png" />
+            </rule>
+            <rule e="node" k="LIGHTS" v="LIGHTS12">
+                <symbol src="jar:/assets/rendertheme/symbols/day/LIGHTS12.png" />
+            </rule>
+            <rule e="node" k="LIGHTS" v="LIGHTS13">
+                <symbol src="jar:/assets/rendertheme/symbols/day/LIGHTS13.png" />
+            </rule>
+            <rule e="node" k="LIGHTS" v="LIGHTDEF">
+                <symbol src="jar:/assets/rendertheme/symbols/day/LIGHTDEF.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="LITFLT" v="*">
+            <rule e="node" k="LITFLT" v="LITFLT10">
+                <symbol src="jar:/assets/rendertheme/symbols/day/LITFLT10.png" />
+            </rule>
+            <rule e="node" k="LITFLT" v="LITFLT61">
+                <symbol src="jar:/assets/rendertheme/symbols/day/LITFLT61.png" />
+            </rule>
+            <rule e="node" k="LITFLT" v="LITFLT01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/LITFLT01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="LITVES" v="*">
+            <rule e="node" k="LITVES" v="LITVES60">
+                <symbol src="jar:/assets/rendertheme/symbols/day/LITVES60.png" />
+            </rule>
+            <rule e="node" k="LITVES" v="LITVES61">
+                <symbol src="jar:/assets/rendertheme/symbols/day/LITVES61.png" />
+            </rule>
+            <rule e="node" k="LITVES" v="LITVES01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/LITVES01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="LNDARE" v="*">
+            <rule e="node" k="LNDARE" v="LNDARE01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/LNDARE01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="LNDELV" v="*">
+            <rule e="node" k="LNDELV" v="POSGEN04">
+                <symbol src="jar:/assets/rendertheme/symbols/day/POSGEN04.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="LNDMRK" v="*">
+            <rule e="node" k="LNDMRK" v="TOWERS51">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS51.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="TOWERS72">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS72.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="TOWERS92">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS92.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="TOWERS93">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS93.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="TOWERS73">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS73.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="TOWERS79">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS79.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="TOWERS48">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS48.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="TOWERS83">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS83.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="TOWERS94">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS94.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="TOWERS98">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS98.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="TOWERS85">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS85.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="TOWERS67">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS67.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="TOWERS66">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS66.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="TOWERS88">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS88.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="TOWERS52">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS52.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="TOWERS53">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS53.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="TOWERS96">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS96.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="TOWERS50">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS50.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="TOWERS49">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS49.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="TOWERS97">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS97.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="BUIREL13">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BUIREL13.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="TOWERS65">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS65.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="TOWERS05">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS05.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="TOWERS60">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS60.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="TOWERS61">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS61.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="TOWERS62">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS62.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="TOWERS59">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS59.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="TOWERS03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS03.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="BUIREL15">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BUIREL15.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="TOWERS15">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS15.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="TOWERS01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS01.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="BUIREL01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BUIREL01.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="MONUMT12">
+                <symbol src="jar:/assets/rendertheme/symbols/day/MONUMT12.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="DOMES011">
+                <symbol src="jar:/assets/rendertheme/symbols/day/DOMES011.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="RASCAN11">
+                <symbol src="jar:/assets/rendertheme/symbols/day/RASCAN11.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="TOWERS03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS03.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="WNDMIL12">
+                <symbol src="jar:/assets/rendertheme/symbols/day/WNDMIL12.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="WIMCON11">
+                <symbol src="jar:/assets/rendertheme/symbols/day/WIMCON11.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="POSGEN03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/POSGEN03.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="CAIRNS11">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CAIRNS11.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="CHIMNY11">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CHIMNY11.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="DSHAER11">
+                <symbol src="jar:/assets/rendertheme/symbols/day/DSHAER11.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="FLGSTF01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/FLGSTF01.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="FLASTK11">
+                <symbol src="jar:/assets/rendertheme/symbols/day/FLASTK11.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="MSTCON14">
+                <symbol src="jar:/assets/rendertheme/symbols/day/MSTCON14.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="MONUMT02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/MONUMT02.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="DOMES001">
+                <symbol src="jar:/assets/rendertheme/symbols/day/DOMES001.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="RASCAN01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/RASCAN01.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="TOWERS01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS01.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="WNDMIL02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/WNDMIL02.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="WIMCON01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/WIMCON01.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="POSGEN01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/POSGEN01.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="CAIRNS01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CAIRNS01.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="CHIMNY01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CHIMNY01.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="DSHAER01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/DSHAER01.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="FLASTK01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/FLASTK01.png" />
+            </rule>
+            <rule e="node" k="LNDMRK" v="MSTCON04">
+                <symbol src="jar:/assets/rendertheme/symbols/day/MSTCON04.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="LNDRGN" v="*">
+            <rule e="node" k="LNDRGN" v="POSGEN04">
+                <symbol src="jar:/assets/rendertheme/symbols/day/POSGEN04.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="LOCMAG" v="*">
+            <rule e="node" k="LOCMAG" v="LOCMAG01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/LOCMAG01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="MAGVAR" v="*">
+            <rule e="node" k="MAGVAR" v="MAGVAR01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/MAGVAR01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="MARCUL" v="*">
+            <rule e="node" k="MARCUL" v="MARCUL02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/MARCUL02.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="MIPARE" v="*">
+            <rule e="node" k="MIPARE" v="CHINFO06">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CHINFO06.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="MONUMT" v="*">
+            <rule e="node" k="MONUMT" v="MONUMT12">
+                <symbol src="jar:/assets/rendertheme/symbols/day/MONUMT12.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="MORFAC" v="*">
+            <rule e="node" k="MORFAC" v="BOYMOR01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYMOR01.png" />
+            </rule>
+            <rule e="node" k="MORFAC" v="BOYMOR03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYMOR03.png" />
+            </rule>
+            <rule e="node" k="MORFAC" v="MORFAC03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/MORFAC03.png" />
+            </rule>
+            <rule e="node" k="MORFAC" v="MORFAC04">
+                <symbol src="jar:/assets/rendertheme/symbols/day/MORFAC04.png" />
+            </rule>
+            <rule e="node" k="MORFAC" v="PILPNT02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/PILPNT02.png" />
+            </rule>
+            <rule e="node" k="MORFAC" v="BOYMOR11">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYMOR11.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="M_NPUB" v="*">
+            <rule e="node" k="M_NPUB" v="CHINFO07">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CHINFO07.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="NEWOBJ" v="*">
+        </rule>
+
+        <rule e="node" k="OBSTRN" v="*">
+            <rule e="node" k="OBSTRN" v="FOULGND1">
+                <symbol src="jar:/assets/rendertheme/symbols/day/FOULGND1.png" />
+            </rule>
+            <rule e="node" k="OBSTRN" v="ACHARE02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/ACHARE02.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="OFSPLF" v="*">
+            <rule e="node" k="OFSPLF" v="OFSPLF01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/OFSPLF01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="PILBOP" v="*">
+            <rule e="node" k="PILBOP" v="PILBOP02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/PILBOP02.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="PILPNT" v="*">
+            <rule e="node" k="PILPNT" v="PILPNT02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/PILPNT02.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="PIPARE" v="*">
+            <rule e="node" k="PIPARE" v="CHINFO07">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CHINFO07.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="PRCARE" v="*">
+            <rule e="node" k="PRCARE" v="PRCARE12">
+                <symbol src="jar:/assets/rendertheme/symbols/day/PRCARE12.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="PRDARE" v="*">
+            <rule e="node" k="PRDARE" v="FLASTK11">
+                <symbol src="jar:/assets/rendertheme/symbols/day/FLASTK11.png" />
+            </rule>
+            <rule e="node" k="PRDARE" v="TNKCON12">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TNKCON12.png" />
+            </rule>
+            <rule e="node" k="PRDARE" v="WIMCON11">
+                <symbol src="jar:/assets/rendertheme/symbols/day/WIMCON11.png" />
+            </rule>
+            <rule e="node" k="PRDARE" v="PRDINS02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/PRDINS02.png" />
+            </rule>
+            <rule e="node" k="PRDARE" v="FLASTK01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/FLASTK01.png" />
+            </rule>
+            <rule e="node" k="PRDARE" v="TMBYRD01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TMBYRD01.png" />
+            </rule>
+            <rule e="node" k="PRDARE" v="TNKCON02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TNKCON02.png" />
+            </rule>
+            <rule e="node" k="PRDARE" v="WIMCON01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/WIMCON01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="PYLONS" v="*">
+            <rule e="node" k="PYLONS" v="POSGEN03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/POSGEN03.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="RADRFL" v="*">
+            <rule e="node" k="RADRFL" v="RADRFL03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/RADRFL03.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="RADSTA" v="*">
+            <rule e="node" k="RADSTA" v="RDOSTA02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/RDOSTA02.png" />
+            </rule>
+            <rule e="node" k="RADSTA" v="POSGEN01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/POSGEN01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="RDOCAL" v="*">
+            <rule e="node" k="RDOCAL" v="RDOCAL02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/RDOCAL02.png" />
+            </rule>
+            <rule e="node" k="RDOCAL" v="RDOCAL03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/RDOCAL03.png" />
+            </rule>
+            <rule e="node" k="RDOCAL" v="RCLDEF01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/RCLDEF01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="RDOSTA" v="*">
+            <rule e="node" k="RDOSTA" v="RDOSTA02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/RDOSTA02.png" />
+            </rule>
+            <rule e="node" k="RDOSTA" v="RDOSTA02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/RDOSTA02.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="RETRFL" v="*">
+            <rule e="node" k="RETRFL" v="RETRFL01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/RETRFL01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="RSCSTA" v="*">
+            <rule e="node" k="RSCSTA" v="RSCSTA02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/RSCSTA02.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="RTPBCN" v="*">
+            <rule e="node" k="RTPBCN" v="RTPBCN02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/RTPBCN02.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="SILTNK" v="*">
+            <rule e="node" k="SILTNK" v="SILBUI11">
+                <symbol src="jar:/assets/rendertheme/symbols/day/SILBUI11.png" />
+            </rule>
+            <rule e="node" k="SILTNK" v="TNKCON12">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TNKCON12.png" />
+            </rule>
+            <rule e="node" k="SILTNK" v="TOWERS03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS03.png" />
+            </rule>
+            <rule e="node" k="SILTNK" v="TOWERS12">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS12.png" />
+            </rule>
+            <rule e="node" k="SILTNK" v="SILBUI01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/SILBUI01.png" />
+            </rule>
+            <rule e="node" k="SILTNK" v="TNKCON02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TNKCON02.png" />
+            </rule>
+            <rule e="node" k="SILTNK" v="TOWERS01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS01.png" />
+            </rule>
+            <rule e="node" k="SILTNK" v="TOWERS02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS02.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="SISTAT" v="*">
+            <rule e="node" k="SISTAT" v="SISTAT02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/SISTAT02.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="SISTAW" v="*">
+            <rule e="node" k="SISTAW" v="SISTAT02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/SISTAT02.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="SLCONS" v="*">
+            <rule e="node" k="SLCONS" v="MORFAC03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/MORFAC03.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="SLOGRD" v="*">
+            <rule e="node" k="SLOGRD" v="HILTOP01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/HILTOP01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="SLOTOP" v="*">
+            <rule e="node" k="SLOTOP" v="HILTOP11">
+                <symbol src="jar:/assets/rendertheme/symbols/day/HILTOP11.png" />
+            </rule>
+            <rule e="node" k="SLOTOP" v="HILTOP01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/HILTOP01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="SNDWAV" v="*">
+            <rule e="node" k="SNDWAV" v="SNDWAV02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/SNDWAV02.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="SPLARE" v="*">
+            <rule e="node" k="SPLARE" v="CHINFO06">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CHINFO06.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="SPRING" v="*">
+            <rule e="node" k="SPRING" v="SPRING02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/SPRING02.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="TOPMAR" v="*">
+            <rule e="node" k="TOPMAR" v="TOPMAR98">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPMAR98.png" />
+            </rule>
+            <rule e="node" k="TOPMAR" v="TOPSHPU2">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHPU2.png" />
+            </rule>
+            <rule e="node" k="TOPMAR" v="TOPSHPT2">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHPT2.png" />
+            </rule>
+            <rule e="node" k="TOPMAR" v="TOPSHPI3">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHPI3.png" />
+            </rule>
+            <rule e="node" k="TOPMAR" v="TOPMAR99">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPMAR99.png" />
+            </rule>
+            <rule e="node" k="TOPMAR" v="TOPSHPT6">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHPT6.png" />
+            </rule>
+            <rule e="node" k="TOPMAR" v="TOPSHPT7">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHPT7.png" />
+            </rule>
+            <rule e="node" k="TOPMAR" v="TOPSHP07">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP07.png" />
+            </rule>
+            <rule e="node" k="TOPMAR" v="TOPSHPT5">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHPT5.png" />
+            </rule>
+            <rule e="node" k="TOPMAR" v="TOPSHPT4">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHPT4.png" />
+            </rule>
+            <rule e="node" k="TOPMAR" v="TOPSHP51">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP51.png" />
+            </rule>
+            <rule e="node" k="TOPMAR" v="TOPSHP52">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP52.png" />
+            </rule>
+            <rule e="node" k="TOPMAR" v="TOPSHP54">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP54.png" />
+            </rule>
+            <rule e="node" k="TOPMAR" v="TOPSHP53">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP53.png" />
+            </rule>
+            <rule e="node" k="TOPMAR" v="TOPSHPJ3">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHPJ3.png" />
+            </rule>
+            <rule e="node" k="TOPMAR" v="TOPSHPJ1">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHPJ1.png" />
+            </rule>
+            <rule e="node" k="TOPMAR" v="TOPSHP23">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP23.png" />
+            </rule>
+            <rule e="node" k="TOPMAR" v="TOPSHPR1">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHPR1.png" />
+            </rule>
+            <rule e="node" k="TOPMAR" v="TOPSHP10">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP10.png" />
+            </rule>
+            <rule e="node" k="TOPMAR" v="TOPSHPT3">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHPT3.png" />
+            </rule>
+            <rule e="node" k="TOPMAR" v="TOPSHPT1">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHPT1.png" />
+            </rule>
+            <rule e="node" k="TOPMAR" v="TOPSHPI2">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHPI2.png" />
+            </rule>
+            <rule e="node" k="TOPMAR" v="TOPSHPI1">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHPI1.png" />
+            </rule>
+            <rule e="node" k="TOPMAR" v="TOPSHPP2">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHPP2.png" />
+            </rule>
+            <rule e="node" k="TOPMAR" v="TOPSHQ17">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ17.png" />
+            </rule>
+            <rule e="node" k="TOPMAR" v="TOPSHQ19">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ19.png" />
+            </rule>
+            <rule e="node" k="TOPMAR" v="TOPSHQ20">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ20.png" />
+            </rule>
+            <rule e="node" k="TOPMAR" v="TOPSHQ21">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ21.png" />
+            </rule>
+            <rule e="node" k="TOPMAR" v="TOPSHQ22">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ22.png" />
+            </rule>
+            <rule e="node" k="TOPMAR" v="TOPSHQ23">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ23.png" />
+            </rule>
+            <rule e="node" k="TOPMAR" v="TOPSHQ24">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ24.png" />
+            </rule>
+            <rule e="node" k="TOPMAR" v="TOPSHQ25">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ25.png" />
+            </rule>
+            <rule e="node" k="TOPMAR" v="TOPSHQ26">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ26.png" />
+            </rule>
+            <rule e="node" k="TOPMAR" v="TOPSHQ27">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ27.png" />
+            </rule>
+            <rule e="node" k="TOPMAR" v="TOPSHQ28">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ28.png" />
+            </rule>
+            <rule e="node" k="TOPMAR" v="TOPSHQ29">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ29.png" />
+            </rule>
+            <rule e="node" k="TOPMAR" v="TOPSHQ30">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ30.png" />
+            </rule>
+            <rule e="node" k="TOPMAR" v="TOPSHQ31">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ31.png" />
+            </rule>
+            <rule e="node" k="TOPMAR" v="TOPSHQ32">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ32.png" />
+            </rule>
+            <rule e="node" k="TOPMAR" v="ZZZZZZ01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/ZZZZZZ01.png" />
+            </rule>
+            <rule e="node" k="TOPMAR" v="TOPMAR91">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPMAR91.png" />
+            </rule>
+            <rule e="node" k="TOPMAR" v="TOPSHP20">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP20.png" />
+            </rule>
+            <rule e="node" k="TOPMAR" v="TOPMAR92">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPMAR92.png" />
+            </rule>
+            <rule e="node" k="TOPMAR" v="TOPSHP48">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHP48.png" />
+            </rule>
+            <rule e="node" k="TOPMAR" v="TOPSHQ06">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ06.png" />
+            </rule>
+            <rule e="node" k="TOPMAR" v="TOPSHQ07">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ07.png" />
+            </rule>
+            <rule e="node" k="TOPMAR" v="TOPSHQ08">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ08.png" />
+            </rule>
+            <rule e="node" k="TOPMAR" v="TOPMAR01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPMAR01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="TOWERS" v="*">
+            <rule e="node" k="TOWERS" v="TOWERS72">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS72.png" />
+            </rule>
+            <rule e="node" k="TOWERS" v="TOWERS54">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS54.png" />
+            </rule>
+            <rule e="node" k="TOWERS" v="TOWERS56">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS56.png" />
+            </rule>
+            <rule e="node" k="TOWERS" v="TOWERS75">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS75.png" />
+            </rule>
+            <rule e="node" k="TOWERS" v="TOWERS96">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS96.png" />
+            </rule>
+            <rule e="node" k="TOWERS" v="TOWERS95">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS95.png" />
+            </rule>
+            <rule e="node" k="TOWERS" v="TOWERS76">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS76.png" />
+            </rule>
+            <rule e="node" k="TOWERS" v="TOWERS58">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS58.png" />
+            </rule>
+            <rule e="node" k="TOWERS" v="TOWERS99">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS99.png" />
+            </rule>
+            <rule e="node" k="TOWERS" v="TOWERS57">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS57.png" />
+            </rule>
+            <rule e="node" k="TOWERS" v="TOWERS98">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS98.png" />
+            </rule>
+            <rule e="node" k="TOWERS" v="TOWERS55">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS55.png" />
+            </rule>
+            <rule e="node" k="TOWERS" v="TOWERS80">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS80.png" />
+            </rule>
+            <rule e="node" k="TOWERS" v="TOWERS70">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS70.png" />
+            </rule>
+            <rule e="node" k="TOWERS" v="TOWERS81">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS81.png" />
+            </rule>
+            <rule e="node" k="TOWERS" v="TOWERS71">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS71.png" />
+            </rule>
+            <rule e="node" k="TOWERS" v="TOWERS74">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS74.png" />
+            </rule>
+            <rule e="node" k="TOWERS" v="TOWERS79">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS79.png" />
+            </rule>
+            <rule e="node" k="TOWERS" v="TOWERS78">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS78.png" />
+            </rule>
+            <rule e="node" k="TOWERS" v="TOWERS77">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS77.png" />
+            </rule>
+            <rule e="node" k="TOWERS" v="TOWERS87">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS87.png" />
+            </rule>
+            <rule e="node" k="TOWERS" v="TOWERS83">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS83.png" />
+            </rule>
+            <rule e="node" k="TOWERS" v="TOWERS68">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS68.png" />
+            </rule>
+            <rule e="node" k="TOWERS" v="TOWERS84">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS84.png" />
+            </rule>
+            <rule e="node" k="TOWERS" v="TOWERS85">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS85.png" />
+            </rule>
+            <rule e="node" k="TOWERS" v="TOWERS82">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS82.png" />
+            </rule>
+            <rule e="node" k="TOWERS" v="TOWERS89">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS89.png" />
+            </rule>
+            <rule e="node" k="TOWERS" v="TOWERS69">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS69.png" />
+            </rule>
+            <rule e="node" k="TOWERS" v="TOWERS91">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS91.png" />
+            </rule>
+            <rule e="node" k="TOWERS" v="TOWERS90">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS90.png" />
+            </rule>
+            <rule e="node" k="TOWERS" v="TOWERS64">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS64.png" />
+            </rule>
+            <rule e="node" k="TOWERS" v="TOWERS02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS02.png" />
+            </rule>
+            <rule e="node" k="TOWERS" v="TOWERS15">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS15.png" />
+            </rule>
+            <rule e="node" k="TOWERS" v="TOWERS05">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS05.png" />
+            </rule>
+            <rule e="node" k="TOWERS" v="TOWERS63">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS63.png" />
+            </rule>
+            <rule e="node" k="TOWERS" v="TOWERS60">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS60.png" />
+            </rule>
+            <rule e="node" k="TOWERS" v="TOWERS61">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS61.png" />
+            </rule>
+            <rule e="node" k="TOWERS" v="TOWERS62">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS62.png" />
+            </rule>
+            <rule e="node" k="TOWERS" v="TOWERS86">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS86.png" />
+            </rule>
+            <rule e="node" k="TOWERS" v="TOWERS59">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS59.png" />
+            </rule>
+            <rule e="node" k="TOWERS" v="TOWERS03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS03.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="TS_FEB" v="*">
+            <rule e="node" k="TS_FEB" v="CURDEF01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CURDEF01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="TS_PAD" v="*">
+            <rule e="node" k="TS_PAD" v="TIDSTR01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TIDSTR01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="TS_PNH" v="*">
+            <rule e="node" k="TS_PNH" v="TIDSTR01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TIDSTR01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="TS_PRH" v="*">
+            <rule e="node" k="TS_PRH" v="TIDSTR01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TIDSTR01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="TS_TIS" v="*">
+            <rule e="node" k="TS_TIS" v="TIDSTR01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TIDSTR01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="T_HMON" v="*">
+            <rule e="node" k="T_HMON" v="TIDEHT01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TIDEHT01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="T_NHMN" v="*">
+            <rule e="node" k="T_NHMN" v="TIDEHT01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TIDEHT01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="T_TIMS" v="*">
+            <rule e="node" k="T_TIMS" v="TIDEHT01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TIDEHT01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="VEGATN" v="*">
+            <rule e="node" k="VEGATN" v="TREPNT04">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TREPNT04.png" />
+            </rule>
+            <rule e="node" k="VEGATN" v="TREPNT05">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TREPNT05.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="WATTUR" v="*">
+            <rule e="node" k="WATTUR" v="WATTUR02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/WATTUR02.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="WEDKLP" v="*">
+            <rule e="node" k="WEDKLP" v="WEDKLP03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/WEDKLP03.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="WRECKS" v="*">
+            <rule e="node" k="WRECKS" v="FOULGND1">
+                <symbol src="jar:/assets/rendertheme/symbols/day/FOULGND1.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="achare" v="*">
+            <rule e="node" k="achare" v="ACHARE02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/ACHARE02.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="achbrt" v="*">
+            <rule e="node" k="achbrt" v="ACHBRT07">
+                <symbol src="jar:/assets/rendertheme/symbols/day/ACHBRT07.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="bcnlat" v="*">
+            <rule e="node" k="bcnlat" v="PRICKE03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/PRICKE03.png" />
+            </rule>
+            <rule e="node" k="bcnlat" v="PRICKE04">
+                <symbol src="jar:/assets/rendertheme/symbols/day/PRICKE04.png" />
+            </rule>
+            <rule e="node" k="bcnlat" v="CAIRNS11">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CAIRNS11.png" />
+            </rule>
+            <rule e="node" k="bcnlat" v="BCNSTK03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNSTK03.png" />
+            </rule>
+            <rule e="node" k="bcnlat" v="BCNTOW01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNTOW01.png" />
+            </rule>
+            <rule e="node" k="bcnlat" v="BCNLTC01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNLTC01.png" />
+            </rule>
+            <rule e="node" k="bcnlat" v="BCNGEN01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNGEN01.png" />
+            </rule>
+            <rule e="node" k="bcnlat" v="CAIRNS01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CAIRNS01.png" />
+            </rule>
+            <rule e="node" k="bcnlat" v="BCNGEN03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNGEN03.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="bcnwtw" v="*">
+            <rule e="node" k="bcnwtw" v="BCNLAT50">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNLAT50.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="berths" v="*">
+            <rule e="node" k="berths" v="BRTHNO01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BRTHNO01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="boylat" v="*">
+            <rule e="node" k="boylat" v="BOYCON74">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCON74.png" />
+            </rule>
+            <rule e="node" k="boylat" v="BOYCAN82">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCAN82.png" />
+            </rule>
+            <rule e="node" k="boylat" v="BOYCAN83">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCAN83.png" />
+            </rule>
+            <rule e="node" k="boylat" v="BOYCON78">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCON78.png" />
+            </rule>
+            <rule e="node" k="boylat" v="BOYSPH74">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSPH74.png" />
+            </rule>
+            <rule e="node" k="boylat" v="BOYCON73">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCON73.png" />
+            </rule>
+            <rule e="node" k="boylat" v="BOYCAN74">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCAN74.png" />
+            </rule>
+            <rule e="node" k="boylat" v="BOYCON68">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCON68.png" />
+            </rule>
+            <rule e="node" k="boylat" v="BOYCAN75">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCAN75.png" />
+            </rule>
+            <rule e="node" k="boylat" v="BOYSPH75">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSPH75.png" />
+            </rule>
+            <rule e="node" k="boylat" v="BOYCON61">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCON61.png" />
+            </rule>
+            <rule e="node" k="boylat" v="BOYCON62">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCON62.png" />
+            </rule>
+            <rule e="node" k="boylat" v="BOYCAN60">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCAN60.png" />
+            </rule>
+            <rule e="node" k="boylat" v="BOYCAN63">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCAN63.png" />
+            </rule>
+            <rule e="node" k="boylat" v="BOYSPH62">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSPH62.png" />
+            </rule>
+            <rule e="node" k="boylat" v="BOYCON01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCON01.png" />
+            </rule>
+            <rule e="node" k="boylat" v="BOYCAN01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCAN01.png" />
+            </rule>
+            <rule e="node" k="boylat" v="BOYSPH01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSPH01.png" />
+            </rule>
+            <rule e="node" k="boylat" v="BOYPIL01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYPIL01.png" />
+            </rule>
+            <rule e="node" k="boylat" v="BOYSPR01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSPR01.png" />
+            </rule>
+            <rule e="node" k="boylat" v="BOYBAR01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYBAR01.png" />
+            </rule>
+            <rule e="node" k="boylat" v="BOYSUP01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSUP01.png" />
+            </rule>
+            <rule e="node" k="boylat" v="BOYGEN03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYGEN03.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="boywtw" v="*">
+            <rule e="node" k="boywtw" v="BOYSPR65">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSPR65.png" />
+            </rule>
+            <rule e="node" k="boywtw" v="BOYCAN63">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCAN63.png" />
+            </rule>
+            <rule e="node" k="boywtw" v="BOYLAT50">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYLAT50.png" />
+            </rule>
+            <rule e="node" k="boywtw" v="BOYLAT51">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYLAT51.png" />
+            </rule>
+            <rule e="node" k="boywtw" v="BOYDEF03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYDEF03.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="bridge" v="*">
+            <rule e="node" k="bridge" v="BRIDGE01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BRIDGE01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="bunsta" v="*">
+            <rule e="node" k="bunsta" v="BUNSTA01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BUNSTA01.png" />
+            </rule>
+            <rule e="node" k="bunsta" v="BUNSTA02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BUNSTA02.png" />
+            </rule>
+            <rule e="node" k="bunsta" v="BUNSTA03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BUNSTA03.png" />
+            </rule>
+            <rule e="node" k="bunsta" v="CHINFO07">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CHINFO07.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="chkpnt" v="*">
+            <rule e="node" k="chkpnt" v="CUSTOM01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CUSTOM01.png" />
+            </rule>
+            <rule e="node" k="chkpnt" v="BORDER01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BORDER01.png" />
+            </rule>
+            <rule e="node" k="chkpnt" v="POSGEN04">
+                <symbol src="jar:/assets/rendertheme/symbols/day/POSGEN04.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="cranes" v="*">
+            <rule e="node" k="cranes" v="CRANES01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CRANES01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="curent" v="*">
+            <rule e="node" k="curent" v="CURENT01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CURENT01.png" />
+            </rule>
+            <rule e="node" k="curent" v="POSGEN04">
+                <symbol src="jar:/assets/rendertheme/symbols/day/POSGEN04.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="cursor" v="*">
+            <rule e="node" k="cursor" v="CURSRB01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CURSRB01.png" />
+            </rule>
+            <rule e="node" k="cursor" v="CURSRA01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CURSRA01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="dismar" v="*">
+            <rule e="node" k="dismar" v="DISMAR06">
+                <symbol src="jar:/assets/rendertheme/symbols/day/DISMAR06.png" />
+            </rule>
+            <rule e="node" k="dismar" v="DISMAR05">
+                <symbol src="jar:/assets/rendertheme/symbols/day/DISMAR05.png" />
+            </rule>
+            <rule e="node" k="dismar" v="DISMAR03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/DISMAR03.png" />
+            </rule>
+            <rule e="node" k="dismar" v="HECMTR02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/HECMTR02.png" />
+            </rule>
+            <rule e="node" k="dismar" v="HECMTR01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/HECMTR01.png" />
+            </rule>
+            <rule e="node" k="dismar" v="HECMTR02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/HECMTR02.png" />
+            </rule>
+            <rule e="node" k="dismar" v="HECMTR01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/HECMTR01.png" />
+            </rule>
+            <rule e="node" k="dismar" v="DISMAR06">
+                <symbol src="jar:/assets/rendertheme/symbols/day/DISMAR06.png" />
+            </rule>
+            <rule e="node" k="dismar" v="DISMAR03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/DISMAR03.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="dnghlt" v="*">
+            <rule e="node" k="dnghlt" v="DNGHILIT">
+                <symbol src="jar:/assets/rendertheme/symbols/day/DNGHILIT.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="events" v="*">
+            <rule e="node" k="events" v="EVENTS02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/EVENTS02.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="hrbfac" v="*">
+            <rule e="node" k="hrbfac" v="HRBFAC13">
+                <symbol src="jar:/assets/rendertheme/symbols/day/HRBFAC13.png" />
+            </rule>
+            <rule e="node" k="hrbfac" v="HRBFAC14">
+                <symbol src="jar:/assets/rendertheme/symbols/day/HRBFAC14.png" />
+            </rule>
+            <rule e="node" k="hrbfac" v="HRBFAC15">
+                <symbol src="jar:/assets/rendertheme/symbols/day/HRBFAC15.png" />
+            </rule>
+            <rule e="node" k="hrbfac" v="HRBFAC16">
+                <symbol src="jar:/assets/rendertheme/symbols/day/HRBFAC16.png" />
+            </rule>
+            <rule e="node" k="hrbfac" v="HRBFAC17">
+                <symbol src="jar:/assets/rendertheme/symbols/day/HRBFAC17.png" />
+            </rule>
+            <rule e="node" k="hrbfac" v="HRBFAC18">
+                <symbol src="jar:/assets/rendertheme/symbols/day/HRBFAC18.png" />
+            </rule>
+            <rule e="node" k="hrbfac" v="HRBFAC11">
+                <symbol src="jar:/assets/rendertheme/symbols/day/HRBFAC11.png" />
+            </rule>
+            <rule e="node" k="hrbfac" v="HRBFAC12">
+                <symbol src="jar:/assets/rendertheme/symbols/day/HRBFAC12.png" />
+            </rule>
+            <rule e="node" k="hrbfac" v="HRBFAC10">
+                <symbol src="jar:/assets/rendertheme/symbols/day/HRBFAC10.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="marfea" v="*">
+            <rule e="node" k="marfea" v="CHINFO09">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CHINFO09.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="marnot" v="*">
+            <rule e="node" k="marnot" v="CHINFO08">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CHINFO08.png" />
+            </rule>
+            <rule e="node" k="marnot" v="CHINFO09">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CHINFO09.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="mnufea" v="*">
+            <rule e="node" k="mnufea" v="CHINFO10">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CHINFO10.png" />
+            </rule>
+            <rule e="node" k="mnufea" v="CHINFO11">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CHINFO11.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="notmrk" v="*">
+            <rule e="node" k="notmrk" v="NMKINF06">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKINF06.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKPRH07">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKPRH07.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKINF06">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKINF06.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKINF06">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKINF06.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKINF53">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKINF53.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKINF20">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKINF20.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKINF20">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKINF20.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKINF48">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKINF48.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKINF48">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKINF48.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKPRH07">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKPRH07.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKPRH07">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKPRH07.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKPRH07">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKPRH07.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKPRH08">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKPRH08.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKPRH11">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKPRH11.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKPRH11">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKPRH11.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKPRH14">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKPRH14.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKREG16">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKREG16.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKREG17">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKREG17.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKINF03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKINF03.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKINF06">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKINF06.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKINF06">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKINF06.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKINF06">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKINF06.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKINF20">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKINF20.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKINF20">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKINF20.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKINF43">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKINF43.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKINF43">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKINF43.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKINF45">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKINF45.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKINF45">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKINF45.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKPRH02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKPRH02.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKPRH02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKPRH02.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKPRH07">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKPRH07.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKPRH07">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKPRH07.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKPRH07">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKPRH07.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKPRH08">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKPRH08.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKPRH08">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKPRH08.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKINF48">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKINF48.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKINF49">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKINF49.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKINF50">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKINF50.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKREG01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKREG01.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKPRH10">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKPRH10.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKPRH11">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKPRH11.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKPRH12">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKPRH12.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKPRH13">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKPRH13.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKREG02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKREG02.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKREG03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKREG03.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKREG10">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKREG10.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKREG01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKREG01.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKREG11">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKREG11.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKREG12">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKREG12.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKREG13">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKREG13.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKREG14">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKREG14.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKREG15">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKREG15.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKREG16">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKREG16.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKREG17">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKREG17.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKREG19">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKREG19.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKREG20">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKREG20.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKRCD01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKRCD01.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKRCD02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKRCD02.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKRCD03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKRCD03.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKRCD04">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKRCD04.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKRCD05">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKRCD05.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKRCD06">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKRCD06.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKINF01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKINF01.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKINF02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKINF02.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKINF03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKINF03.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKINF04">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKINF04.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKINF05">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKINF05.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKINF06">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKINF06.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKINF53">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKINF53.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKINF19">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKINF19.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKINF20">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKINF20.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKINF21">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKINF21.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKINF22">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKINF22.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKINF23">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKINF23.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKINF24">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKINF24.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKINF25">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKINF25.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKINF26">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKINF26.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKINF27">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKINF27.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKINF28">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKINF28.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKINF29">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKINF29.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKINF38">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKINF38.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKINF43">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKINF43.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKINF44">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKINF44.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKINF45">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKINF45.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKINF46">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKINF46.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKINF47">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKINF47.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKPRH02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKPRH02.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKPRH06">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKPRH06.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKPRH07">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKPRH07.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKPRH08">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKPRH08.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKPRH12">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKPRH12.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKPRH13">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKPRH13.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKPRH14">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKPRH14.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKRCD01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKRCD01.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKRCD02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKRCD02.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKRCD03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKRCD03.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKRCD04">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKRCD04.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKINF01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKINF01.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKINF40">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKINF40.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NMKPRH02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NMKPRH02.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NOTMRK01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NOTMRK01.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NOTMRK02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NOTMRK02.png" />
+            </rule>
+            <rule e="node" k="notmrk" v="NOTMRK03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NOTMRK03.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="plnpos" v="*">
+            <rule e="node" k="plnpos" v="PLNPOS01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/PLNPOS01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="positn" v="*">
+            <rule e="node" k="positn" v="POSITN02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/POSITN02.png" />
+            </rule>
+            <rule e="node" k="positn" v="POSITN02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/POSITN02.png" />
+            </rule>
+            <rule e="node" k="positn" v="POSITN02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/POSITN02.png" />
+            </rule>
+            <rule e="node" k="positn" v="POSITN02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/POSITN02.png" />
+            </rule>
+            <rule e="node" k="positn" v="POSITN02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/POSITN02.png" />
+            </rule>
+            <rule e="node" k="positn" v="POSITN02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/POSITN02.png" />
+            </rule>
+            <rule e="node" k="positn" v="POSITN02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/POSITN02.png" />
+            </rule>
+            <rule e="node" k="positn" v="POSITN02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/POSITN02.png" />
+            </rule>
+            <rule e="node" k="positn" v="POSITN02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/POSITN02.png" />
+            </rule>
+            <rule e="node" k="positn" v="POSITN02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/POSITN02.png" />
+            </rule>
+            <rule e="node" k="positn" v="POSITN02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/POSITN02.png" />
+            </rule>
+            <rule e="node" k="positn" v="POSITN02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/POSITN02.png" />
+            </rule>
+            <rule e="node" k="positn" v="POSITN02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/POSITN02.png" />
+            </rule>
+            <rule e="node" k="positn" v="POSITN02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/POSITN02.png" />
+            </rule>
+            <rule e="node" k="positn" v="POSITN02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/POSITN02.png" />
+            </rule>
+            <rule e="node" k="positn" v="POSITN02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/POSITN02.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="_RDOCAL" v="*">
+            <rule e="node" k="_RDOCAL" v="RDOCAL02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/RDOCAL02.png" />
+            </rule>
+            <rule e="node" k="_RDOCAL" v="RDOCAL03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/RDOCAL03.png" />
+            </rule>
+            <rule e="node" k="_RDOCAL" v="RCLDEF01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/RCLDEF01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="refdmp" v="*">
+            <rule e="node" k="refdmp" v="REFDMP01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/REFDMP01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="refpnt" v="*">
+            <rule e="node" k="refpnt" v="REFPNT02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/REFPNT02.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="sistat" v="*">
+            <rule e="node" k="sistat" v="SSWARS01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/SSWARS01.png" />
+            </rule>
+            <rule e="node" k="sistat" v="SSENTR01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/SSENTR01.png" />
+            </rule>
+            <rule e="node" k="sistat" v="SSLOCK01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/SSLOCK01.png" />
+            </rule>
+            <rule e="node" k="sistat" v="SISTAT02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/SISTAT02.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="sistaw" v="*">
+            <rule e="node" k="sistaw" v="WTLVGG02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/WTLVGG02.png" />
+            </rule>
+            <rule e="node" k="sistaw" v="WTLVGG01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/WTLVGG01.png" />
+            </rule>
+            <rule e="node" k="sistaw" v="HGWTMK01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/HGWTMK01.png" />
+            </rule>
+            <rule e="node" k="sistaw" v="VTCLMK01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/VTCLMK01.png" />
+            </rule>
+            <rule e="node" k="sistaw" v="SISTAT02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/SISTAT02.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="slcons" v="*">
+            <rule e="node" k="slcons" v="PIER0001">
+                <symbol src="jar:/assets/rendertheme/symbols/day/PIER0001.png" />
+            </rule>
+            <rule e="node" k="slcons" v="MORFAC03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/MORFAC03.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="termnl" v="*">
+            <rule e="node" k="termnl" v="TERMNL12">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TERMNL12.png" />
+            </rule>
+            <rule e="node" k="termnl" v="TERMNL03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TERMNL03.png" />
+            </rule>
+            <rule e="node" k="termnl" v="TERMNL04">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TERMNL04.png" />
+            </rule>
+            <rule e="node" k="termnl" v="TERMNL05">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TERMNL05.png" />
+            </rule>
+            <rule e="node" k="termnl" v="TERMNL06">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TERMNL06.png" />
+            </rule>
+            <rule e="node" k="termnl" v="TERMNL07">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TERMNL07.png" />
+            </rule>
+            <rule e="node" k="termnl" v="TERMNL08">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TERMNL08.png" />
+            </rule>
+            <rule e="node" k="termnl" v="TERMNL09">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TERMNL09.png" />
+            </rule>
+            <rule e="node" k="termnl" v="TERMNL10">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TERMNL10.png" />
+            </rule>
+            <rule e="node" k="termnl" v="TERMNL11">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TERMNL11.png" />
+            </rule>
+            <rule e="node" k="termnl" v="TERMNL13">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TERMNL13.png" />
+            </rule>
+            <rule e="node" k="termnl" v="TERMNL02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TERMNL02.png" />
+            </rule>
+            <rule e="node" k="termnl" v="TERMNL01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TERMNL01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="tidcur" v="*">
+            <rule e="node" k="tidcur" v="TIDCUR01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TIDCUR01.png" />
+            </rule>
+            <rule e="node" k="tidcur" v="TIDCUR02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TIDCUR02.png" />
+            </rule>
+            <rule e="node" k="tidcur" v="TIDCUR01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TIDCUR01.png" />
+            </rule>
+            <rule e="node" k="topmar" v="TOPMA102">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPMA102.png" />
+            </rule>
+            <rule e="node" k="topmar" v="TOPMA100">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPMA100.png" />
+            </rule>
+            <rule e="node" k="topmar" v="TOPMA114">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPMA114.png" />
+            </rule>
+            <rule e="node" k="topmar" v="TOPSHPI1">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHPI1.png" />
+            </rule>
+            <rule e="node" k="topmar" v="TOPSHPP2">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHPP2.png" />
+            </rule>
+            <rule e="node" k="topmar" v="TOPSHQ15">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ15.png" />
+            </rule>
+            <rule e="node" k="topmar" v="TOPSHQ16">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ16.png" />
+            </rule>
+            <rule e="node" k="topmar" v="TOPSHQ17">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ17.png" />
+            </rule>
+            <rule e="node" k="topmar" v="TOPSHQ18">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ18.png" />
+            </rule>
+            <rule e="node" k="topmar" v="TOPSHQ19">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ19.png" />
+            </rule>
+            <rule e="node" k="topmar" v="TOPSHQ20">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ20.png" />
+            </rule>
+            <rule e="node" k="topmar" v="TOPSHQ21">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ21.png" />
+            </rule>
+            <rule e="node" k="topmar" v="TOPSHQ22">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ22.png" />
+            </rule>
+            <rule e="node" k="topmar" v="TOPSHQ23">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ23.png" />
+            </rule>
+            <rule e="node" k="topmar" v="TOPSHQ24">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ24.png" />
+            </rule>
+            <rule e="node" k="topmar" v="TOPSHQ25">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ25.png" />
+            </rule>
+            <rule e="node" k="topmar" v="TOPSHQ26">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ26.png" />
+            </rule>
+            <rule e="node" k="topmar" v="TOPSHQ27">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ27.png" />
+            </rule>
+            <rule e="node" k="topmar" v="TOPSHQ28">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ28.png" />
+            </rule>
+            <rule e="node" k="topmar" v="TOPSHQ29">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ29.png" />
+            </rule>
+            <rule e="node" k="topmar" v="TOPSHQ30">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ30.png" />
+            </rule>
+            <rule e="node" k="topmar" v="TOPSHQ31">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ31.png" />
+            </rule>
+            <rule e="node" k="topmar" v="TOPSHQ32">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ32.png" />
+            </rule>
+            <rule e="node" k="topmar" v="TOPSHQ06">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ06.png" />
+            </rule>
+            <rule e="node" k="topmar" v="TOPSHQ08">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOPSHQ08.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="trnbsn" v="*">
+            <rule e="node" k="trnbsn" v="TRNBSN01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TRNBSN01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="vehtrf" v="*">
+        </rule>
+
+        <rule e="node" k="waypnt" v="*">
+            <rule e="node" k="waypnt" v="WAYPNT11">
+                <symbol src="jar:/assets/rendertheme/symbols/day/WAYPNT11.png" />
+            </rule>
+            <rule e="node" k="waypnt" v="WAYPNT03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/WAYPNT03.png" />
+            </rule>
+            <rule e="node" k="waypnt" v="WAYPNT11">
+                <symbol src="jar:/assets/rendertheme/symbols/day/WAYPNT11.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="wtwgag" v="*">
+            <rule e="node" k="wtwgag" v="WTLVGG02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/WTLVGG02.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="CSYMB" v="*">
+            <rule e="node" k="CSYMB" v="ACHRES61">
+                <symbol src="jar:/assets/rendertheme/symbols/day/ACHRES61.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="ACHRES71">
+                <symbol src="jar:/assets/rendertheme/symbols/day/ACHRES71.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="AISDEF01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/AISDEF01.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="AISONE01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/AISONE01.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="AISSIX01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/AISSIX01.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="AISSLP01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/AISSLP01.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="AISVES01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/AISVES01.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="ARPATG01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/ARPATG01.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="ARPONE01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/ARPONE01.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="ARPSIX01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/ARPSIX01.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="BLKADJ01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BLKADJ01.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="BRIDGE01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BRIDGE01.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="CHCRDEL1">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CHCRDEL1.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="CHCRID01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CHCRID01.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="CHINFO08">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CHINFO08.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="CHINFO09">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CHINFO09.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="CHINFO10">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CHINFO10.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="CHINFO11">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CHINFO11.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="CHKSYM01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CHKSYM01.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="CLRLIN01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CLRLIN01.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="CURSRA01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CURSRA01.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="CURSRB01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/CURSRB01.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="DANGER51">
+                <symbol src="jar:/assets/rendertheme/symbols/day/DANGER51.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="DANGER52">
+                <symbol src="jar:/assets/rendertheme/symbols/day/DANGER52.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="DIRBOY01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/DIRBOY01.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="DIRBOYA1">
+                <symbol src="jar:/assets/rendertheme/symbols/day/DIRBOYA1.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="DIRBOYB1">
+                <symbol src="jar:/assets/rendertheme/symbols/day/DIRBOYB1.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="DNGHILIT">
+                <symbol src="jar:/assets/rendertheme/symbols/day/DNGHILIT.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="EBLVRM11">
+                <symbol src="jar:/assets/rendertheme/symbols/day/EBLVRM11.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="ERBLTIK1">
+                <symbol src="jar:/assets/rendertheme/symbols/day/ERBLTIK1.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="EVENTS02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/EVENTS02.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="INFORM01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/INFORM01.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="ISODGR51">
+                <symbol src="jar:/assets/rendertheme/symbols/day/ISODGR51.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="LOWACC01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/LOWACC01.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="NORTHAR1">
+                <symbol src="jar:/assets/rendertheme/symbols/day/NORTHAR1.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="OBSTRN01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/OBSTRN01.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="OBSTRN02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/OBSTRN02.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="OBSTRN03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/OBSTRN03.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="OBSTRN11">
+                <symbol src="jar:/assets/rendertheme/symbols/day/OBSTRN11.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="OSPONE02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/OSPONE02.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="OSPSIX02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/OSPSIX02.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="OWNSHP01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/OWNSHP01.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="OWNSHP05">
+                <symbol src="jar:/assets/rendertheme/symbols/day/OWNSHP05.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="PLNPOS01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/PLNPOS01.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="PLNSPD03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/PLNSPD03.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="PLNSPD04">
+                <symbol src="jar:/assets/rendertheme/symbols/day/PLNSPD04.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="POSITN02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/POSITN02.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="QUAPOS01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/QUAPOS01.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="QUARRY01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/QUARRY01.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="QUESMRK1">
+                <symbol src="jar:/assets/rendertheme/symbols/day/QUESMRK1.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="RACNSP01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/RACNSP01.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="RECDEF51">
+                <symbol src="jar:/assets/rendertheme/symbols/day/RECDEF51.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="RECTRC55">
+                <symbol src="jar:/assets/rendertheme/symbols/day/RECTRC55.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="RECTRC56">
+                <symbol src="jar:/assets/rendertheme/symbols/day/RECTRC56.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="RECTRC57">
+                <symbol src="jar:/assets/rendertheme/symbols/day/RECTRC57.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="RECTRC58">
+                <symbol src="jar:/assets/rendertheme/symbols/day/RECTRC58.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="REFPNT02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/REFPNT02.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="RFNERY01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/RFNERY01.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="RFNERY11">
+                <symbol src="jar:/assets/rendertheme/symbols/day/RFNERY11.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="SCALEB10">
+                <symbol src="jar:/assets/rendertheme/symbols/day/SCALEB10.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="SCALEB11">
+                <symbol src="jar:/assets/rendertheme/symbols/day/SCALEB11.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="TIDCUR01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TIDCUR01.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="TIDCUR02">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TIDCUR02.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="TIDCUR03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TIDCUR03.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="TMBYRD01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TMBYRD01.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="TNKFRM01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TNKFRM01.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="TNKFRM11">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TNKFRM11.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="TOWERS05">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS05.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="TOWERS15">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TOWERS15.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="TREPNT04">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TREPNT04.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="TREPNT05">
+                <symbol src="jar:/assets/rendertheme/symbols/day/TREPNT05.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="UNITFTH1">
+                <symbol src="jar:/assets/rendertheme/symbols/day/UNITFTH1.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="UNITMTR1">
+                <symbol src="jar:/assets/rendertheme/symbols/day/UNITMTR1.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="UWTROC03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/UWTROC03.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="UWTROC04">
+                <symbol src="jar:/assets/rendertheme/symbols/day/UWTROC04.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="VECGND01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/VECGND01.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="VECGND21">
+                <symbol src="jar:/assets/rendertheme/symbols/day/VECGND21.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="VECWTR01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/VECWTR01.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="VECWTR21">
+                <symbol src="jar:/assets/rendertheme/symbols/day/VECWTR21.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="WAYPNT01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/WAYPNT01.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="WAYPNT03">
+                <symbol src="jar:/assets/rendertheme/symbols/day/WAYPNT03.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="WAYPNT11">
+                <symbol src="jar:/assets/rendertheme/symbols/day/WAYPNT11.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="WNDFRM51">
+                <symbol src="jar:/assets/rendertheme/symbols/day/WNDFRM51.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="WNDFRM61">
+                <symbol src="jar:/assets/rendertheme/symbols/day/WNDFRM61.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="WRECKS01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/WRECKS01.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="WRECKS04">
+                <symbol src="jar:/assets/rendertheme/symbols/day/WRECKS04.png" />
+            </rule>
+            <rule e="node" k="CSYMB" v="WRECKS05">
+                <symbol src="jar:/assets/rendertheme/symbols/day/WRECKS05.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="_bcngn" v="*">
+            <rule e="node" k="_bcngn" v="BCNGEN01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNGEN01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="_boygn" v="*">
+            <rule e="node" k="_boygn" v="BOYPIL69">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYPIL69.png" />
+            </rule>
+            <rule e="node" k="_boygn" v="BOYCAN62">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCAN62.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="_extgn" v="*">
+            <rule e="node" k="_extgn" v="STARPT01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/STARPT01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="_slgto" v="*">
+            <rule e="node" k="_slgto" v="BOYSPR04">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSPR04.png" />
+            </rule>
+            <rule e="node" k="_slgto" v="BOYCON60">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCON60.png" />
+            </rule>
+            <rule e="node" k="_slgto" v="BOYCAN61">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYCAN61.png" />
+            </rule>
+            <rule e="node" k="_slgto" v="BOYPIL60">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYPIL60.png" />
+            </rule>
+            <rule e="node" k="_slgto" v="BOYPIL61">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYPIL61.png" />
+            </rule>
+            <rule e="node" k="_slgto" v="BOYSPR01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BOYSPR01.png" />
+            </rule>
+            <rule e="node" k="_slgto" v="BCNGEN01">
+                <symbol src="jar:/assets/rendertheme/symbols/day/BCNGEN01.png" />
+            </rule>
+        </rule>
+
+        <rule e="node" k="_texto" v="*">
+            <rule e="node" k="_texto" v="WRECKS04">
+                <symbol src="jar:/assets/rendertheme/symbols/day/WRECKS04.png" />
+            </rule>
+        </rule>
+        
+		 
+		<!-- place -->
+		<rule e="node" k="place" v="city" zoom-max="14">
+			<caption k="name" font-style="bold" font-size="35" fill="#000000" stroke="#ffffff" stroke-width="2.0" />
+		</rule>
+	</rule>
+	
+	
+</rendertheme>

@@ -105,9 +105,9 @@ if __name__ == "__main__":
     print stats.getListOfLayers()
     print stats.getListOfZooms()
     print stats.getListOfScales()
-    print stats.getLayerGeometryType("BOYCAR")
-    print stats.getFilesAtZoom(7)
-    print stats.getFilesAtScale(80000)
+    #print stats.getLayerGeometryType("BOYCAR")
+    #print stats.getFilesAtZoom(7)
+    #print stats.getFilesAtScale(80000)
     
     
     

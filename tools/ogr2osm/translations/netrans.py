@@ -20,20 +20,20 @@ def filterLayer(layer):
         print "Skipping layer...", layer.GetName()
         return None
 
-#def filterFeature(ogrfeature, fieldNames, reproject):
-#    if ogrfeature is None:
-#        return
-#    layer = ogrfeature.GetFieldAsString("Layer")
-#    if (layer == "VA-BLDG-UVM" or
-#        layer == "VA-BLDG-NON UVM"):
-#        return ogrfeature
-#    elif (layer == "VA-BLDG-ATTRIBUTES" and len(ogrfeature.GetFieldAsString("Text")) == 4):
-#        # Ignore CFC Soccer Stands - has no building outline
-#        if ogrfeature.GetFieldAsString("Text") == "0979":
-#            return
-#        return ogrfeature
-#    else:
-#        return
+def filterFeature(ogrfeature, fieldNames, reproject):
+    if ogrfeature is None:
+        return
+    layer = ogrfeature.GetFieldAsString("Layer")
+    if (layer == "VA-BLDG-UVM" or
+        layer == "VA-BLDG-NON UVM"):
+        return ogrfeature
+    elif (layer == "VA-BLDG-ATTRIBUTES" and len(ogrfeature.GetFieldAsString("Text")) == 4):
+        # Ignore CFC Soccer Stands - has no building outline
+        if ogrfeature.GetFieldAsString("Text") == "0979":
+            return
+        return ogrfeature
+    else:
+        return
 ##
 #def filterFeaturePost(feature, ogrfeature, ogrgeometry):
 #    if feature is None and ogrfeature is None and ogrgeometry is None:
